@@ -20,9 +20,9 @@ export type HclOriginProps = {
 
 export const hclOriginDefaults: Required<Omit<HclOriginProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "Where it grows",
-  title: "Rooted in the original Spice Islands",
-  body: "Our cloves come from smallholder gardens on the volcanic slopes of North Maluku, where sea breezes, rich soil and generations of know-how give each bud its deep, sweet warmth. We buy directly from the families who tend the trees.",
+  eyebrow: "",
+  title: "Grown on the volcanic slopes of North Maluku",
+  body: "Our cloves come from smallholder gardens around Ternate, where the trees grow in volcanic soil within sight of the sea. We buy directly from the families who tend the trees, at harvest time.",
   facts: [
     { label: "Origin", value: "North Maluku" },
     { label: "Harvest", value: "By hand" },
@@ -58,7 +58,7 @@ export default function HclOrigin(props: HclOriginProps) {
               {facts.map((fact, i) => (
                 <div key={i} className="hcl-origin__fact">
                   <dt className="hcl-origin__fact-label">{fact.label}</dt>
-                  <dd className="hcl-origin__fact-value">{fact.value}</dd>
+                  <dd className="hcl-num hcl-origin__fact-value">{fact.value}</dd>
                 </div>
               ))}
             </dl>
@@ -69,7 +69,6 @@ export default function HclOrigin(props: HclOriginProps) {
         <HclReveal isCanvas={p.isCanvas} className="hcl-origin__text">
           {p.eyebrow && <p className="hcl-eyebrow hcl-origin__eyebrow">{p.eyebrow}</p>}
           <h2 className="hcl-origin__title">{p.title}</h2>
-          <span className="hcl-origin__rule" aria-hidden="true" />
           {p.body && <p className="hcl-origin__body">{p.body}</p>}
         </HclReveal>
       </div>

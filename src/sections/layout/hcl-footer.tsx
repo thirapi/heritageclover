@@ -37,8 +37,7 @@ export type HclFooterProps = {
 export const hclFooterDefaults: Required<Omit<HclFooterProps, keyof HclInjectedProps>> = {
   sectionId: "",
   brandName: "Heritage Clover",
-  tagline:
-    "The spice that shaped the world, hand-picked in the Spice Islands of Maluku and sun-dried the way it has been for centuries.",
+  tagline: "Cloves from smallholder gardens in North Maluku, hand-picked and sun-dried.",
   exploreTitle: "Explore",
   exploreLinks: [
     { label: "Home", href: "/" },
@@ -63,9 +62,9 @@ export const hclFooterDefaults: Required<Omit<HclFooterProps, keyof HclInjectedP
     { label: "Facebook", href: "https://facebook.com", icon: "Facebook" },
     { label: "YouTube", href: "https://youtube.com", icon: "Youtube" },
   ],
-  newsletterEyebrow: "Letters from the spice route",
-  newsletterTitle: "Stories, recipes and first word on each new harvest.",
-  newsletterBody: "A few thoughtful letters a season. Unsubscribe whenever you like.",
+  newsletterEyebrow: "",
+  newsletterTitle: "Harvest news and recipes by email",
+  newsletterBody: "Occasional emails when a new harvest is packed. Unsubscribe anytime.",
   newsletterPlaceholder: "Your email address",
   newsletterButton: "Subscribe",
   copyright: "© 2026 Heritage Clover. All rights reserved.",
@@ -109,44 +108,6 @@ export default function HclFooter(props: HclFooterProps) {
       style={{ backgroundColor: p.backgroundColor, color: p.textColor }}
     >
       <div className="hcl-container">
-        <HclReveal isCanvas={p.isCanvas} className="hcl-footer__newsletter">
-          <div className="hcl-footer__newsletter-copy">
-            {p.newsletterEyebrow && <p className="hcl-eyebrow hcl-footer__eyebrow">{p.newsletterEyebrow}</p>}
-            <h2 className="hcl-footer__newsletter-title">{p.newsletterTitle}</h2>
-          </div>
-          <form className="hcl-footer__form" onSubmit={(e) => e.preventDefault()}>
-            <label htmlFor={inputId} className="hcl-footer__sr-only">
-              {p.newsletterPlaceholder}
-            </label>
-            <div className="hcl-footer__field">
-              <input
-                id={inputId}
-                type="email"
-                name="email"
-                autoComplete="email"
-                placeholder={p.newsletterPlaceholder}
-                className="hcl-footer__input"
-              />
-              <button type="submit" className="hcl-btn hcl-btn--primary hcl-footer__submit">
-                {p.newsletterButton}
-                <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" />
-              </button>
-            </div>
-            {p.newsletterBody && <p className="hcl-footer__form-note">{p.newsletterBody}</p>}
-          </form>
-        </HclReveal>
-
-        <div className="hcl-footer__ornament" aria-hidden="true">
-          <span />
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M12 2c1.7 2.6 1.7 5.8 0 8.5-1.7-2.7-1.7-5.9 0-8.5Zm0 20c-1.7-2.6-1.7-5.8 0-8.5 1.7 2.7 1.7 5.9 0 8.5ZM2 12c2.6-1.7 5.8-1.7 8.5 0-2.7 1.7-5.9 1.7-8.5 0Zm20 0c-2.6 1.7-5.8 1.7-8.5 0 2.7-1.7 5.9-1.7 8.5 0Z"
-              fill="currentColor"
-            />
-          </svg>
-          <span />
-        </div>
-
         <div className="hcl-footer__grid">
           <HclReveal isCanvas={p.isCanvas} className="hcl-footer__brand">
             <HclLink href="/" className="hcl-footer__brand-name">
@@ -160,7 +121,7 @@ export default function HclFooter(props: HclFooterProps) {
                   return (
                     <li key={`${social.label}-${i}`}>
                       <HclLink href={social.href} className="hcl-footer__social" aria-label={social.label}>
-                        <Icon size={18} strokeWidth={1.5} aria-hidden="true" />
+                        <Icon size={18} strokeWidth={1.75} aria-hidden="true" />
                       </HclLink>
                     </li>
                   );
@@ -209,9 +170,32 @@ export default function HclFooter(props: HclFooterProps) {
           </HclReveal>
         </div>
 
-        <p className="hcl-footer__wordmark" aria-hidden="true">
-          {p.brandName}
-        </p>
+        <HclReveal isCanvas={p.isCanvas} className="hcl-footer__newsletter">
+          <div className="hcl-footer__newsletter-copy">
+            {p.newsletterEyebrow && <p className="hcl-eyebrow hcl-footer__eyebrow">{p.newsletterEyebrow}</p>}
+            <h2 className="hcl-footer__newsletter-title">{p.newsletterTitle}</h2>
+            {p.newsletterBody && <p className="hcl-footer__newsletter-body">{p.newsletterBody}</p>}
+          </div>
+          <form className="hcl-footer__form" onSubmit={(e) => e.preventDefault()}>
+            <label htmlFor={inputId} className="hcl-footer__sr-only">
+              {p.newsletterPlaceholder}
+            </label>
+            <div className="hcl-footer__field">
+              <input
+                id={inputId}
+                type="email"
+                name="email"
+                autoComplete="email"
+                placeholder={p.newsletterPlaceholder}
+                className="hcl-footer__input"
+              />
+              <button type="submit" className="hcl-btn hcl-btn--primary hcl-footer__submit">
+                {p.newsletterButton}
+                <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" />
+              </button>
+            </div>
+          </form>
+        </HclReveal>
 
         <div className="hcl-footer__bottom">
           <p className="hcl-footer__copyright">{p.copyright}</p>

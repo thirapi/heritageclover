@@ -16,29 +16,29 @@ export type HclUsesProps = {
 
 export const hclUsesDefaults: Required<Omit<HclUsesProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "Ways to enjoy",
-  title: "One small bud, many rituals",
+  eyebrow: "",
+  title: "Four ways to use whole cloves",
   intro:
-    "Cloves have perfumed kitchens, homes and celebrations along the spice route for generations. A few ways to bring that warmth into your days.",
+    "In Indonesian kitchens cloves season rendang and spiced rice and go into hot drinks. A few buds simmered in water will also scent a whole room.",
   uses: [
     {
-      title: "Culinary",
-      body: "Bloom whole buds in rendang, spiced rice, gingerbread and mulled drinks for deep, sweet warmth.",
+      title: "Cooking",
+      body: "Toast whole buds in oil before adding rendang spices, or cook them with rice, gingerbread and mulled wine.",
       image: ASSETS.useCulinary,
     },
     {
-      title: "Wellness rituals",
-      body: "A cup of wedang cengkeh or a drop of clove bud oil in a warm bath for a slow, comforting evening.",
+      title: "Drinks and bath",
+      body: "Steep a few buds in hot water for wedang cengkeh, or add a drop of clove bud oil to a warm bath.",
       image: ASSETS.useWellness,
     },
     {
-      title: "Home aroma",
-      body: "Simmer pots, pomanders and diffuser blends that fill the house with a cosy, spiced scent.",
+      title: "Home scent",
+      body: "Simmer a handful with cinnamon and orange peel, or press them into an orange to make a pomander.",
       image: ASSETS.useAroma,
     },
     {
       title: "Gifting",
-      body: "Heritage gift sets that carry a story from the Spice Islands to the people you love.",
+      body: "Gift sets of whole Maluku cloves, packed to send to family, friends and business partners.",
       image: ASSETS.useGifting,
     },
   ],
@@ -78,15 +78,9 @@ export default function HclUses(props: HclUsesProps) {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img className="hcl-uses__image" src={use.image} alt={use.title} loading="lazy" />
                 )}
-                <span className="hcl-uses__index" aria-hidden="true">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
               </div>
-              <div className="hcl-uses__text">
-                <h3 className="hcl-uses__card-title">{use.title}</h3>
-                <span className="hcl-uses__rule" aria-hidden="true" />
-                {use.body && <p className="hcl-uses__body">{use.body}</p>}
-              </div>
+              <h3 className="hcl-uses__card-title">{use.title}</h3>
+              {use.body && <p className="hcl-uses__body">{use.body}</p>}
             </HclReveal>
           ))}
         </ul>

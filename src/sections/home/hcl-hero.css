@@ -46,19 +46,8 @@
 }
 
 .hcl-hero__eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.875rem;
   margin-bottom: 1.75rem;
   color: var(--hcl-gold);
-}
-
-.hcl-hero__eyebrow-rule {
-  flex: none;
-  display: inline-block;
-  width: 48px;
-  height: 1px;
-  background-color: var(--hcl-gold);
 }
 
 .hcl-hero__title {
@@ -92,38 +81,6 @@
   padding: 0 1.875rem;
 }
 
-.hcl-hero__cta--ghost {
-  border-color: rgba(252, 250, 245, 0.55);
-  color: var(--hcl-ivory);
-}
-
-.hcl-hero__cta--ghost:hover {
-  border-color: var(--hcl-gold);
-  color: var(--hcl-gold);
-}
-
-.hcl-hero__scroll {
-  position: absolute;
-  right: max(var(--hcl-gutter), calc((100% - var(--hcl-container)) / 2 + var(--hcl-gutter)));
-  bottom: clamp(56px, 9vh, 104px);
-  width: 1px;
-  height: 96px;
-  background-color: rgba(201, 164, 92, 0.3);
-}
-
-.hcl-hero__scroll-line {
-  display: block;
-  width: 1px;
-  height: 40%;
-  background-color: var(--hcl-gold);
-}
-
-@media (max-width: 1023px) {
-  .hcl-hero__scroll {
-    display: none;
-  }
-}
-
 @media (max-width: 767px) {
   .hcl-hero {
     padding: 104px 0 48px;
@@ -132,10 +89,6 @@
   .hcl-hero__eyebrow {
     margin-bottom: 1.25rem;
     font-size: 0.6875rem;
-  }
-
-  .hcl-hero__eyebrow-rule {
-    width: 28px;
   }
 
   .hcl-hero__body {

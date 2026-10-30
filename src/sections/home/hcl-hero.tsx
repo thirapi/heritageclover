@@ -31,7 +31,7 @@ export const hclHeroDefaults: Required<Omit<HclHeroProps, keyof HclInjectedProps
   eyebrow: "Heritage Clover · Maluku, Indonesia",
   title: "The Spice That",
   titleAccent: "Shaped the World.",
-  body: "Hand-picked clove buds from the original Spice Islands, sun-dried the old way and sealed fresh for your kitchen.",
+  body: "Clove buds picked by hand in North Maluku, dried in the sun for four to five days and sealed fresh for your kitchen.",
   primaryLabel: "Shop cloves",
   primaryHref: "/store",
   secondaryLabel: "Our story",
@@ -79,7 +79,6 @@ export default function HclHero(props: HclHeroProps) {
         <div className={cn("hcl-hero__content", !p.isCanvas && "hcl-fade-up")}>
           {p.eyebrow && (
             <p className="hcl-eyebrow hcl-hero__eyebrow">
-              <span className="hcl-hero__eyebrow-rule" aria-hidden="true" />
               {p.eyebrow}
             </p>
           )}
@@ -100,15 +99,12 @@ export default function HclHero(props: HclHeroProps) {
               </HclLink>
             )}
             {p.secondaryLabel && (
-              <HclLink href={p.secondaryHref} className="hcl-btn hcl-btn--ghost hcl-hero__cta hcl-hero__cta--ghost">
+              <HclLink href={p.secondaryHref} className="hcl-btn hcl-btn--on-dark hcl-hero__cta">
                 {p.secondaryLabel}
               </HclLink>
             )}
           </div>
         </div>
-      </div>
-      <div className="hcl-hero__scroll" aria-hidden="true">
-        <span className="hcl-hero__scroll-line" />
       </div>
     </HclRoot>
   );

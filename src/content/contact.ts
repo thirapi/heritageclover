@@ -26,7 +26,6 @@ export const CONTACT: Record<Locale, ContactContent> = {
     },
     contact: {},
     faq: {
-      eyebrow: "Quick answers",
       title: "Before you write",
       intro: "A few things people often ask us. For everything else, our full FAQ is a click away.",
       items: [
@@ -64,7 +63,6 @@ export const CONTACT: Record<Locale, ContactContent> = {
       image: ASSETS.origin,
     },
     contact: {
-      eyebrow: "Mari terhubung",
       title: "Kirim kabar ke rumah rempah kami",
       body: "Pertanyaan tentang cengkeh kami, hadiah untuk orang tersayang, atau pesanan untuk dapur maupun perusahaan Anda: kami membaca setiap pesan dan membalas dalam satu hari kerja.",
       addressLabel: "Kunjungi",
@@ -84,11 +82,10 @@ export const CONTACT: Record<Locale, ContactContent> = {
       requiredError: "Mohon isi kolom ini.",
       emailError: "Mohon masukkan alamat email yang valid.",
       successTitle: "Terima kasih",
-      successText: "Pesan Anda sedang dalam perjalanan. Kami akan membalas dalam satu hari kerja.",
+      successText: "Pesan Anda sudah kami terima. Kami akan membalas dalam satu hari kerja.",
       resetLabel: "Kirim pesan lain",
     },
     faq: {
-      eyebrow: "Jawaban singkat",
       title: "Sebelum Anda menulis",
       intro: "Beberapa hal yang sering ditanyakan kepada kami. Untuk pertanyaan lainnya, FAQ lengkap kami hanya sejauh satu klik.",
       items: [

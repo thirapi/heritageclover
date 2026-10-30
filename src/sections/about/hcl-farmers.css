@@ -1,16 +1,14 @@
 .hcl-farmers {
   position: relative;
-  padding: var(--hcl-space-section) 0 calc(var(--hcl-space-section) + 32px);
+  padding: var(--hcl-space-section) 0;
 }
 
 .hcl-farmers__head {
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: 48px 72px;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: 32px 72px;
   align-items: end;
-  margin-bottom: 80px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid var(--hcl-line);
+  margin-bottom: 64px;
 }
 
 .hcl-farmers__eyebrow {
@@ -19,102 +17,52 @@
 
 .hcl-farmers__title {
   font-size: var(--hcl-h2);
-  max-width: 14ch;
+  max-width: 17ch;
 }
 
 .hcl-farmers__body {
-  position: relative;
-  padding-left: 24px;
+  max-width: 48ch;
   color: var(--hcl-ink-muted);
   font-size: 1.0625rem;
-}
-
-.hcl-farmers__body::before {
-  content: "";
-  position: absolute;
-  top: 0.4em;
-  bottom: 0.4em;
-  left: 0;
-  width: 1px;
-  background-color: var(--hcl-gold);
 }
 
 .hcl-farmers__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px;
+  gap: 48px 32px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* Staggered portraits: the middle one sits lower for an editorial rhythm. */
-.hcl-farmers__person:nth-child(3n + 2) {
-  margin-top: 72px;
-}
-
 .hcl-farmers__figure {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   margin: 0;
 }
 
 .hcl-farmers__portrait {
-  position: relative;
   aspect-ratio: 4 / 5;
-  border-radius: 4px;
+  border-radius: var(--hcl-radius);
   overflow: hidden;
   background-color: var(--hcl-line);
-}
-
-.hcl-farmers__portrait::after {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(201, 164, 92, 0.55);
-  border-radius: 2px;
-  pointer-events: none;
 }
 
 .hcl-farmers__portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: sepia(0.15);
-  transition: transform 900ms var(--hcl-ease);
 }
 
-.hcl-farmers__person:hover .hcl-farmers__portrait img {
-  transform: scale(1.04);
-}
-
-.hcl-farmers__number {
-  position: absolute;
-  left: 24px;
-  bottom: 18px;
-  font-family: var(--hcl-font-display);
-  font-style: italic;
-  font-size: 2.5rem;
-  line-height: 1;
-  color: var(--hcl-gold);
-}
-
+/* Real grower quotes: serif italic is allowed here (docs/01 §6.3). */
 .hcl-farmers__quote {
-  position: relative;
-  margin: 2rem 0 1.5rem;
-  padding-top: 1.5rem;
+  flex: 1;
+  margin: 1.75rem 0 1.5rem;
   font-family: var(--hcl-font-display);
   font-style: italic;
-  font-size: 1.375rem;
-  line-height: 1.35;
-}
-
-.hcl-farmers__quote::before {
-  content: "\201C";
-  position: absolute;
-  top: -0.35em;
-  left: -0.05em;
-  font-size: 3.5rem;
-  line-height: 1;
-  color: var(--hcl-gold);
+  font-size: 1.3125rem;
+  line-height: 1.4;
 }
 
 .hcl-farmers__caption {
@@ -131,38 +79,34 @@
 }
 
 .hcl-farmers__role {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--hcl-ember);
+  font-size: 0.875rem;
+  color: var(--hcl-ink-muted);
 }
 
 @media (max-width: 1023px) {
   .hcl-farmers__head {
     grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-    margin-bottom: 56px;
+    gap: 20px;
+    margin-bottom: 48px;
   }
 
   .hcl-farmers__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 56px 32px;
+    gap: 40px 24px;
   }
 
-  .hcl-farmers__person:nth-child(3n + 2) {
-    margin-top: 0;
+  .hcl-farmers__quote {
+    font-size: 1.1875rem;
   }
 }
 
-@media (max-width: 639px) {
-  .hcl-farmers {
-    padding-bottom: var(--hcl-space-section);
-  }
-
+@media (max-width: 767px) {
   .hcl-farmers__grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 56px;
+    gap: 48px;
+  }
+
+  .hcl-farmers__portrait {
+    aspect-ratio: 4 / 3;
   }
 
   .hcl-farmers__quote {

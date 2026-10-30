@@ -50,7 +50,6 @@ export const INSIGHT_PAGE: Record<Locale, InsightPageContent> = {
       image: ASSETS.article1,
     },
     grid: {
-      eyebrow: "Wawasan",
       title: "Catatan dari Kepulauan Rempah",
       intro:
         "Kisah, resep, dan panduan praktis tentang kuncup yang pernah mengubah dunia, ditulis dari meja sortir kami di Maluku.",

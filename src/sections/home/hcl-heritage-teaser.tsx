@@ -21,14 +21,14 @@ export type HclHeritageTeaserProps = {
 
 export const hclHeritageTeaserDefaults: Required<Omit<HclHeritageTeaserProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "The spice route",
+  eyebrow: "",
   title: "A tiny bud that drew fleets across the world",
-  body: "For centuries the clove grew on only a handful of islands in North Maluku. Its fragrance travelled by sail to distant courts and kitchens, and it changed the map of the world along the way.",
+  body: "For centuries the clove grew on only a handful of islands in North Maluku. Traders carried it by sea to China, India, the Middle East and Europe, and the fight to control its supply drew European fleets to the islands.",
   milestones: [
     { year: "Antiquity", label: "Cloves leave Maluku on early sea routes towards China and India." },
-    { year: "1500s", label: "Ternate and Tidore become the beating heart of the clove trade." },
+    { year: "1500s", label: "Ternate and Tidore become the centre of the clove trade." },
     { year: "1600s", label: "European fleets race each other for the Spice Islands." },
-    { year: "Today", label: "Smallholder growers keep the harvest alive, bud by bud." },
+    { year: "Today", label: "Smallholder families on the same islands still pick the buds by hand." },
   ],
   ctaLabel: "Read our story",
   ctaHref: "/our-story",
@@ -67,9 +67,9 @@ export default function HclHeritageTeaser(props: HclHeritageTeaserProps) {
           <div className="hcl-heritage-teaser__lead">
             {p.body && <p className="hcl-heritage-teaser__body">{p.body}</p>}
             {p.ctaLabel && (
-              <HclLink href={p.ctaHref} className="hcl-heritage-teaser__cta">
+              <HclLink href={p.ctaHref} className="hcl-link hcl-heritage-teaser__cta">
                 {p.ctaLabel}
-                <ArrowRight size={16} strokeWidth={1.5} aria-hidden="true" />
+                <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" />
               </HclLink>
             )}
           </div>
@@ -105,11 +105,6 @@ export default function HclHeritageTeaser(props: HclHeritageTeaserProps) {
                 <circle key={i} cx={isl.cx} cy={isl.cy} r={isl.r} />
               ))}
             </g>
-            <g className="hcl-heritage-teaser__compass" transform="translate(64 64)">
-              <circle r="34" />
-              <circle r="24" />
-              <path d="M0 -44 L5 -5 L0 0 L-5 -5 Z M0 44 L5 5 L0 0 L-5 5 Z M-44 0 L-5 -5 L0 0 L-5 5 Z M44 0 L5 -5 L0 0 L5 5 Z" />
-            </g>
             <text className="hcl-heritage-teaser__map-label" x="1192" y="136" textAnchor="end">
               MALUKU
             </text>
@@ -126,7 +121,7 @@ export default function HclHeritageTeaser(props: HclHeritageTeaserProps) {
                   className="hcl-heritage-teaser__item"
                 >
                   <span className="hcl-heritage-teaser__dot" aria-hidden="true" />
-                  <p className="hcl-heritage-teaser__year">{m.year}</p>
+                  <p className="hcl-num hcl-heritage-teaser__year">{m.year}</p>
                   <p className="hcl-heritage-teaser__label">{m.label}</p>
                 </HclReveal>
               ))}

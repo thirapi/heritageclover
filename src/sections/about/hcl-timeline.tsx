@@ -27,10 +27,10 @@ export const hclTimelineDefaults: Required<
   Omit<HclTimelineProps, keyof HclInjectedProps>
 > = {
   sectionId: "",
-  eyebrow: "Five centuries of clove",
+  eyebrow: "",
   title: "A spice that shaped the world",
   intro:
-    "Long before it reached your kitchen, the clove sailed the spice route, crowned sultanates and sent empires across oceans. This is its journey.",
+    "For most of recorded history, cloves grew on only a few islands in North Maluku. Arab and Asian traders, local sultanates and European trading companies competed for them for centuries. These are the turning points.",
   events: [
     {
       year: "Before 1500",
@@ -123,15 +123,12 @@ export default function HclTimeline(props: HclTimelineProps) {
     >
       <div className="hcl-container">
         <HclReveal isCanvas={p.isCanvas} className="hcl-timeline__head">
-          {p.eyebrow && (
-            <p className="hcl-eyebrow hcl-timeline__eyebrow">{p.eyebrow}</p>
-          )}
-          <h2 className="hcl-timeline__title">{p.title}</h2>
-          <span className="hcl-timeline__ornament" aria-hidden="true">
-            <span />
-            <i />
-            <span />
-          </span>
+          <div>
+            {p.eyebrow && (
+              <p className="hcl-eyebrow hcl-timeline__eyebrow">{p.eyebrow}</p>
+            )}
+            <h2 className="hcl-timeline__title">{p.title}</h2>
+          </div>
           {p.intro && <p className="hcl-timeline__intro">{p.intro}</p>}
         </HclReveal>
 
@@ -141,28 +138,24 @@ export default function HclTimeline(props: HclTimelineProps) {
           </span>
           <ol className="hcl-timeline__events">
             {p.events.map((event, i) => (
-              <li
-                key={`${event.year}-${i}`}
-                className={`hcl-timeline__event ${i % 2 === 1 ? "hcl-timeline__event--right" : ""}`}
-              >
+              <li key={`${event.year}-${i}`} className="hcl-timeline__event">
+                <p className="hcl-timeline__year hcl-num">{event.year}</p>
                 <span className="hcl-timeline__marker" aria-hidden="true" />
-                <p className="hcl-timeline__year-side" aria-hidden="true">
-                  {event.year}
-                </p>
                 <HclReveal
                   isCanvas={p.isCanvas}
                   as="article"
                   className="hcl-timeline__card"
                 >
+                  <div className="hcl-timeline__text">
+                    <h3 className="hcl-timeline__event-title">{event.title}</h3>
+                    <p className="hcl-timeline__body">{event.body}</p>
+                  </div>
                   {event.image && (
                     <div className="hcl-timeline__media">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={event.image} alt={event.title} loading="lazy" />
                     </div>
                   )}
-                  <p className="hcl-timeline__year">{event.year}</p>
-                  <h3 className="hcl-timeline__event-title">{event.title}</h3>
-                  <p className="hcl-timeline__body">{event.body}</p>
                 </HclReveal>
               </li>
             ))}

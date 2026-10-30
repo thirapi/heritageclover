@@ -1,17 +1,22 @@
 .hcl-quality {
-  position: relative;
   padding: var(--hcl-space-section) 0;
 }
 
 .hcl-quality__inner {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: 96px;
+  grid-template-areas:
+    "intro points"
+    "intro badges";
+  column-gap: 80px;
   align-items: start;
 }
 
+.hcl-quality__intro {
+  grid-area: intro;
+}
+
 .hcl-quality__eyebrow {
-  color: var(--hcl-gold);
   margin-bottom: 1rem;
 }
 
@@ -19,37 +24,30 @@
   font-size: var(--hcl-h2);
 }
 
-.hcl-quality__rule {
-  display: block;
-  width: 72px;
-  height: 1px;
-  margin: 1.75rem 0;
-  background-color: var(--hcl-gold);
-}
-
 .hcl-quality__lead {
+  margin-top: 1.5rem;
   font-size: 1.0625rem;
   opacity: 0.78;
   max-width: 44ch;
 }
 
 .hcl-quality__badges {
-  margin-top: 56px;
+  grid-area: badges;
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(74, 44, 33, 0.14);
 }
 
 .hcl-quality__badges-label {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.6;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .hcl-quality__badge-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -60,81 +58,73 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 92px;
+  width: 112px;
+  padding: 14px 10px 12px;
+  border: 1px solid rgba(74, 44, 33, 0.14);
+  border-radius: var(--hcl-radius-sm);
+  background-color: rgba(252, 250, 245, 0.6);
   text-align: center;
 }
 
 .hcl-quality__badge-image {
-  width: 72px;
-  height: 72px;
-  border-radius: 999px;
-  object-fit: cover;
-  border: 1px solid var(--hcl-gold);
-  padding: 4px;
-  background-clip: content-box;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .hcl-quality__badge-text {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   line-height: 1.35;
-  letter-spacing: 0.04em;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .hcl-quality__points {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 48px;
+  grid-area: points;
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid rgba(201, 164, 92, 0.35);
 }
 
 .hcl-quality__point {
-  padding: 44px 40px 48px 0;
-  border-bottom: 1px solid rgba(201, 164, 92, 0.35);
+  padding: 32px 0;
+  border-top: 1px solid rgba(74, 44, 33, 0.14);
 }
 
-.hcl-quality__point:nth-child(even) {
-  padding-left: 40px;
-  padding-right: 0;
-  border-left: 1px solid rgba(201, 164, 92, 0.35);
+.hcl-quality__point:nth-child(-n + 2) {
+  padding-top: 0;
+  border-top: 0;
 }
 
-.hcl-quality__icon {
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  margin-bottom: 24px;
-  border: 1px solid rgba(201, 164, 92, 0.6);
-  border-radius: 999px;
-  color: var(--hcl-gold);
-}
-
-.hcl-quality__icon svg {
-  width: 22px;
-  height: 22px;
+.hcl-quality__point-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 
 .hcl-quality__point-title {
-  font-size: var(--hcl-h3);
-  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
 }
 
 .hcl-quality__point-body {
   font-size: 0.9375rem;
-  opacity: 0.72;
+  opacity: 0.75;
 }
 
 @media (max-width: 1023px) {
   .hcl-quality__inner {
     grid-template-columns: minmax(0, 1fr);
-    gap: 56px;
+    grid-template-areas:
+      "intro"
+      "points"
+      "badges";
   }
 
-  .hcl-quality__badges {
-    margin-top: 40px;
+  .hcl-quality__intro {
+    margin-bottom: 48px;
   }
 }
 
@@ -144,16 +134,25 @@
   }
 
   .hcl-quality__point,
-  .hcl-quality__point:nth-child(even) {
-    padding: 32px 0;
-    border-left: 0;
+  .hcl-quality__point:nth-child(2) {
+    padding: 24px 0;
+    border-top: 1px solid rgba(74, 44, 33, 0.14);
   }
 
-  .hcl-quality__icon {
-    margin-bottom: 18px;
+  .hcl-quality__point:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .hcl-quality__point-title {
+    font-size: 1.25rem;
   }
 
   .hcl-quality__lead {
     font-size: 1rem;
+  }
+
+  .hcl-quality__badge {
+    width: calc((100% - 24px) / 3);
   }
 }

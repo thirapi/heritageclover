@@ -41,7 +41,6 @@ export const FAQ_PAGE: Record<Locale, FaqPageContent> = {
       image: ASSETS.sorting,
     },
     faq: {
-      eyebrow: "Tanya jawab",
       title: "Semua yang ingin Anda tanyakan tentang cengkeh kami",
       intro:
         "Dari toples di rak dapur hingga pesanan untuk seluruh tim Anda, inilah hal-hal yang paling sering ditanyakan pelanggan kepada kami.",

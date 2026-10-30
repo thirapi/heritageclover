@@ -36,16 +36,9 @@
   font-size: var(--hcl-h1);
 }
 
-.hcl-page-hero__rule {
-  display: block;
-  width: 72px;
-  height: 1px;
-  margin: 1.5rem 0;
-  background-color: var(--hcl-gold);
-}
-
 .hcl-page-hero__subtitle {
   max-width: 56ch;
+  margin-top: 1.25rem;
   font-size: 1.125rem;
   opacity: 0.85;
 }

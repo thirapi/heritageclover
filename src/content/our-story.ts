@@ -41,10 +41,9 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
       subtitle: "Dari Kepulauan Rempah Maluku ke dapur Anda, satu kuncup petik tangan dalam satu waktu.",
     },
     timeline: {
-      eyebrow: "Lima abad cengkeh",
       title: "Rempah yang mengubah dunia",
       intro:
-        "Jauh sebelum sampai di dapur Anda, cengkeh telah mengarungi jalur rempah, memahkotai kesultanan, dan mengirim kerajaan-kerajaan menyeberangi samudra. Inilah perjalanannya.",
+        "Jauh sebelum sampai di dapur Anda, cengkeh telah mengarungi jalur rempah, memahkotai kesultanan, dan mengirim kerajaan-kerajaan menyeberangi samudra. Berikut lima masa yang menentukan sejarahnya.",
       events: [
         {
           year: "Sebelum 1500",
@@ -79,7 +78,6 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
       ],
     },
     values: {
-      eyebrow: "Misi kami",
       mission:
         "Mengembalikan cengkeh ke tempat semestinya: ditanam dengan jujur, dirawat dengan cermat, dan seharum saat meninggalkan Kepulauan Rempah.",
       missionNote:
@@ -108,7 +106,6 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
       ],
     },
     farmers: {
-      eyebrow: "Tangan di balik panen",
       title: "Kenali orang-orang yang menjaga kebun",
       body: "Cengkeh kami berasal dari kebun keluarga, tempat keahlian diwariskan dari orang tua ke anak. Mereka mengenal setiap pohon dan setiap musim dari aromanya. Inilah sebagian petani yang bekerja bersama kami.",
       people: [

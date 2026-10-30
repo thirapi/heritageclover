@@ -48,18 +48,12 @@ export default function HclRichText(props: HclRichTextProps) {
             <HclReveal isCanvas={p.isCanvas} className="hcl-rich-text__head">
               {p.title && <h2 className="hcl-rich-text__title">{p.title}</h2>}
               {p.updatedAt && <p className="hcl-rich-text__meta">{p.updatedAt}</p>}
-              <span className="hcl-rich-text__rule" aria-hidden="true" />
             </HclReveal>
           )}
           {p.blocks.map((block, i) => (
             <div key={i} className="hcl-rich-text__block">
               {block.heading && (
-                <h2 className="hcl-rich-text__heading">
-                  <span className="hcl-rich-text__index" aria-hidden="true">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  {block.heading}
-                </h2>
+                <h3 className="hcl-rich-text__heading">{block.heading}</h3>
               )}
               {paragraphs(block.body).map((para, j) => (
                 <p key={j} className="hcl-rich-text__para">

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ARTICLES, articleHref } from "@/content/insight";
 import { HclLink } from "../hcl-link";
 import { HclReveal } from "../hcl-motion";
@@ -20,7 +20,7 @@ export type HclInsightTeaserProps = {
 
 export const hclInsightTeaserDefaults: Required<Omit<HclInsightTeaserProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "Insight",
+  eyebrow: "",
   title: "Notes from the spice route",
   articles: ARTICLES.en.slice(0, 3).map((a) => ({
     title: a.title,
@@ -52,9 +52,9 @@ export default function HclInsightTeaser(props: HclInsightTeaserProps) {
             <h2 className="hcl-insight-teaser__title">{p.title}</h2>
           </div>
           {p.ctaLabel && (
-            <HclLink href={p.ctaHref} className="hcl-insight-teaser__cta">
+            <HclLink href={p.ctaHref} className="hcl-link hcl-insight-teaser__cta">
               {p.ctaLabel}
-              <ArrowRight size={18} strokeWidth={1.6} aria-hidden="true" />
+              <ArrowRight size={18} strokeWidth={1.75} aria-hidden="true" />
             </HclLink>
           )}
         </HclReveal>
@@ -76,13 +76,13 @@ export default function HclInsightTeaser(props: HclInsightTeaserProps) {
                   )}
                 </div>
                 <div className="hcl-insight-teaser__text">
-                  {article.date && <p className="hcl-insight-teaser__date">{article.date}</p>}
+                  {article.date && <p className="hcl-num hcl-insight-teaser__date">{article.date}</p>}
                   <h3 className="hcl-insight-teaser__card-title">{article.title}</h3>
                   {article.excerpt && <p className="hcl-insight-teaser__excerpt">{article.excerpt}</p>}
                   {p.readLabel && (
-                    <span className="hcl-insight-teaser__read">
+                    <span className="hcl-link hcl-insight-teaser__read">
                       {p.readLabel}
-                      <ArrowUpRight size={16} strokeWidth={1.6} aria-hidden="true" />
+                      <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" />
                     </span>
                   )}
                 </div>

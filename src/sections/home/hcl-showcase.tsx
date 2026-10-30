@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ASSETS } from "@/content/assets";
 import { HclLink } from "../hcl-link";
 import { HclReveal } from "../hcl-motion";
@@ -21,13 +21,13 @@ export type HclShowcaseProps = {
 
 export const hclShowcaseDefaults: Required<Omit<HclShowcaseProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "The collection",
+  eyebrow: "",
   title: "From the Spice Islands, for your table",
-  body: "Four ways to bring the warmth of Maluku cloves into your home, each one sorted by hand and sealed at its aromatic best.",
+  body: "Whole buds, ground clove, bud oil and a gift set. Everything starts with the same hand-picked, sun-dried cloves from North Maluku.",
   products: [
     {
       name: "Whole Cloves",
-      description: "Premium hand-sorted buds with intact heads, full of warm, sweet aroma.",
+      description: "Hand-sorted buds with the heads intact, for rice, stews, pickles and spiced drinks.",
       image: ASSETS.productWhole,
       href: "/store",
     },
@@ -39,13 +39,13 @@ export const hclShowcaseDefaults: Required<Omit<HclShowcaseProps, keyof HclInjec
     },
     {
       name: "Clove Bud Oil",
-      description: "Distilled from dried buds for aromatherapy and home rituals.",
+      description: "Distilled from dried clove buds, for diffusers and home fragrance.",
       image: ASSETS.productOil,
       href: "/store",
     },
     {
       name: "Heritage Gift Set",
-      description: "A keepsake hamper of spice-route treasures, ready to give.",
+      description: "A boxed selection of our clove products, ready to give.",
       image: ASSETS.productGift,
       href: "/store",
     },
@@ -87,17 +87,14 @@ export default function HclShowcase(props: HclShowcaseProps) {
                     // eslint-disable-next-line @next/next/no-img-element
                     <img className="hcl-showcase__image" src={product.image} alt={product.name} loading="lazy" />
                   )}
-                  <span className="hcl-showcase__index" aria-hidden="true">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
                 </div>
                 <div className="hcl-showcase__info">
                   <h3 className="hcl-showcase__name">{product.name}</h3>
                   {product.description && <p className="hcl-showcase__desc">{product.description}</p>}
                   {p.cardLinkLabel && (
-                    <span className="hcl-showcase__more">
+                    <span className="hcl-link hcl-showcase__more">
                       {p.cardLinkLabel}
-                      <ArrowUpRight size={15} strokeWidth={1.75} aria-hidden="true" />
+                      <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" />
                     </span>
                   )}
                 </div>
@@ -107,7 +104,6 @@ export default function HclShowcase(props: HclShowcaseProps) {
         </ul>
         {p.swipeHint && (
           <p className="hcl-showcase__hint" aria-hidden="true">
-            <span className="hcl-showcase__hint-rule" />
             {p.swipeHint}
           </p>
         )}

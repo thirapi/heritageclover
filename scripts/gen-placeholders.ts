@@ -68,7 +68,6 @@ function svg({ label, w, h, from, to, ink }: Spec): string {
   </defs>
   <rect width="${w}" height="${h}" fill="url(#g)"/>
   ${buds}
-  <rect x="${w * 0.04}" y="${h * 0.04}" width="${w * 0.92}" height="${h * 0.92}" fill="none" stroke="${ink}" stroke-opacity="0.35" stroke-width="${Math.max(1, Math.round(w / 900))}"/>
   <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="${ink}" font-family="Georgia, serif" font-size="${font}" font-style="italic">${label}</text>
   <text x="50%" y="${h * 0.5 + font * 1.3}" text-anchor="middle" fill="${ink}" fill-opacity="0.6" font-family="system-ui, sans-serif" font-size="${Math.round(font * 0.38)}" letter-spacing="3">PLACEHOLDER</text>
 </svg>

@@ -16,7 +16,7 @@ export type HclStatsProps = {
 
 export const hclStatsDefaults: Required<Omit<HclStatsProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  title: "Rooted in the gardens of Maluku",
+  title: "Our clove gardens in numbers",
   stats: [
     { value: "XXX", suffix: "+", label: "Smallholder farmers" },
     { value: "XXX", suffix: "ha", label: "Hectares of gardens" },
@@ -65,7 +65,7 @@ function HclStatValue({ value, isCanvas }: { value: string; isCanvas?: boolean }
   }, [countable, inView, target, value]);
 
   return (
-    <span ref={ref} className="hcl-stats__number">
+    <span ref={ref} className="hcl-stats__number hcl-num">
       {value}
     </span>
   );
@@ -78,7 +78,6 @@ export default function HclStats(props: HclStatsProps) {
       <div className="hcl-container">
         {p.title && (
           <HclReveal isCanvas={p.isCanvas} className="hcl-stats__head">
-            <span className="hcl-stats__ornament" aria-hidden="true" />
             <h2 className="hcl-stats__title">{p.title}</h2>
           </HclReveal>
         )}

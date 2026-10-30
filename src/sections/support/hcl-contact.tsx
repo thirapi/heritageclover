@@ -41,9 +41,9 @@ export type HclContactProps = {
 
 export const hclContactDefaults: Required<Omit<HclContactProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "Get in touch",
-  title: "Write to the spice house",
-  body: "Questions about our cloves, a gift for someone dear, or an order for your kitchen or company: we read every message and reply within one working day.",
+  eyebrow: "",
+  title: "Write to our team in Ternate",
+  body: "Questions about our cloves, gift sets, or supply for a kitchen or company. Every message is answered by our team within one working day.",
   addressLabel: "Visit",
   address: "Jl. Placeholder No. 1, Ternate\nNorth Maluku, Indonesia",
   emailInfoLabel: "Email",
@@ -64,7 +64,7 @@ export const hclContactDefaults: Required<Omit<HclContactProps, keyof HclInjecte
   requiredError: "Please fill in this field.",
   emailError: "Please enter a valid email address.",
   successTitle: "Thank you",
-  successText: "Your message is on its way. We will reply within one working day.",
+  successText: "We have received your message and will reply within one working day.",
   resetLabel: "Send another message",
   backgroundColor: "#F6F0E4",
   textColor: "#4A2C21",
@@ -134,14 +134,15 @@ export default function HclContact(props: HclContactProps) {
         <HclReveal isCanvas={p.isCanvas} className="hcl-contact__info">
           {p.eyebrow && <p className="hcl-eyebrow hcl-contact__eyebrow">{p.eyebrow}</p>}
           {p.title && <h2 className="hcl-contact__title">{p.title}</h2>}
-          <span className="hcl-contact__rule" aria-hidden="true" />
           {p.body && <p className="hcl-contact__body">{p.body}</p>}
 
           <dl className="hcl-contact__list">
             {p.address && (
               <div className="hcl-contact__row">
                 <dt className="hcl-contact__label">
-                  <MapPin className="hcl-contact__icon" size={20} strokeWidth={1.5} aria-hidden="true" />
+                  <span className="hcl-icon hcl-contact__icon" aria-hidden="true">
+                    <MapPin size={20} strokeWidth={1.75} />
+                  </span>
                   {p.addressLabel}
                 </dt>
                 <dd className="hcl-contact__value">
@@ -152,7 +153,9 @@ export default function HclContact(props: HclContactProps) {
             {p.email && (
               <div className="hcl-contact__row">
                 <dt className="hcl-contact__label">
-                  <Mail className="hcl-contact__icon" size={20} strokeWidth={1.5} aria-hidden="true" />
+                  <span className="hcl-icon hcl-contact__icon" aria-hidden="true">
+                    <Mail size={20} strokeWidth={1.75} />
+                  </span>
                   {p.emailInfoLabel}
                 </dt>
                 <dd className="hcl-contact__value">
@@ -165,7 +168,9 @@ export default function HclContact(props: HclContactProps) {
             {waDigits && (
               <div className="hcl-contact__row">
                 <dt className="hcl-contact__label">
-                  <MessageCircle className="hcl-contact__icon" size={20} strokeWidth={1.5} aria-hidden="true" />
+                  <span className="hcl-icon hcl-contact__icon" aria-hidden="true">
+                    <MessageCircle size={20} strokeWidth={1.75} />
+                  </span>
                   {p.whatsappInfoLabel}
                 </dt>
                 <dd className="hcl-contact__value">
@@ -183,7 +188,9 @@ export default function HclContact(props: HclContactProps) {
             {p.hours && (
               <div className="hcl-contact__row">
                 <dt className="hcl-contact__label">
-                  <Clock className="hcl-contact__icon" size={20} strokeWidth={1.5} aria-hidden="true" />
+                  <span className="hcl-icon hcl-contact__icon" aria-hidden="true">
+                    <Clock size={20} strokeWidth={1.75} />
+                  </span>
                   {p.hoursLabel}
                 </dt>
                 <dd className="hcl-contact__value hcl-contact__multiline">{p.hours}</dd>
@@ -205,15 +212,15 @@ export default function HclContact(props: HclContactProps) {
         </HclReveal>
 
         <HclReveal isCanvas={p.isCanvas} delay={0.12} className="hcl-contact__panel">
-          <span className="hcl-contact__corner hcl-contact__corner--tl" aria-hidden="true" />
-          <span className="hcl-contact__corner hcl-contact__corner--br" aria-hidden="true" />
           {sent ? (
             <div className="hcl-contact__success" role="status">
-              <CheckCircle2 className="hcl-contact__success-icon" size={40} strokeWidth={1.25} aria-hidden="true" />
+              <span className="hcl-icon hcl-contact__success-icon" aria-hidden="true">
+                <CheckCircle2 size={20} strokeWidth={1.75} />
+              </span>
               {p.successTitle && <h3 className="hcl-contact__form-title">{p.successTitle}</h3>}
               <p className="hcl-contact__success-text">{p.successText}</p>
               {p.resetLabel && (
-                <button type="button" className="hcl-btn hcl-btn--ghost hcl-contact__reset" onClick={reset}>
+                <button type="button" className="hcl-btn hcl-btn--secondary hcl-contact__reset" onClick={reset}>
                   {p.resetLabel}
                 </button>
               )}

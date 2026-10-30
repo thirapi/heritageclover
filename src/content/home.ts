@@ -35,7 +35,6 @@ type HomeContent = {
 
 // Full ID translation of the quality section; also used by the Process page.
 export const QUALITY_ID: HclQualityProps = {
-  eyebrow: "Janji kami",
   title: "Kualitas yang tercium sebelum toples dibuka",
   body: "Cengkeh yang baik itu gemuk, utuh, dan sedikit berminyak saat disentuh. Kami menjaga setiap batch pada standar lama itu, dan memeriksanya dengan cermat.",
   points: [
@@ -72,7 +71,7 @@ export const QUALITY_ID: HclQualityProps = {
 export const HOME: Record<Locale, HomeContent> = {
   en: {
     meta: {
-      title: "Heritage Clover — Cloves from the Spice Islands",
+      title: "Heritage Clover: Cloves from the Spice Islands",
       description:
         "Hand-picked, sun-dried cloves from smallholder gardens in Maluku, the original Spice Islands, sealed fresh for your kitchen.",
     },
@@ -92,7 +91,7 @@ export const HOME: Record<Locale, HomeContent> = {
   },
   id: {
     meta: {
-      title: "Heritage Clover — Cengkeh dari Kepulauan Rempah",
+      title: "Heritage Clover: Cengkeh dari Kepulauan Rempah",
       description:
         "Cengkeh petik tangan dan jemur matahari dari kebun rakyat di Maluku, Kepulauan Rempah yang asli, dikemas segar untuk dapur Anda.",
     },
@@ -115,7 +114,6 @@ export const HOME: Record<Locale, HomeContent> = {
       ].join("\n"),
     },
     intro: {
-      eyebrow: "Sejak jalur rempah",
       statement:
         "Dahulu lebih berharga dari emas, cengkeh berlayar dari Maluku ke seluruh penjuru dunia.\nKini kami membawanya pulang, sebagaimana mestinya.",
       body: "Heritage Clover bekerja bersama petani rakyat di Kepulauan Rempah, tempat pohon cengkeh telah berbunga selama berabad-abad. Setiap kuncup dipetik dengan tangan tepat saat merona merah muda, dijemur perlahan di bawah matahari khatulistiwa, dan disortir dengan cermat, agar aromanya yang hangat dan manis sampai kepada Anda dengan utuh.",
@@ -133,9 +131,8 @@ export const HOME: Record<Locale, HomeContent> = {
       note: "Angka akan dikonfirmasi bersama mitra petani kami.",
     },
     heritage: {
-      eyebrow: "Jalur rempah",
       title: "Kuncup mungil yang menarik armada dari seluruh dunia",
-      body: "Selama berabad-abad, cengkeh hanya tumbuh di segelintir pulau di Maluku Utara. Harumnya berlayar ke istana dan dapur yang jauh, dan di sepanjang perjalanan itu, ia mengubah peta dunia.",
+      body: "Selama berabad-abad, cengkeh hanya tumbuh di segelintir pulau di Maluku Utara. Harumnya berlayar ke istana dan dapur yang jauh, dan di sepanjang jalur itu, ia mengubah peta dunia.",
       milestones: [
         { year: "Zaman kuno", label: "Cengkeh meninggalkan Maluku lewat jalur laut awal menuju Tiongkok dan India." },
         { year: "1500-an", label: "Ternate dan Tidore menjadi jantung perdagangan cengkeh." },
@@ -145,7 +142,6 @@ export const HOME: Record<Locale, HomeContent> = {
       ctaLabel: "Baca kisah kami",
     },
     showcase: {
-      eyebrow: "Koleksi kami",
       title: "Dari Kepulauan Rempah, untuk meja Anda",
       body: "Empat cara menghadirkan kehangatan cengkeh Maluku ke rumah Anda, masing-masing disortir dengan tangan dan dikemas saat harumnya di puncak.",
       products: [
@@ -163,7 +159,7 @@ export const HOME: Record<Locale, HomeContent> = {
         },
         {
           name: "Minyak Bunga Cengkeh",
-          description: "Disuling dari kuncup kering untuk aromaterapi dan ritual di rumah.",
+          description: "Disuling dari kuncup kering, untuk pengharum ruangan dan perawatan di rumah.",
           image: ASSETS.productOil,
           href: "/store",
         },
@@ -179,7 +175,6 @@ export const HOME: Record<Locale, HomeContent> = {
       swipeHint: "Geser untuk melihat",
     },
     origin: {
-      eyebrow: "Tempat tumbuhnya",
       title: "Berakar di Kepulauan Rempah yang asli",
       body: "Cengkeh kami berasal dari kebun rakyat di lereng vulkanik Maluku Utara, tempat angin laut, tanah yang subur, dan kearifan turun-temurun memberi setiap kuncup kehangatan yang dalam dan manis. Kami membeli langsung dari keluarga-keluarga yang merawat pohonnya.",
       facts: [
@@ -193,8 +188,7 @@ export const HOME: Record<Locale, HomeContent> = {
       locationLabel: "Ternate · Maluku Utara",
     },
     steps: {
-      eyebrow: "Dari pohon ke toples",
-      title: "Lima langkah tanpa terburu-buru",
+      title: "Dari pohon ke toples",
       intro:
         "Keterampilan sabar yang sama yang telah dijalankan Kepulauan Rempah selama berabad-abad, dijaga jujur dengan beberapa pemeriksaan modern.",
       steps: [
@@ -232,8 +226,7 @@ export const HOME: Record<Locale, HomeContent> = {
       ctaLabel: "Lihat proses kami",
     },
     uses: {
-      eyebrow: "Cara menikmati",
-      title: "Satu kuncup kecil, beragam ritual",
+      title: "Satu kuncup, banyak kegunaan",
       intro:
         "Turun-temurun, cengkeh telah mengharumkan dapur, rumah, dan perayaan di sepanjang jalur rempah. Inilah beberapa cara menghadirkan kehangatannya dalam hari-hari Anda.",
       uses: [
@@ -243,7 +236,7 @@ export const HOME: Record<Locale, HomeContent> = {
           image: ASSETS.useCulinary,
         },
         {
-          title: "Ritual relaksasi",
+          title: "Mandi dan perawatan",
           body: "Secangkir wedang cengkeh atau setetes minyak bunga cengkeh di air mandi hangat untuk malam yang tenang dan nyaman.",
           image: ASSETS.useWellness,
         },
@@ -261,7 +254,6 @@ export const HOME: Record<Locale, HomeContent> = {
     },
     quality: QUALITY_ID,
     testimonials: {
-      eyebrow: "Kata mereka",
       title: "Dari dapur dekat dan jauh",
       items: [
         {
@@ -287,7 +279,6 @@ export const HOME: Record<Locale, HomeContent> = {
       nextLabel: "Testimoni berikutnya",
     },
     insight: {
-      eyebrow: "Wawasan",
       title: "Catatan dari jalur rempah",
       articles: ARTICLES.id.slice(0, 3).map((a) => ({
         title: a.title,

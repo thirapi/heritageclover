@@ -1,60 +1,28 @@
+/* The Our Story page's one dark band (docs/01 §6.7). */
 .hcl-values {
   position: relative;
   padding: var(--hcl-space-section) 0;
 }
 
 .hcl-values__mission {
-  position: relative;
-  max-width: 920px;
-  margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+  gap: 32px 64px;
+  align-items: end;
 }
 
 .hcl-values__eyebrow {
   color: var(--hcl-gold);
-  margin-bottom: 1.5rem;
-}
-
-.hcl-values__quote-mark {
-  display: block;
-  height: 0.55em;
-  font-family: var(--hcl-font-display);
-  font-size: 7rem;
-  line-height: 1;
-  color: var(--hcl-gold);
-  opacity: 0.7;
+  margin-bottom: 1.25rem;
 }
 
 .hcl-values__statement {
-  font-size: clamp(1.75rem, 1.2rem + 2.2vw, 3rem);
-  font-style: italic;
-  line-height: 1.2;
-}
-
-.hcl-values__ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 2.25rem 0 1.5rem;
-}
-
-.hcl-values__ornament span {
-  width: 64px;
-  height: 1px;
-  background-color: var(--hcl-gold);
-}
-
-.hcl-values__ornament i {
-  width: 7px;
-  height: 7px;
-  transform: rotate(45deg);
-  border: 1px solid var(--hcl-gold);
+  font-size: clamp(1.75rem, 1.3rem + 1.9vw, 2.875rem);
+  line-height: 1.15;
 }
 
 .hcl-values__note {
-  max-width: 56ch;
-  margin: 0 auto;
+  max-width: 44ch;
   font-size: 1.0625rem;
   opacity: 0.75;
 }
@@ -62,47 +30,34 @@
 .hcl-values__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: 96px 0 0;
+  gap: 40px 32px;
+  margin: 88px 0 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid rgba(201, 164, 92, 0.35);
 }
 
 .hcl-values__item {
-  position: relative;
-  padding: 48px 32px 8px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(252, 250, 245, 0.15);
 }
 
-.hcl-values__item + .hcl-values__item {
-  border-left: 1px solid rgba(201, 164, 92, 0.2);
+.hcl-values__item-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 1rem;
 }
 
-.hcl-values__index {
-  position: absolute;
-  top: 20px;
-  right: 32px;
-  font-family: var(--hcl-font-display);
-  font-style: italic;
-  font-size: 1.125rem;
-  color: var(--hcl-gold);
-  opacity: 0.8;
-}
-
+/* On the dark band the icon box is an ivory tint with a gold glyph. */
 .hcl-values__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  margin-bottom: 1.75rem;
-  border: 1px solid rgba(201, 164, 92, 0.6);
-  border-radius: 50%;
+  background-color: rgba(252, 250, 245, 0.1);
   color: var(--hcl-gold);
 }
 
 .hcl-values__title {
-  font-size: var(--hcl-h3);
-  margin-bottom: 0.75rem;
+  padding-top: 7px;
+  font-size: 1.3125rem;
+  line-height: 1.2;
 }
 
 .hcl-values__body {
@@ -111,48 +66,25 @@
 }
 
 @media (max-width: 1023px) {
+  .hcl-values__mission {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .hcl-values__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 72px;
-    border-top: 0;
-  }
-
-  .hcl-values__item,
-  .hcl-values__item + .hcl-values__item {
-    border-left: 0;
-    border-top: 1px solid rgba(201, 164, 92, 0.35);
-    padding: 40px 24px 32px 0;
-  }
-
-  .hcl-values__item:nth-child(even) {
-    padding-left: 24px;
-    border-left: 1px solid rgba(201, 164, 92, 0.2);
-  }
-
-  .hcl-values__index {
-    right: 24px;
+    gap: 40px 32px;
+    margin-top: 64px;
   }
 }
 
 @media (max-width: 639px) {
-  .hcl-values__quote-mark {
-    font-size: 5rem;
-  }
-
   .hcl-values__grid {
     grid-template-columns: minmax(0, 1fr);
-    margin-top: 56px;
+    gap: 32px;
+    margin-top: 48px;
   }
 
-  .hcl-values__item,
-  .hcl-values__item + .hcl-values__item,
-  .hcl-values__item:nth-child(even) {
-    padding: 32px 0 28px;
-    border-left: 0;
-  }
-
-  .hcl-values__index {
-    top: 32px;
-    right: 0;
+  .hcl-values__item {
+    padding-top: 24px;
   }
 }
