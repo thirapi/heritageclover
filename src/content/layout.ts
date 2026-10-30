@@ -22,8 +22,7 @@ export const LAYOUT: Record<Locale, { header: HclHeaderProps; footer: HclFooterP
       panelNote: "Cengkeh petik tangan dari Kepulauan Rempah Maluku.",
     },
     footer: {
-      tagline:
-        "Rempah yang mengubah dunia, dipetik dengan tangan di Kepulauan Rempah Maluku dan dijemur di bawah matahari seperti berabad-abad lalu.",
+      tagline: "Cengkeh dari kebun rakyat di Maluku Utara, dipetik dengan tangan dan dijemur di bawah matahari.",
       exploreTitle: "Jelajahi",
       exploreLinks: [
         { label: "Beranda", href: "/" },
@@ -41,9 +40,8 @@ export const LAYOUT: Record<Locale, { header: HclHeaderProps; footer: HclFooterP
       ],
       contactTitle: "Kontak",
       address: "Ternate, Maluku Utara\nIndonesia",
-      newsletterEyebrow: "Surat dari jalur rempah",
-      newsletterTitle: "Kisah, resep, dan kabar pertama setiap panen baru.",
-      newsletterBody: "Beberapa surat pilihan setiap musim. Berhenti berlangganan kapan saja.",
+      newsletterTitle: "Kabar panen dan resep lewat email",
+      newsletterBody: "Email sesekali saat panen baru selesai dikemas. Berhenti berlangganan kapan saja.",
       newsletterPlaceholder: "Alamat email Anda",
       newsletterButton: "Berlangganan",
       copyright: "© 2026 Heritage Clover. Hak cipta dilindungi.",

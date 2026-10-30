@@ -21,7 +21,7 @@ export const CONTACT: Record<Locale, ContactContent> = {
     hero: {
       eyebrow: "Contact",
       title: "Talk to us",
-      subtitle: "Questions about our cloves, gifts or orders: we would love to hear from you.",
+      subtitle: "Questions about our cloves, gift sets or orders. We reply within one working day.",
       image: ASSETS.origin,
     },
     contact: {},
@@ -37,7 +37,7 @@ export const CONTACT: Record<Locale, ContactContent> = {
         {
           question: "Do you prepare corporate gifts?",
           answer:
-            "Yes. We prepare heritage gift sets for corporate occasions and can supply larger volumes for kitchens, bakeries and retailers. Send us the quantity, timing and any custom packaging you have in mind, and we will come back to you with a proposal.",
+            "Yes. We prepare gift sets for corporate occasions and can supply larger volumes for kitchens, bakeries and retailers. Send us the quantity, timing and any custom packaging you have in mind, and we will come back to you with a proposal.",
         },
         {
           question: "Can I visit you or become a partner?",
@@ -59,12 +59,12 @@ export const CONTACT: Record<Locale, ContactContent> = {
     hero: {
       eyebrow: "Kontak",
       title: "Hubungi kami",
-      subtitle: "Pertanyaan seputar cengkeh, hadiah, atau pesanan: kami senang mendengar kabar dari Anda.",
+      subtitle: "Pertanyaan seputar cengkeh, paket hadiah, atau pesanan. Kami membalas dalam satu hari kerja.",
       image: ASSETS.origin,
     },
     contact: {
-      title: "Kirim kabar ke rumah rempah kami",
-      body: "Pertanyaan tentang cengkeh kami, hadiah untuk orang tersayang, atau pesanan untuk dapur maupun perusahaan Anda: kami membaca setiap pesan dan membalas dalam satu hari kerja.",
+      title: "Kirim pesan ke tim kami di Ternate",
+      body: "Pertanyaan tentang cengkeh kami, paket hadiah, atau pasokan untuk dapur maupun perusahaan. Setiap pesan dibalas oleh tim kami dalam satu hari kerja.",
       addressLabel: "Kunjungi",
       address: "Jl. Placeholder No. 1, Ternate\nMaluku Utara, Indonesia",
       emailInfoLabel: "Email",
@@ -82,7 +82,7 @@ export const CONTACT: Record<Locale, ContactContent> = {
       requiredError: "Mohon isi kolom ini.",
       emailError: "Mohon masukkan alamat email yang valid.",
       successTitle: "Terima kasih",
-      successText: "Pesan Anda sudah kami terima. Kami akan membalas dalam satu hari kerja.",
+      successText: "Pesan Anda sudah kami terima dan akan kami balas dalam satu hari kerja.",
       resetLabel: "Kirim pesan lain",
     },
     faq: {
@@ -97,7 +97,7 @@ export const CONTACT: Record<Locale, ContactContent> = {
         {
           question: "Apakah Anda menyiapkan hadiah korporat?",
           answer:
-            "Ya. Kami menyiapkan paket hadiah bernuansa warisan untuk berbagai acara perusahaan, dan dapat memasok dalam jumlah besar untuk dapur, toko roti, maupun peritel. Kirimkan jumlah, waktu, dan konsep kemasan khusus yang Anda inginkan, lalu kami akan menyampaikan penawaran.",
+            "Ya. Kami menyiapkan paket hadiah untuk berbagai acara perusahaan, dan dapat memasok dalam jumlah besar untuk dapur, toko roti, maupun peritel. Kirimkan jumlah, waktu, dan konsep kemasan khusus yang Anda inginkan, lalu kami akan menyampaikan penawaran.",
         },
         {
           question: "Bisakah saya berkunjung atau menjadi mitra?",

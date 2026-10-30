@@ -43,9 +43,9 @@ export const PROCESS: Record<Locale, ProcessContent> = {
       image: ASSETS.drying,
     },
     detail: {
-      title: "Dari pohon ke toples",
+      title: "Dipetik, dijemur, disortir, diperiksa, dikemas",
       intro:
-        "Setiap panen melewati lima tahap sebelum sampai di dapur Anda. Tidak ada mesin pengering dan tidak ada bahan tambahan.",
+        "Setiap panen melewati lima tahap yang sama antara kebun dan dapur Anda. Sebagian besar pekerjaan dilakukan dengan tangan, dan penjemurannya bergantung pada cuaca.",
       steps: [
         {
           number: "01",
@@ -78,7 +78,7 @@ export const PROCESS: Record<Locale, ProcessContent> = {
         {
           number: "05",
           title: "Dikemas untuk menjaga harum",
-          body: "Cengkeh jadi dikemas dalam kantong dan toples kedap udara yang melindunginya dari cahaya dan udara, membawa aroma kebun hingga ke meja Anda.",
+          body: "Cengkeh jadi dikemas dalam kantong dan toples kedap udara yang melindunginya dari cahaya dan udara, sehingga minyak pembawa aromanya tetap tersimpan di dalam kuncup.",
           image: ASSETS.packing,
           duration: "Dikemas segar",
         },

@@ -22,7 +22,7 @@ export const FAQ_PAGE: Record<Locale, FaqPageContent> = {
     hero: {
       eyebrow: "FAQ",
       title: "Questions & answers",
-      subtitle: "Everything you wanted to know about our cloves, from the jar on your shelf to an order for your team.",
+      subtitle: "Storage, grades and ordering, for a jar at home or an order for your team.",
       image: ASSETS.sorting,
     },
     faq: {},
@@ -37,13 +37,13 @@ export const FAQ_PAGE: Record<Locale, FaqPageContent> = {
     hero: {
       eyebrow: "FAQ",
       title: "Tanya jawab",
-      subtitle: "Semua yang ingin Anda ketahui tentang cengkeh kami, dari toples di rak dapur hingga pesanan untuk tim Anda.",
+      subtitle: "Penyimpanan, kualitas, dan pemesanan, untuk satu toples di rumah maupun pesanan untuk tim Anda.",
       image: ASSETS.sorting,
     },
     faq: {
-      title: "Semua yang ingin Anda tanyakan tentang cengkeh kami",
+      title: "Pertanyaan umum seputar cengkeh kami",
       intro:
-        "Dari toples di rak dapur hingga pesanan untuk seluruh tim Anda, inilah hal-hal yang paling sering ditanyakan pelanggan kepada kami.",
+        "Penyimpanan, tingkatan kualitas, pemesanan, dan pasokan dalam jumlah besar: pertanyaan yang paling sering dikirim pelanggan kepada kami.",
       items: [
         {
           question: "Bagaimana cara menyimpan cengkeh?",
@@ -63,7 +63,7 @@ export const FAQ_PAGE: Record<Locale, FaqPageContent> = {
         {
           question: "Apa arti tingkatan kualitas cengkeh Anda?",
           answer:
-            "Kualitas premium kami terdiri dari kuncup utuh yang tidak patah dengan kepala lengkap, kadar air rendah, serta warna yang pekat dan merata, disortir dengan tangan setelah dijemur. Kualitas dapur kami dapat berisi kuncup tanpa kepala atau dengan ukuran yang sedikit beragam: kehangatan yang sama dengan harga lebih bersahabat, ideal untuk dijadikan bubuk dan untuk masakan yang dimasak perlahan.",
+            "Kualitas premium kami terdiri dari kuncup utuh yang tidak patah dengan kepala lengkap, kadar air rendah, serta warna yang pekat dan merata, disortir dengan tangan setelah dijemur. Kualitas dapur kami dapat berisi kuncup tanpa kepala atau dengan ukuran yang sedikit beragam. Harganya lebih murah dan cocok untuk dijadikan bubuk atau untuk masakan yang direbus lama.",
         },
         {
           question: "Bagaimana cara menggunakan minyak bunga cengkeh?",
@@ -73,10 +73,10 @@ export const FAQ_PAGE: Record<Locale, FaqPageContent> = {
         {
           question: "Apakah Anda menerima pesanan korporat dan dalam jumlah besar?",
           answer:
-            "Ya. Kami menyiapkan paket hadiah bernuansa warisan untuk berbagai acara perusahaan dan memasok dalam jumlah lebih besar untuk dapur, toko roti, dan peritel. Sampaikan jumlah, waktu, dan konsep kemasan khusus yang Anda inginkan, lalu kami akan menghubungi Anda kembali dengan penawaran.",
+            "Ya. Kami menyiapkan paket hadiah untuk berbagai acara perusahaan dan memasok dalam jumlah lebih besar untuk dapur, toko roti, dan peritel. Sampaikan jumlah, waktu, dan konsep kemasan khusus yang Anda inginkan, lalu kami akan menghubungi Anda kembali dengan penawaran.",
         },
       ],
-      contactText: "Masih ada yang ingin Anda tanyakan?",
+      contactText: "Pertanyaan Anda tidak ada di sini?",
       contactLabel: "Hubungi kami",
     },
     cta: FINAL_CTA_ID(),
