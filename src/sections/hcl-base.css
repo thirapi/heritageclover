@@ -38,23 +38,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hcl-root *,
-.hcl-root *::before,
-.hcl-root *::after {
+/*
+ * Base + helper rules are wrapped in :where() (zero specificity) so a section's
+ * own class (e.g. .hcl-page-hero__eyebrow) always overrides them.
+ */
+:where(.hcl-root *, .hcl-root *::before, .hcl-root *::after) {
   box-sizing: border-box;
 }
 
-.hcl-root a {
+:where(.hcl-root a) {
   color: inherit;
   text-decoration: none;
 }
 
-.hcl-root img {
+:where(.hcl-root img) {
   display: block;
   max-width: 100%;
 }
 
-.hcl-root :where(h1, h2, h3, h4) {
+:where(.hcl-root h1, .hcl-root h2, .hcl-root h3, .hcl-root h4) {
   font-family: var(--hcl-font-display);
   font-weight: 500;
   line-height: 1.1;
@@ -62,19 +64,19 @@
   margin: 0;
 }
 
-.hcl-root :where(p) {
+:where(.hcl-root p) {
   margin: 0;
 }
 
 /* Shared layout + type helpers used by every section. */
-.hcl-root .hcl-container {
+:where(.hcl-root .hcl-container) {
   width: 100%;
   max-width: var(--hcl-container);
   margin-inline: auto;
   padding-inline: var(--hcl-gutter);
 }
 
-.hcl-root .hcl-eyebrow {
+:where(.hcl-root .hcl-eyebrow) {
   font-family: var(--hcl-font-body);
   font-size: 0.75rem;
   font-weight: 600;
@@ -83,7 +85,7 @@
   color: var(--hcl-ember);
 }
 
-.hcl-root .hcl-btn {
+:where(.hcl-root .hcl-btn) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -97,20 +99,20 @@
     border-color 200ms var(--hcl-ease);
 }
 
-.hcl-root .hcl-btn--primary {
+:where(.hcl-root .hcl-btn--primary) {
   background-color: var(--hcl-ember);
   color: var(--hcl-ivory);
 }
 
-.hcl-root .hcl-btn--primary:hover {
+:where(.hcl-root .hcl-btn--primary:hover) {
   background-color: var(--hcl-clove);
 }
 
-.hcl-root .hcl-btn--ghost {
+:where(.hcl-root .hcl-btn--ghost) {
   border: 1px solid currentColor;
 }
 
-.hcl-root :focus-visible {
+:where(.hcl-root :focus-visible) {
   outline: 2px solid var(--hcl-gold);
   outline-offset: 3px;
 }

@@ -30,7 +30,7 @@ const fail = (file: string, rule: string) => errors.push(`${relative(ROOT, file)
 
 const files = walk(SECTIONS);
 const registrySources = files
-  .filter((f) => basename(f) === "index.ts")
+  .filter((f) => /^index.*\.ts$/.test(basename(f)))
   .map((f) => readFileSync(f, "utf8"))
   .join("\n");
 

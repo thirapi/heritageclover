@@ -30,4 +30,4 @@ export const ASSETS = {
   cta: `${BASE}/cta.svg`,
   cert: `${BASE}/cert.svg`,
   og: `${BASE}/og.svg`,
-} as const;
+};
