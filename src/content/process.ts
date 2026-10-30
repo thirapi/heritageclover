@@ -4,6 +4,7 @@ import type { HclFinalCtaProps } from "@/sections/common/hcl-final-cta";
 import type { HclPageHeroProps } from "@/sections/common/hcl-page-hero";
 import type { HclQualityProps } from "@/sections/home/hcl-quality";
 import { ASSETS } from "./assets";
+import { QUALITY_ID } from "./home";
 import { FINAL_CTA_ID } from "./our-story";
 
 type ProcessContent = {
@@ -84,7 +85,7 @@ export const PROCESS: Record<Locale, ProcessContent> = {
         },
       ],
     },
-    quality: {},
+    quality: QUALITY_ID,
     cta: FINAL_CTA_ID(),
   },
 };

@@ -46,7 +46,7 @@ export default function HclRichText(props: HclRichTextProps) {
         <article className="hcl-rich-text__article">
           {(p.title || p.updatedAt) && (
             <HclReveal isCanvas={p.isCanvas} className="hcl-rich-text__head">
-              {p.title && <h1 className="hcl-rich-text__title">{p.title}</h1>}
+              {p.title && <h2 className="hcl-rich-text__title">{p.title}</h2>}
               {p.updatedAt && <p className="hcl-rich-text__meta">{p.updatedAt}</p>}
               <span className="hcl-rich-text__rule" aria-hidden="true" />
             </HclReveal>

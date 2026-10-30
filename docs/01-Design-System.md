@@ -10,7 +10,7 @@ jadi token brand tidak boleh masuk ke sana.
 |---|---|---|
 | `--hcl-clove` | `#4A2C21` | teks utama, background gelap (warna kuncup cengkeh kering) |
 | `--hcl-clove-deep` | `#2E1A13` | footer, hero overlay |
-| `--hcl-ember` | `#B5532E` | aksen/CTA (merah bata bunga cengkeh segar) |
+| `--hcl-ember` | `#AD4F2B` | aksen/CTA (merah bata bunga cengkeh segar; digelapkan dari #B5532E agar kontras teks kecil ≥ 4.5:1) |
 | `--hcl-leaf` | `#3F5B3A` | aksen sekunder (daun cengkeh/semanggi) |
 | `--hcl-gold` | `#C9A45C` | garis ornamen, angka, badge "heritage" |
 | `--hcl-parchment` | `#F6F0E4` | background utama |

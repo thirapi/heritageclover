@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { ASSETS } from "@/content/assets";
 import { HclLink } from "../hcl-link";
-import { HclReveal } from "../hcl-motion";
+import { cn } from "@/lib/utils";
 import { HclRoot, withHclDefaults, type HclInjectedProps } from "../hcl-root";
 import "./hcl-hero.css";
 
@@ -76,7 +76,7 @@ export default function HclHero(props: HclHeroProps) {
       )}
       <div className="hcl-hero__overlay" aria-hidden="true" />
       <div className="hcl-container">
-        <HclReveal isCanvas={p.isCanvas} className="hcl-hero__content">
+        <div className={cn("hcl-hero__content", !p.isCanvas && "hcl-fade-up")}>
           {p.eyebrow && (
             <p className="hcl-eyebrow hcl-hero__eyebrow">
               <span className="hcl-hero__eyebrow-rule" aria-hidden="true" />
@@ -105,7 +105,7 @@ export default function HclHero(props: HclHeroProps) {
               </HclLink>
             )}
           </div>
-        </HclReveal>
+        </div>
       </div>
       <div className="hcl-hero__scroll" aria-hidden="true">
         <span className="hcl-hero__scroll-line" />

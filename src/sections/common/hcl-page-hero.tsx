@@ -1,7 +1,7 @@
 "use client";
 
 import { ASSETS } from "@/content/assets";
-import { HclReveal } from "../hcl-motion";
+import { cn } from "@/lib/utils";
 import { HclRoot, withHclDefaults, type HclInjectedProps } from "../hcl-root";
 import "./hcl-page-hero.css";
 
@@ -40,12 +40,12 @@ export default function HclPageHero(props: HclPageHeroProps) {
       )}
       <div className="hcl-page-hero__overlay" aria-hidden="true" />
       <div className="hcl-container">
-        <HclReveal isCanvas={p.isCanvas} className="hcl-page-hero__content">
+        <div className={cn("hcl-page-hero__content", !p.isCanvas && "hcl-fade-up")}>
           {p.eyebrow && <p className="hcl-eyebrow hcl-page-hero__eyebrow">{p.eyebrow}</p>}
           <h1 className="hcl-page-hero__title">{p.title}</h1>
           <span className="hcl-page-hero__rule" aria-hidden="true" />
           {p.subtitle && <p className="hcl-page-hero__subtitle">{p.subtitle}</p>}
-        </HclReveal>
+        </div>
       </div>
     </HclRoot>
   );

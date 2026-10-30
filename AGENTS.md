@@ -14,4 +14,5 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Every section must follow `docs/03-Kontrak-Section.md` — sections are later ported into
   `~/project/exantara-saas` (see `docs/04-Integrasi-Exantara.md`).
 - Stack is pinned to match exantara-saas: Next 16, React 19.2, **Tailwind 3.4** (not v4).
-- Checks: `npm test`, `npm run typecheck`, `npm run lint`, `npm run build`.
+- Checks: `npm test`, `npm run typecheck`, `npm run lint`, `npm run check:sections`, `npm run build`, then `npm start` + `npm run qa`.
+- Preview any section alone at `/dev/sections/<id>` (`?canvas=1` = static editor state). Handoff/porting notes: `docs/05-Progress-Handoff.md`.

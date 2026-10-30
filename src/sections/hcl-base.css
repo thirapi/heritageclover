@@ -6,7 +6,7 @@
 .hcl-root {
   --hcl-clove: #4A2C21;
   --hcl-clove-deep: #2E1A13;
-  --hcl-ember: #B5532E;
+  --hcl-ember: #AD4F2B;
   --hcl-leaf: #3F5B3A;
   --hcl-gold: #C9A45C;
   --hcl-parchment: #F6F0E4;
@@ -112,6 +112,32 @@
 
 :where(.hcl-root) .hcl-btn--ghost {
   border: 1px solid currentColor;
+}
+
+/*
+ * Above-the-fold entrance (hero, page hero): pure CSS so the text paints on
+ * first render instead of waiting for JS hydration (keeps LCP fast). Sections
+ * further down use HclReveal (motion, on scroll) instead.
+ */
+:where(.hcl-root) .hcl-fade-up {
+  animation: hcl-fade-up 900ms var(--hcl-ease) both;
+}
+
+@keyframes hcl-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.hcl-root) .hcl-fade-up {
+    animation: none;
+  }
 }
 
 :where(.hcl-root) :focus-visible {
