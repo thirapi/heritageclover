@@ -48,19 +48,6 @@ export const hclHeaderDefaults: Required<Omit<HclHeaderProps, keyof HclInjectedP
 const SCROLL_THRESHOLD = 40;
 const MOBILE_QUERY = "(max-width: 899px)";
 
-// Small four-petal clove-bud mark used when no logo image is set.
-function HclHeaderMark() {
-  return (
-    <svg className="hcl-header__mark" viewBox="0 0 32 32" aria-hidden="true">
-      <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" strokeWidth="0.75" />
-      <path
-        d="M16 5c2.2 3.4 2.2 7.6 0 11-2.2-3.4-2.2-7.6 0-11Zm0 22c-2.2-3.4-2.2-7.6 0-11 2.2 3.4 2.2 7.6 0 11ZM5 16c3.4-2.2 7.6-2.2 11 0-3.4 2.2-7.6 2.2-11 0Zm22 0c-3.4 2.2-7.6 2.2-11 0 3.4-2.2 7.6-2.2 11 0Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
 export default function HclHeader(props: HclHeaderProps) {
   const p = withHclDefaults(hclHeaderDefaults, props);
   const localeLinks = useHclLocaleLinks();
@@ -125,11 +112,9 @@ export default function HclHeader(props: HclHeaderProps) {
     >
       <div className="hcl-container hcl-header__bar">
         <HclLink href="/" className="hcl-header__logo" onClick={close}>
-          {p.logoImage ? (
+          {p.logoImage && (
             // eslint-disable-next-line @next/next/no-img-element
             <img className="hcl-header__logo-image" src={p.logoImage} alt="" aria-hidden="true" />
-          ) : (
-            <HclHeaderMark />
           )}
           <span className="hcl-header__logo-text">{p.logoText}</span>
         </HclLink>
@@ -167,7 +152,7 @@ export default function HclHeader(props: HclHeaderProps) {
             <ShoppingBag size={20} strokeWidth={1.5} aria-hidden="true" />
           </HclLink>
 
-          <HclLink href={p.shopHref} className="hcl-btn hcl-btn--primary hcl-header__shop">
+          <HclLink href={p.shopHref} className={cn("hcl-btn hcl-header__shop", solid && !open ? "hcl-btn--primary" : "hcl-btn--on-dark")}>
             {p.shopLabel}
           </HclLink>
 
@@ -200,7 +185,6 @@ export default function HclHeader(props: HclHeaderProps) {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="hcl-container hcl-header__panel-inner">
-              <span className="hcl-header__panel-rule" aria-hidden="true" />
               <ul className="hcl-header__panel-links">
                 {p.links.map((link, i) => (
                   <motion.li
@@ -210,9 +194,6 @@ export default function HclHeader(props: HclHeaderProps) {
                     transition={{ duration: 0.6, delay: 0.08 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
                   >
                     <HclLink href={link.href} className="hcl-header__panel-link" onClick={close}>
-                      <span className="hcl-header__panel-index" aria-hidden="true">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
                       {link.label}
                     </HclLink>
                   </motion.li>

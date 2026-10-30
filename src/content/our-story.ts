@@ -38,13 +38,12 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
     },
     hero: {
       title: "Kisah Kami",
-      subtitle: "Dari Kepulauan Rempah Maluku ke dapur Anda, satu kuncup petik tangan dalam satu waktu.",
+      subtitle: "Tempat cengkeh kami tumbuh, siapa yang memetiknya, dan bagaimana cengkeh itu sampai ke dapur Anda.",
     },
     timeline: {
-      eyebrow: "Lima abad cengkeh",
       title: "Rempah yang mengubah dunia",
       intro:
-        "Jauh sebelum sampai di dapur Anda, cengkeh telah mengarungi jalur rempah, memahkotai kesultanan, dan mengirim kerajaan-kerajaan menyeberangi samudra. Inilah perjalanannya.",
+        "Hampir sepanjang sejarah yang tercatat, cengkeh hanya tumbuh di beberapa pulau di Maluku Utara. Pedagang Arab dan Asia, kesultanan setempat, dan kongsi dagang Eropa memperebutkannya selama berabad-abad. Inilah titik-titik baliknya.",
       events: [
         {
           year: "Sebelum 1500",
@@ -79,11 +78,10 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
       ],
     },
     values: {
-      eyebrow: "Misi kami",
       mission:
-        "Mengembalikan cengkeh ke tempat semestinya: ditanam dengan jujur, dirawat dengan cermat, dan seharum saat meninggalkan Kepulauan Rempah.",
+        "Menghadirkan cengkeh Indonesia ke dapur Anda seperti cara petani Maluku menyimpannya: dipetik dengan tangan, dijemur di bawah matahari, dan dikemas rapat selagi minyaknya masih tersimpan di dalam kuncup.",
       missionNote:
-        "Kami brand Indonesia yang kecil dengan ingatan yang panjang. Semua yang kami lakukan berawal dari para petani yang menjaga warisan ini tetap hidup.",
+        "Kami brand Indonesia yang kecil. Kami membeli dari kebun cengkeh rakyat dan bekerja bersama keluarga-keluarga yang memetik, menjemur, dan menyortir hasil panennya.",
       values: [
         {
           title: "Berakar pada asal",
@@ -91,8 +89,8 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
           icon: "Compass",
         },
         {
-          title: "Sabar, bukan jalan pintas",
-          body: "Dipetik dengan tangan saat masih kuncup dan dijemur perlahan di bawah matahari. Tradisi yang menentukan tempo, bukan jam.",
+          title: "Dipetik tangan, dijemur matahari",
+          body: "Kuncup dipetik selagi masih tertutup, lalu dijemur di atas tikar di bawah matahari selama beberapa hari, cara yang sama yang dipakai petani Maluku turun-temurun.",
           icon: "Sun",
         },
         {
@@ -102,15 +100,14 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
         },
         {
           title: "Kualitas yang bisa dicek",
-          body: "Setiap batch disortir, diperiksa, dan dikemas dengan cermat. Jika belum layak untuk dapur kami sendiri, tidak akan kami kirim.",
+          body: "Setiap batch disortir dengan tangan dan diperiksa kadar airnya sebelum dikemas. Batch yang belum cukup kering dijemur kembali.",
           icon: "ShieldCheck",
         },
       ],
     },
     farmers: {
-      eyebrow: "Tangan di balik panen",
       title: "Kenali orang-orang yang menjaga kebun",
-      body: "Cengkeh kami berasal dari kebun keluarga, tempat keahlian diwariskan dari orang tua ke anak. Mereka mengenal setiap pohon dan setiap musim dari aromanya. Inilah sebagian petani yang bekerja bersama kami.",
+      body: "Cengkeh kami berasal dari kebun keluarga di Maluku, tempat pohon yang ditanam satu generasi sering kali dipanen oleh generasi berikutnya. Inilah sebagian petani yang bekerja bersama kami.",
       people: [
         {
           name: "Nama petani",
@@ -133,7 +130,7 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
       ],
     },
     stats: {
-      title: "Berakar di kebun-kebun Maluku",
+      title: "Kebun cengkeh kami dalam angka",
       stats: [
         { value: "XXX", suffix: "+", label: "Petani rakyat" },
         { value: "XXX", suffix: "ha", label: "Hektar kebun" },
@@ -150,7 +147,7 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
 export function FINAL_CTA_ID(): HclFinalCtaProps {
   return {
     title: "Hadirkan Kepulauan Rempah di meja Anda.",
-    body: "Cengkeh utuh, bubuk halus, dan minyak bunga cengkeh murni, dipetik dengan tangan oleh petani rakyat di Maluku dan dijemur seperti yang dilakukan turun-temurun.",
+    body: "Cengkeh utuh, cengkeh bubuk, dan minyak bunga cengkeh dari kebun rakyat di Maluku. Dipetik dengan tangan, dijemur di bawah matahari, dan dikemas segar.",
     primaryLabel: "Lihat koleksi",
     secondaryLabel: "Hubungi kami",
   };

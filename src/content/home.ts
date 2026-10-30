@@ -35,9 +35,8 @@ type HomeContent = {
 
 // Full ID translation of the quality section; also used by the Process page.
 export const QUALITY_ID: HclQualityProps = {
-  eyebrow: "Janji kami",
   title: "Kualitas yang tercium sebelum toples dibuka",
-  body: "Cengkeh yang baik itu gemuk, utuh, dan sedikit berminyak saat disentuh. Kami menjaga setiap batch pada standar lama itu, dan memeriksanya dengan cermat.",
+  body: "Cengkeh yang baik itu gemuk, utuh, dan sedikit berminyak saat disentuh. Setiap batch disortir dengan tangan dan diuji kadar airnya sebelum dikemas.",
   points: [
     {
       title: "Asal yang dapat ditelusuri",
@@ -56,7 +55,7 @@ export const QUALITY_ID: HclQualityProps = {
     },
     {
       title: "Tanpa tambahan apa pun",
-      body: "Cengkeh murni, tanpa bahan pengisi, pewarna, atau pengawet. Hanya rempahnya, sebagaimana alam menciptakannya.",
+      body: "Hanya kuncup cengkeh utuh, tanpa bahan pengisi, pewarna, atau pengawet.",
       icon: "Leaf",
     },
   ],
@@ -72,7 +71,7 @@ export const QUALITY_ID: HclQualityProps = {
 export const HOME: Record<Locale, HomeContent> = {
   en: {
     meta: {
-      title: "Heritage Clover — Cloves from the Spice Islands",
+      title: "Heritage Clover: Cloves from the Spice Islands",
       description:
         "Hand-picked, sun-dried cloves from smallholder gardens in Maluku, the original Spice Islands, sealed fresh for your kitchen.",
     },
@@ -92,7 +91,7 @@ export const HOME: Record<Locale, HomeContent> = {
   },
   id: {
     meta: {
-      title: "Heritage Clover — Cengkeh dari Kepulauan Rempah",
+      title: "Heritage Clover: Cengkeh dari Kepulauan Rempah",
       description:
         "Cengkeh petik tangan dan jemur matahari dari kebun rakyat di Maluku, Kepulauan Rempah yang asli, dikemas segar untuk dapur Anda.",
     },
@@ -100,7 +99,7 @@ export const HOME: Record<Locale, HomeContent> = {
       eyebrow: "Heritage Clover · Maluku, Indonesia",
       title: "Rempah yang",
       titleAccent: "Mengubah Dunia.",
-      body: "Kuncup cengkeh petik tangan dari Kepulauan Rempah yang asli, dijemur dengan cara lama dan dikemas segar untuk dapur Anda.",
+      body: "Kuncup cengkeh yang dipetik dengan tangan di Maluku Utara, dijemur di bawah matahari selama empat sampai lima hari, dan dikemas segar untuk dapur Anda.",
       primaryLabel: "Belanja cengkeh",
       secondaryLabel: "Kisah kami",
     },
@@ -109,21 +108,20 @@ export const HOME: Record<Locale, HomeContent> = {
         "Dipetik tangan di Maluku",
         "Dijemur berhari-hari",
         "Disortir dengan tangan",
-        "Lahir di Jalur Rempah",
+        "Dipetik saat masih kuncup",
         "Dari kebun rakyat",
         "Dikemas untuk menjaga harum",
       ].join("\n"),
     },
     intro: {
-      eyebrow: "Sejak jalur rempah",
       statement:
-        "Dahulu lebih berharga dari emas, cengkeh berlayar dari Maluku ke seluruh penjuru dunia.\nKini kami membawanya pulang, sebagaimana mestinya.",
-      body: "Heritage Clover bekerja bersama petani rakyat di Kepulauan Rempah, tempat pohon cengkeh telah berbunga selama berabad-abad. Setiap kuncup dipetik dengan tangan tepat saat merona merah muda, dijemur perlahan di bawah matahari khatulistiwa, dan disortir dengan cermat, agar aromanya yang hangat dan manis sampai kepada Anda dengan utuh.",
+        "Selama berabad-abad, cengkeh hanya tumbuh di beberapa pulau kecil di Maluku Utara.\nKami membelinya di sana, dari keluarga-keluarga yang menanamnya.",
+      body: "Heritage Clover bekerja bersama petani rakyat di Ternate dan pulau-pulau di sekitarnya. Setiap kuncup dipetik dengan tangan saat warnanya berubah dari hijau ke merah muda, dijemur di bawah matahari selama empat sampai lima hari, dan disortir dengan tangan sebelum dikemas.",
       signature: "Keluarga Heritage Clover",
       imageAlt: "Tangan menyortir kuncup cengkeh kering",
     },
     stats: {
-      title: "Berakar di kebun-kebun Maluku",
+      title: "Kebun cengkeh kami dalam angka",
       stats: [
         { value: "XXX", suffix: "+", label: "Petani rakyat" },
         { value: "XXX", suffix: "ha", label: "Hektar kebun" },
@@ -133,25 +131,23 @@ export const HOME: Record<Locale, HomeContent> = {
       note: "Angka akan dikonfirmasi bersama mitra petani kami.",
     },
     heritage: {
-      eyebrow: "Jalur rempah",
       title: "Kuncup mungil yang menarik armada dari seluruh dunia",
-      body: "Selama berabad-abad, cengkeh hanya tumbuh di segelintir pulau di Maluku Utara. Harumnya berlayar ke istana dan dapur yang jauh, dan di sepanjang perjalanan itu, ia mengubah peta dunia.",
+      body: "Selama berabad-abad, cengkeh hanya tumbuh di segelintir pulau di Maluku Utara. Para pedagang membawanya lewat laut ke Tiongkok, India, Timur Tengah, dan Eropa, dan perebutan pasokannya mendatangkan armada-armada Eropa ke pulau-pulau itu.",
       milestones: [
         { year: "Zaman kuno", label: "Cengkeh meninggalkan Maluku lewat jalur laut awal menuju Tiongkok dan India." },
-        { year: "1500-an", label: "Ternate dan Tidore menjadi jantung perdagangan cengkeh." },
+        { year: "1500-an", label: "Ternate dan Tidore menjadi pusat perdagangan cengkeh." },
         { year: "1600-an", label: "Armada-armada Eropa berlomba menuju Kepulauan Rempah." },
-        { year: "Hari ini", label: "Petani rakyat menjaga panen tetap hidup, kuncup demi kuncup." },
+        { year: "Hari ini", label: "Keluarga petani rakyat di pulau-pulau yang sama masih memetik kuncupnya dengan tangan." },
       ],
       ctaLabel: "Baca kisah kami",
     },
     showcase: {
-      eyebrow: "Koleksi kami",
       title: "Dari Kepulauan Rempah, untuk meja Anda",
-      body: "Empat cara menghadirkan kehangatan cengkeh Maluku ke rumah Anda, masing-masing disortir dengan tangan dan dikemas saat harumnya di puncak.",
+      body: "Kuncup utuh, cengkeh bubuk, minyak bunga cengkeh, dan paket hadiah. Semuanya berasal dari cengkeh yang sama, dipetik dengan tangan dan dijemur di bawah matahari di Maluku Utara.",
       products: [
         {
           name: "Cengkeh Utuh",
-          description: "Kuncup premium sortir tangan dengan kepala utuh, kaya aroma hangat dan manis.",
+          description: "Kuncup sortir tangan dengan kepala utuh, untuk nasi, semur, acar, dan minuman rempah.",
           image: ASSETS.productWhole,
           href: "/store",
         },
@@ -163,13 +159,13 @@ export const HOME: Record<Locale, HomeContent> = {
         },
         {
           name: "Minyak Bunga Cengkeh",
-          description: "Disuling dari kuncup kering untuk aromaterapi dan ritual di rumah.",
+          description: "Disuling dari kuncup cengkeh kering, untuk diffuser dan pengharum ruangan.",
           image: ASSETS.productOil,
           href: "/store",
         },
         {
           name: "Paket Hadiah Warisan",
-          description: "Bingkisan kenangan berisi harta jalur rempah, siap untuk diberikan.",
+          description: "Pilihan produk cengkeh kami dalam satu kotak, siap untuk diberikan.",
           image: ASSETS.productGift,
           href: "/store",
         },
@@ -179,9 +175,8 @@ export const HOME: Record<Locale, HomeContent> = {
       swipeHint: "Geser untuk melihat",
     },
     origin: {
-      eyebrow: "Tempat tumbuhnya",
-      title: "Berakar di Kepulauan Rempah yang asli",
-      body: "Cengkeh kami berasal dari kebun rakyat di lereng vulkanik Maluku Utara, tempat angin laut, tanah yang subur, dan kearifan turun-temurun memberi setiap kuncup kehangatan yang dalam dan manis. Kami membeli langsung dari keluarga-keluarga yang merawat pohonnya.",
+      title: "Tumbuh di lereng vulkanik Maluku Utara",
+      body: "Cengkeh kami berasal dari kebun rakyat di sekitar Ternate, tempat pohon-pohonnya tumbuh di tanah vulkanik yang menghadap ke laut. Kami membeli langsung dari keluarga-keluarga yang merawat pohonnya, saat musim panen.",
       facts: [
         { label: "Asal", value: "Maluku Utara" },
         { label: "Panen", value: "Petik tangan" },
@@ -193,10 +188,9 @@ export const HOME: Record<Locale, HomeContent> = {
       locationLabel: "Ternate · Maluku Utara",
     },
     steps: {
-      eyebrow: "Dari pohon ke toples",
-      title: "Lima langkah tanpa terburu-buru",
+      title: "Dari pohon ke toples",
       intro:
-        "Keterampilan sabar yang sama yang telah dijalankan Kepulauan Rempah selama berabad-abad, dijaga jujur dengan beberapa pemeriksaan modern.",
+        "Pemetikan, penjemuran, dan penyortiran dikerjakan dengan tangan, seperti yang selalu dilakukan petani Maluku. Kadar air diperiksa dan setiap lot dikemas rapat sebelum meninggalkan pulau.",
       steps: [
         {
           number: "01",
@@ -207,13 +201,13 @@ export const HOME: Record<Locale, HomeContent> = {
         {
           number: "02",
           title: "Dijemur matahari",
-          body: "Dihamparkan di atas tikar anyaman, kuncup mengering perlahan di bawah matahari khatulistiwa hingga cokelat kemerahan pekat.",
+          body: "Dihamparkan di atas tikar anyaman, kuncup dijemur di bawah matahari khatulistiwa hingga berwarna cokelat kemerahan pekat.",
           icon: "Sun",
         },
         {
           number: "03",
           title: "Disortir tangan",
-          body: "Setiap batch diayak dan dipilah dengan mata, hanya menyisakan kuncup yang utuh dan berbentuk sempurna.",
+          body: "Setiap batch diayak dan dipilah dengan mata, hanya menyisakan kuncup yang utuh dan berbentuk baik.",
           icon: "Filter",
         },
         {
@@ -225,43 +219,41 @@ export const HOME: Record<Locale, HomeContent> = {
         {
           number: "05",
           title: "Dikemas segar",
-          body: "Dikemas dalam kantong kedap udara yang menjaga aroma hangat dan manisnya hingga Anda membukanya.",
+          body: "Dikemas dalam kantong kedap udara yang menjaga aromanya hingga Anda membukanya.",
           icon: "Package",
         },
       ],
-      ctaLabel: "Lihat proses kami",
+      ctaLabel: "Lihat proses lengkapnya",
     },
     uses: {
-      eyebrow: "Cara menikmati",
-      title: "Satu kuncup kecil, beragam ritual",
+      title: "Empat cara menggunakan cengkeh utuh",
       intro:
-        "Turun-temurun, cengkeh telah mengharumkan dapur, rumah, dan perayaan di sepanjang jalur rempah. Inilah beberapa cara menghadirkan kehangatannya dalam hari-hari Anda.",
+        "Di dapur Indonesia, cengkeh membumbui rendang dan nasi berempah, dan masuk ke dalam minuman hangat. Beberapa kuncup yang direbus dalam air juga bisa mengharumkan seisi ruangan.",
       uses: [
         {
-          title: "Kuliner",
-          body: "Tumis kuncup utuh dalam rendang, nasi berempah, kue jahe, dan minuman rempah untuk kehangatan yang dalam dan manis.",
+          title: "Memasak",
+          body: "Tumis kuncup utuh dalam minyak sebelum bumbu rendang dimasukkan, atau masak bersama nasi, kue jahe, dan anggur rempah.",
           image: ASSETS.useCulinary,
         },
         {
-          title: "Ritual relaksasi",
-          body: "Secangkir wedang cengkeh atau setetes minyak bunga cengkeh di air mandi hangat untuk malam yang tenang dan nyaman.",
+          title: "Minuman dan mandi",
+          body: "Seduh beberapa kuncup dalam air panas untuk wedang cengkeh, atau teteskan sedikit minyak bunga cengkeh ke air mandi hangat.",
           image: ASSETS.useWellness,
         },
         {
           title: "Pengharum rumah",
-          body: "Rebusan rempah, pomander, dan racikan diffuser yang memenuhi rumah dengan harum rempah yang hangat.",
+          body: "Rebus segenggam cengkeh bersama kayu manis dan kulit jeruk, atau tancapkan pada sebutir jeruk untuk membuat pomander.",
           image: ASSETS.useAroma,
         },
         {
           title: "Hadiah",
-          body: "Paket hadiah warisan yang membawa kisah dari Kepulauan Rempah kepada orang-orang terkasih.",
+          body: "Paket hadiah berisi cengkeh utuh Maluku, dikemas untuk dikirim kepada keluarga, teman, dan mitra bisnis.",
           image: ASSETS.useGifting,
         },
       ],
     },
     quality: QUALITY_ID,
     testimonials: {
-      eyebrow: "Kata mereka",
       title: "Dari dapur dekat dan jauh",
       items: [
         {
@@ -287,7 +279,6 @@ export const HOME: Record<Locale, HomeContent> = {
       nextLabel: "Testimoni berikutnya",
     },
     insight: {
-      eyebrow: "Wawasan",
       title: "Catatan dari jalur rempah",
       articles: ARTICLES.id.slice(0, 3).map((a) => ({
         title: a.title,

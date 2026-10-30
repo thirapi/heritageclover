@@ -19,9 +19,9 @@ export const hclFarmersDefaults: Required<
   Omit<HclFarmersProps, keyof HclInjectedProps>
 > = {
   sectionId: "",
-  eyebrow: "The hands behind the harvest",
+  eyebrow: "",
   title: "Meet the people who keep the gardens",
-  body: "Our cloves come from family gardens where the craft is passed from parent to child. They know each tree by name and each season by its scent. These are some of the growers we work with.",
+  body: "Our cloves come from family gardens in Maluku, where trees planted by one generation are often harvested by the next. These are some of the growers we work with.",
   people: [
     {
       name: "Farmer name",
@@ -88,12 +88,9 @@ export default function HclFarmers(props: HclFarmersProps) {
                       loading="lazy"
                     />
                   )}
-                  <span className="hcl-farmers__number" aria-hidden="true">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
                 </div>
                 <blockquote className="hcl-farmers__quote">
-                  <p>{person.quote}</p>
+                  <p>&ldquo;{person.quote}&rdquo;</p>
                 </blockquote>
                 <figcaption className="hcl-farmers__caption">
                   <span className="hcl-farmers__name">{person.name}</span>

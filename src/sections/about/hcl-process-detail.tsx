@@ -28,10 +28,10 @@ export const hclProcessDetailDefaults: Required<
   Omit<HclProcessDetailProps, keyof HclInjectedProps>
 > = {
   sectionId: "",
-  eyebrow: "From flower to jar",
-  title: "Five unhurried steps",
+  eyebrow: "",
+  title: "Picked, dried, sorted, checked, sealed",
   intro:
-    "Good cloves are not manufactured, they are looked after. Here is how each harvest travels from the garden to your kitchen.",
+    "Every harvest goes through the same five steps between the garden and your kitchen. Most of the work is done by hand, and the drying depends on the weather.",
   steps: [
     {
       number: "01",
@@ -64,7 +64,7 @@ export const hclProcessDetailDefaults: Required<
     {
       number: "05",
       title: "Sealed to keep the fragrance",
-      body: "Finished cloves are packed in airtight pouches and jars that protect them from light and air, carrying the scent of the garden all the way to your table.",
+      body: "Finished cloves are packed in airtight pouches and jars that protect them from light and air, so the oils that carry the aroma stay in the bud.",
       image: ASSETS.packing,
       duration: "Sealed fresh",
     },
@@ -146,12 +146,10 @@ export default function HclProcessDetail(props: HclProcessDetailProps) {
                       />
                     ) : null,
                   )}
-                  <span className="hcl-process-detail__frame-number">
-                    {current?.number}
-                  </span>
                 </div>
                 <div className="hcl-process-detail__progress">
                   <span className="hcl-process-detail__progress-label">
+                    <span className="hcl-num">{current?.number}</span>
                     {current?.title}
                   </span>
                   <span className="hcl-process-detail__dots">
@@ -187,7 +185,7 @@ export default function HclProcessDetail(props: HclProcessDetailProps) {
                   </div>
                 )}
                 <div className="hcl-process-detail__text">
-                  <span className="hcl-process-detail__number">
+                  <span className="hcl-process-detail__number hcl-num">
                     {step.number}
                   </span>
                   <h3 className="hcl-process-detail__step-title">
@@ -196,7 +194,7 @@ export default function HclProcessDetail(props: HclProcessDetailProps) {
                   <p className="hcl-process-detail__body">{step.body}</p>
                   {step.duration && (
                     <p className="hcl-process-detail__duration">
-                      <Clock size={15} strokeWidth={1.6} aria-hidden="true" />
+                      <Clock size={16} strokeWidth={1.75} aria-hidden="true" />
                       {step.duration}
                     </p>
                   )}

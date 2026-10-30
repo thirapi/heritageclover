@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
-import { Plus } from "lucide-react";
+import { ArrowRight, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { HclLink } from "../hcl-link";
 import { HclReveal } from "../hcl-motion";
@@ -23,9 +23,9 @@ export type HclFaqProps = {
 
 export const hclFaqDefaults: Required<Omit<HclFaqProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "Questions & answers",
-  title: "Everything you wanted to ask about our cloves",
-  intro: "From the jar on your shelf to an order for your whole team, here is what our customers ask us most.",
+  eyebrow: "",
+  title: "Common questions about our cloves",
+  intro: "Storage, grades, ordering and bulk supply: the questions our customers send us most often.",
   items: [
     {
       question: "How should I store my cloves?",
@@ -45,7 +45,7 @@ export const hclFaqDefaults: Required<Omit<HclFaqProps, keyof HclInjectedProps>>
     {
       question: "What do your clove grades mean?",
       answer:
-        "Our premium grade is made of whole, unbroken buds with intact heads, low moisture and a deep, even colour, hand-sorted after sun-drying. Our kitchen grade may include buds without heads or with slight variation in size: the same warmth, at a gentler price, ideal for ground spice and slow cooking.",
+        "Our premium grade is made of whole, unbroken buds with intact heads, low moisture and a deep, even colour, hand-sorted after sun-drying. Our kitchen grade may include buds without heads or with slight variation in size. It costs less and works well ground or in long-simmered dishes.",
     },
     {
       question: "How can I use clove bud oil?",
@@ -55,10 +55,10 @@ export const hclFaqDefaults: Required<Omit<HclFaqProps, keyof HclInjectedProps>>
     {
       question: "Do you take corporate and bulk orders?",
       answer:
-        "Yes. We prepare heritage gift sets for corporate occasions and supply larger volumes for kitchens, bakeries and retailers. Tell us the quantity, timing and any custom packaging you have in mind, and we will come back to you with a proposal.",
+        "Yes. We prepare gift sets for corporate occasions and supply larger volumes for kitchens, bakeries and retailers. Tell us the quantity, timing and any custom packaging you have in mind, and we will come back to you with a proposal.",
     },
   ],
-  contactText: "Still curious about something?",
+  contactText: "Question not listed here?",
   contactLabel: "Contact us",
   contactHref: "/contact",
   backgroundColor: "#F6F0E4",
@@ -82,13 +82,13 @@ export default function HclFaq(props: HclFaqProps) {
         <HclReveal isCanvas={p.isCanvas} className="hcl-faq__head">
           {p.eyebrow && <p className="hcl-eyebrow hcl-faq__eyebrow">{p.eyebrow}</p>}
           {p.title && <h2 className="hcl-faq__title">{p.title}</h2>}
-          <span className="hcl-faq__rule" aria-hidden="true" />
           {p.intro && <p className="hcl-faq__intro">{p.intro}</p>}
           {p.contactLabel && (
             <p className="hcl-faq__contact">
               {p.contactText && <span>{p.contactText}</span>}
-              <HclLink href={p.contactHref || "/contact"} className="hcl-faq__contact-link">
+              <HclLink href={p.contactHref || "/contact"} className="hcl-link">
                 {p.contactLabel}
+                <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" />
               </HclLink>
             </p>
           )}
@@ -110,12 +110,9 @@ export default function HclFaq(props: HclFaqProps) {
                     aria-controls={panelId}
                     onClick={() => setOpen(isOpen ? null : i)}
                   >
-                    <span className="hcl-faq__num" aria-hidden="true">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                     <span className="hcl-faq__question">{it.question}</span>
                     <span className="hcl-faq__toggle" aria-hidden="true">
-                      <Plus size={18} strokeWidth={1.5} />
+                      {isOpen ? <Minus size={20} strokeWidth={1.75} /> : <Plus size={20} strokeWidth={1.75} />}
                     </span>
                   </button>
                 </h3>

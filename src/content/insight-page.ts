@@ -27,12 +27,12 @@ export const INSIGHT_PAGE: Record<Locale, InsightPageContent> = {
   en: {
     meta: {
       title: "Insight",
-      description: "Stories, recipes and practical guides on cloves, from the heritage of the Spice Islands to your kitchen.",
+      description: "History, recipes and practical guides on cloves, from the gardens of North Maluku to your kitchen.",
     },
     hero: {
       eyebrow: "The journal",
       title: "Insight",
-      subtitle: "Heritage, recipes and guides from the clove gardens of Maluku.",
+      subtitle: "History, recipes and storage guides from the clove gardens of Maluku.",
       image: ASSETS.article1,
     },
     grid: { articles: gridArticles("en") },
@@ -41,23 +41,22 @@ export const INSIGHT_PAGE: Record<Locale, InsightPageContent> = {
   id: {
     meta: {
       title: "Wawasan",
-      description: "Kisah, resep, dan panduan praktis seputar cengkeh, dari warisan Kepulauan Rempah hingga dapur Anda.",
+      description: "Sejarah, resep, dan panduan praktis seputar cengkeh, dari kebun-kebun Maluku Utara hingga dapur Anda.",
     },
     hero: {
       eyebrow: "Jurnal kami",
       title: "Wawasan",
-      subtitle: "Warisan, resep, dan panduan dari kebun-kebun cengkeh Maluku.",
+      subtitle: "Sejarah, resep, dan panduan penyimpanan dari kebun-kebun cengkeh Maluku.",
       image: ASSETS.article1,
     },
     grid: {
-      eyebrow: "Wawasan",
       title: "Catatan dari Kepulauan Rempah",
       intro:
-        "Kisah, resep, dan panduan praktis tentang kuncup yang pernah mengubah dunia, ditulis dari meja sortir kami di Maluku.",
+        "Sejarah, resep, dan panduan penyimpanan cengkeh, ditulis oleh tim yang menyortir dan mengemas hasil panen kami di Maluku Utara.",
       filterLabel: "Saring artikel berdasarkan kategori",
       allLabel: "Semua",
       readMoreLabel: "Baca artikel",
-      emptyText: "Belum ada artikel di sini. Kisah-kisah baru dari kebun cengkeh segera hadir.",
+      emptyText: "Belum ada artikel dalam kategori ini.",
       articles: gridArticles("id"),
     },
     article: {

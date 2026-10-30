@@ -8,130 +8,71 @@
   align-items: center;
 }
 
-.hcl-article__head {
+.hcl-article__head,
+.hcl-article__body,
+.hcl-article__foot {
   width: 100%;
   max-width: 70ch;
-  text-align: center;
+  /* Same font-size as the body so 70ch resolves to one shared column width. */
+  font-size: 1.125rem;
 }
 
 .hcl-article__back {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
   margin-bottom: 2.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--hcl-ink-muted);
-  transition: color 200ms var(--hcl-ease);
 }
 
-.hcl-article__back:hover {
-  color: var(--hcl-ember);
+.hcl-article__back:hover svg {
+  transform: translateX(-3px);
 }
 
 .hcl-article__meta {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--hcl-ink-muted);
 }
 
 .hcl-article__category {
+  font-weight: 600;
   color: var(--hcl-ember);
 }
 
-.hcl-article__dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: var(--hcl-gold);
-}
-
 .hcl-article__title {
-  font-size: clamp(2.25rem, 1.5rem + 3vw, 4rem);
+  font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.75rem);
   line-height: 1.08;
-}
-
-.hcl-article__rule {
-  position: relative;
-  display: block;
-  width: 120px;
-  height: 1px;
-  margin: 2rem auto 0;
-  background-color: var(--hcl-gold);
-}
-
-.hcl-article__rule span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 6px;
-  height: 6px;
-  background-color: var(--hcl-gold);
-  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .hcl-article__figure {
   width: 100%;
   max-width: 1040px;
-  margin: 3.5rem 0 4rem;
-  padding: 10px;
-  border: 1px solid var(--hcl-line);
-  border-radius: 4px;
-  background-color: var(--hcl-ivory);
+  margin: 3rem 0 3.5rem;
 }
 
 .hcl-article__img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 2px;
+  border-radius: var(--hcl-radius);
+  background-color: var(--hcl-sand);
 }
 
 .hcl-article__body {
-  width: 100%;
-  max-width: 70ch;
   font-size: 1.125rem;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 .hcl-article__body p + p {
   margin-top: 1.25rem;
 }
 
-.hcl-article__body > p:first-child::first-letter {
-  float: left;
-  margin: 0.08em 0.12em 0 0;
-  font-family: var(--hcl-font-display);
-  font-size: 4.25em;
-  font-weight: 500;
-  line-height: 0.8;
-  color: var(--hcl-ember);
-}
-
 .hcl-article__body h2 {
-  position: relative;
-  margin: 3rem 0 1rem;
-  padding-top: 1.5rem;
-  font-size: clamp(1.625rem, 1.4rem + 1vw, 2.25rem);
-  line-height: 1.15;
-}
-
-.hcl-article__body h2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 1px;
-  background-color: var(--hcl-gold);
+  margin: 2.75rem 0 0.875rem;
+  font-size: clamp(1.625rem, 1.45rem + 0.8vw, 2.125rem);
+  line-height: 1.2;
 }
 
 .hcl-article__body h2:first-child {
@@ -139,30 +80,13 @@
 }
 
 .hcl-article__foot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.5rem;
-  width: 100%;
-  max-width: 70ch;
   margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--hcl-line);
 }
 
-.hcl-article__foot-rule {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: var(--hcl-line);
-}
-
-.hcl-article__foot-link {
-  border-color: var(--hcl-gold);
-}
-
-.hcl-article__foot-link:hover {
-  background-color: var(--hcl-clove);
-  border-color: var(--hcl-clove);
-  color: var(--hcl-ivory);
+.hcl-article__foot .hcl-article__back {
+  margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -171,8 +95,7 @@
   }
 
   .hcl-article__figure {
-    margin: 2.5rem 0 2.75rem;
-    padding: 6px;
+    margin: 2.25rem 0 2.5rem;
   }
 
   .hcl-article__img {
@@ -181,11 +104,11 @@
 
   .hcl-article__body {
     font-size: 1.0625rem;
-    line-height: 1.75;
+    line-height: 1.7;
   }
 
   .hcl-article__body h2 {
-    margin-top: 2.5rem;
+    margin-top: 2.25rem;
   }
 
   .hcl-article__foot {

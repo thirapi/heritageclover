@@ -24,7 +24,7 @@ export const PROCESS: Record<Locale, ProcessContent> = {
     hero: {
       eyebrow: "The process",
       title: "From tree to table",
-      subtitle: "Five unhurried steps, done the way growers in Maluku have done them for generations.",
+      subtitle: "Picked, dried, sorted, tested and sealed, the way growers in Maluku have done it for generations.",
       image: ASSETS.drying,
     },
     detail: {},
@@ -39,14 +39,13 @@ export const PROCESS: Record<Locale, ProcessContent> = {
     hero: {
       eyebrow: "Prosesnya",
       title: "Dari pohon ke meja",
-      subtitle: "Lima langkah tanpa terburu-buru, dikerjakan seperti para petani di Maluku melakukannya turun-temurun.",
+      subtitle: "Dipetik, dijemur, disortir, diuji, dan dikemas, seperti yang dilakukan petani Maluku turun-temurun.",
       image: ASSETS.drying,
     },
     detail: {
-      eyebrow: "Dari bunga ke toples",
-      title: "Lima langkah tanpa terburu-buru",
+      title: "Dipetik, dijemur, disortir, diperiksa, dikemas",
       intro:
-        "Cengkeh yang baik tidak diproduksi, melainkan dirawat. Inilah perjalanan setiap panen dari kebun ke dapur Anda.",
+        "Setiap panen melewati lima tahap yang sama antara kebun dan dapur Anda. Sebagian besar pekerjaan dilakukan dengan tangan, dan penjemurannya bergantung pada cuaca.",
       steps: [
         {
           number: "01",
@@ -79,7 +78,7 @@ export const PROCESS: Record<Locale, ProcessContent> = {
         {
           number: "05",
           title: "Dikemas untuk menjaga harum",
-          body: "Cengkeh jadi dikemas dalam kantong dan toples kedap udara yang melindunginya dari cahaya dan udara, membawa aroma kebun hingga ke meja Anda.",
+          body: "Cengkeh jadi dikemas dalam kantong dan toples kedap udara yang melindunginya dari cahaya dan udara, sehingga minyak pembawa aromanya tetap tersimpan di dalam kuncup.",
           image: ASSETS.packing,
           duration: "Dikemas segar",
         },

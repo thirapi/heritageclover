@@ -8,7 +8,10 @@
 }
 
 .hcl-process-detail__head {
-  max-width: 680px;
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: 32px 72px;
+  align-items: end;
   margin-bottom: 72px;
 }
 
@@ -18,27 +21,16 @@
 
 .hcl-process-detail__title {
   font-size: var(--hcl-h2);
+  max-width: 20ch;
 }
 
 .hcl-process-detail__intro {
-  position: relative;
-  margin-top: 1.75rem;
-  padding-top: 1.75rem;
+  max-width: 48ch;
   font-size: 1.0625rem;
   color: var(--hcl-ink-muted);
 }
 
-.hcl-process-detail__intro::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 72px;
-  height: 1px;
-  background-color: var(--hcl-gold);
-}
-
-/* Static layout (mobile, canvas, reduced motion): stacked image + text. */
+/* Static layout (mobile, canvas, reduced motion): image + text per step. */
 .hcl-process-detail__aside {
   display: none;
 }
@@ -46,54 +38,32 @@
 .hcl-process-detail__steps {
   display: flex;
   flex-direction: column;
-  gap: 72px;
-  max-width: 880px;
-  margin: 0 auto;
+  gap: 56px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .hcl-process-detail__media {
-  position: relative;
   aspect-ratio: 16 / 10;
-  margin-bottom: 2rem;
-  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border-radius: var(--hcl-radius);
   overflow: hidden;
   background-color: var(--hcl-line);
-}
-
-.hcl-process-detail__media::after,
-.hcl-process-detail__frame::after {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(201, 164, 92, 0.55);
-  border-radius: 2px;
-  pointer-events: none;
 }
 
 .hcl-process-detail__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: sepia(0.15);
-}
-
-.hcl-process-detail__text {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  column-gap: 28px;
-  align-items: baseline;
 }
 
 .hcl-process-detail__number {
-  grid-row: span 3;
-  font-family: var(--hcl-font-display);
-  font-style: italic;
-  font-size: clamp(2.75rem, 2rem + 2vw, 4rem);
-  line-height: 0.9;
-  color: var(--hcl-gold);
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--hcl-ember);
 }
 
 .hcl-process-detail__step-title {
@@ -102,45 +72,47 @@
 }
 
 .hcl-process-detail__body {
-  grid-column: 2;
   max-width: 54ch;
   color: var(--hcl-ink-muted);
 }
 
 .hcl-process-detail__duration {
-  grid-column: 2;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-self: start;
   gap: 8px;
   margin-top: 1.25rem;
-  padding: 6px 14px;
-  border: 1px solid var(--hcl-gold);
-  border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
   color: var(--hcl-clove);
 }
 
 .hcl-process-detail__duration svg {
+  flex-shrink: 0;
   color: var(--hcl-ember);
 }
 
-/* Static desktop (canvas / reduced motion): two-column grid of image + text cards. */
+/* Static desktop (canvas / reduced motion): one row per step, image left. */
 @media (min-width: 1024px) {
   .hcl-process-detail:not(.hcl-process-detail--live)
-    .hcl-process-detail__steps {
+    .hcl-process-detail__step {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 72px 64px;
-    max-width: none;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: 64px;
+    align-items: center;
+    padding-top: 56px;
+    border-top: 1px solid var(--hcl-line);
   }
 
   .hcl-process-detail:not(.hcl-process-detail--live)
-    .hcl-process-detail__step:nth-child(even) {
-    margin-top: 96px;
+    .hcl-process-detail__step:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .hcl-process-detail:not(.hcl-process-detail--live)
+    .hcl-process-detail__media {
+    margin-bottom: 0;
   }
 }
 
@@ -164,9 +136,9 @@
   .hcl-process-detail__frame {
     position: relative;
     height: min(66vh, 600px);
-    border-radius: 4px;
+    border-radius: var(--hcl-radius);
     overflow: hidden;
-    background-color: var(--hcl-clove-deep);
+    background-color: var(--hcl-line);
   }
 
   .hcl-process-detail__frame-img {
@@ -175,30 +147,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: sepia(0.15);
     opacity: 0;
-    transform: scale(1.06);
-    transition:
-      opacity 700ms var(--hcl-ease),
-      transform 1200ms var(--hcl-ease);
+    transition: opacity 600ms var(--hcl-ease);
   }
 
   .hcl-process-detail__frame-img.is-active {
     opacity: 1;
-    transform: scale(1);
-  }
-
-  .hcl-process-detail__frame-number {
-    position: absolute;
-    right: 32px;
-    bottom: 20px;
-    z-index: 1;
-    font-family: var(--hcl-font-display);
-    font-style: italic;
-    font-size: 5rem;
-    line-height: 1;
-    color: var(--hcl-ivory);
-    text-shadow: 0 2px 24px rgba(46, 26, 19, 0.45);
   }
 
   .hcl-process-detail__progress {
@@ -210,9 +164,14 @@
   }
 
   .hcl-process-detail__progress-label {
-    font-family: var(--hcl-font-display);
-    font-style: italic;
-    font-size: 1.25rem;
+    display: inline-flex;
+    gap: 12px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+
+  .hcl-process-detail__progress-label .hcl-num {
+    color: var(--hcl-ember);
   }
 
   .hcl-process-detail__dots {
@@ -224,17 +183,15 @@
     width: 28px;
     height: 2px;
     background-color: var(--hcl-line);
-    transition: background-color 400ms var(--hcl-ease);
+    transition: background-color 300ms var(--hcl-ease);
   }
 
   .hcl-process-detail__dot.is-on {
-    background-color: var(--hcl-gold);
+    background-color: var(--hcl-ember);
   }
 
   .hcl-process-detail--live .hcl-process-detail__steps {
     gap: 0;
-    max-width: none;
-    margin: 0;
     padding-bottom: 10vh;
   }
 
@@ -260,30 +217,24 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .hcl-process-detail__head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
     margin-bottom: 48px;
   }
 
   .hcl-process-detail__steps {
-    gap: 56px;
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hcl-process-detail__steps {
+    gap: 48px;
   }
 
   .hcl-process-detail__media {
     aspect-ratio: 4 / 3;
-    margin-bottom: 1.5rem;
-  }
-
-  .hcl-process-detail__text {
-    column-gap: 18px;
-  }
-
-  .hcl-process-detail__body,
-  .hcl-process-detail__duration {
-    grid-column: 1 / -1;
-  }
-
-  .hcl-process-detail__number {
-    grid-row: auto;
   }
 }

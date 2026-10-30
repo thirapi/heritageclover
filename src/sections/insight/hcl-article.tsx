@@ -77,20 +77,17 @@ export default function HclArticle(props: HclArticleProps) {
       <article className="hcl-container hcl-article__inner">
         <HclReveal isCanvas={p.isCanvas} className="hcl-article__head">
           {p.backLabel && (
-            <HclLink href={p.backHref || "/insight"} className="hcl-article__back">
+            <HclLink href={p.backHref || "/insight"} className="hcl-link hcl-article__back">
               <ArrowLeft size={16} strokeWidth={1.75} aria-hidden="true" />
               {p.backLabel}
             </HclLink>
           )}
           <p className="hcl-article__meta">
             {p.category && <span className="hcl-article__category">{p.category}</span>}
-            {p.category && p.date && <span className="hcl-article__dot" aria-hidden="true" />}
-            {p.date && <span className="hcl-article__date">{p.date}</span>}
+            {p.category && p.date && <span aria-hidden="true">·</span>}
+            {p.date && <span className="hcl-num">{p.date}</span>}
           </p>
           <h1 className="hcl-article__title">{p.title}</h1>
-          <span className="hcl-article__rule" aria-hidden="true">
-            <span />
-          </span>
         </HclReveal>
 
         {p.image && (
@@ -106,8 +103,7 @@ export default function HclArticle(props: HclArticleProps) {
 
         {p.backLabel && (
           <div className="hcl-article__foot">
-            <span className="hcl-article__foot-rule" aria-hidden="true" />
-            <HclLink href={p.backHref || "/insight"} className="hcl-btn hcl-btn--ghost hcl-article__foot-link">
+            <HclLink href={p.backHref || "/insight"} className="hcl-link hcl-article__back">
               <ArrowLeft size={16} strokeWidth={1.75} aria-hidden="true" />
               {p.backLabel}
             </HclLink>

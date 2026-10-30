@@ -6,6 +6,7 @@
  *   - HTTP status is 200 (links to /store* are skipped: served by exantara)
  *   - no horizontal scroll at 375 / 768 / 1440 px
  *   - every <img> has an alt attribute, exactly one <h1>
+ *   - anti-slop: max 2 eyebrows per page, dark bands <= 25% of <main>
  *   - no console errors / page errors
  * Exits 1 with a list of problems.
  */
@@ -67,17 +68,35 @@ async function audit(browser: Browser, path: string) {
       }
       window.scrollTo(0, 0);
     });
-    const r = await page.evaluate(() => ({
-      scrollWidth: document.documentElement.scrollWidth,
-      innerWidth: window.innerWidth,
-      imgsWithoutAlt: Array.from(document.images).filter((img) => !img.hasAttribute("alt")).map((img) => img.src),
-      h1: document.querySelectorAll("h1").length,
-    }));
+    const r = await page.evaluate(() => {
+      const main = document.querySelector("main");
+      // A section is a "dark band" when its own text color is light.
+      const luminance = (rgb: string) => {
+        const [r, g, b] = (rgb.match(/\d+(\.\d+)?/g) ?? ["0", "0", "0"]).slice(0, 3).map(Number);
+        return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+      };
+      const sections = main ? (Array.from(main.children) as HTMLElement[]) : [];
+      const dark = sections
+        .filter((s) => luminance(getComputedStyle(s).color) > 0.7)
+        .reduce((sum, s) => sum + s.getBoundingClientRect().height, 0);
+      const total = main?.getBoundingClientRect().height ?? 1;
+      return {
+        scrollWidth: document.documentElement.scrollWidth,
+        innerWidth: window.innerWidth,
+        imgsWithoutAlt: Array.from(document.images).filter((img) => !img.hasAttribute("alt")).map((img) => img.src),
+        h1: document.querySelectorAll("h1").length,
+        eyebrows: main ? main.querySelectorAll(".hcl-eyebrow").length : 0,
+        darkRatio: dark / total,
+      };
+    });
     const at = `${path} @${width}px`;
     if (r.scrollWidth > r.innerWidth) problems.push(`${at}: horizontal scroll (${r.scrollWidth} > ${r.innerWidth})`);
     if (width === 1440) {
       if (r.imgsWithoutAlt.length) problems.push(`${at}: <img> without alt: ${r.imgsWithoutAlt.join(", ")}`);
       if (r.h1 !== 1) problems.push(`${at}: expected 1 <h1>, found ${r.h1}`);
+      // Anti-slop page rules (docs/01 §6.1 and §6.7).
+      if (r.eyebrows > 2) problems.push(`${at}: ${r.eyebrows} eyebrows (max 2 per page)`);
+      if (r.darkRatio > 0.25) problems.push(`${at}: dark bands cover ${Math.round(r.darkRatio * 100)}% (max 25%)`);
     }
     for (const e of errors) problems.push(`${at}: console error: ${e.slice(0, 200)}`);
     await page.close();

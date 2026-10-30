@@ -19,7 +19,7 @@ export type HclTestimonialsProps = {
 
 export const hclTestimonialsDefaults: Required<Omit<HclTestimonialsProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "Kind words",
+  eyebrow: "",
   title: "From kitchens near and far",
   items: [
     {
@@ -125,9 +125,6 @@ export default function HclTestimonials(props: HclTestimonialsProps) {
               startX.current = null;
             }}
           >
-            <span className="hcl-testimonials__mark" aria-hidden="true">
-              &ldquo;
-            </span>
             <div className="hcl-testimonials__viewport" aria-live="polite">
               {p.isCanvas ? (
                 quote
@@ -156,12 +153,10 @@ export default function HclTestimonials(props: HclTestimonialsProps) {
                 aria-label={p.prevLabel}
                 onClick={() => go(-1)}
               >
-                <ArrowLeft size={20} strokeWidth={1.5} aria-hidden="true" />
+                <ArrowLeft size={18} strokeWidth={1.75} aria-hidden="true" />
               </button>
-              <p className="hcl-testimonials__counter" aria-hidden="true">
-                <span>{String(position + 1).padStart(2, "0")}</span>
-                <i />
-                <span>{String(count).padStart(2, "0")}</span>
+              <p className="hcl-num hcl-testimonials__counter" aria-hidden="true">
+                <span>{position + 1}</span> / {count}
               </p>
               <button
                 type="button"
@@ -169,7 +164,7 @@ export default function HclTestimonials(props: HclTestimonialsProps) {
                 aria-label={p.nextLabel}
                 onClick={() => go(1)}
               >
-                <ArrowRight size={20} strokeWidth={1.5} aria-hidden="true" />
+                <ArrowRight size={18} strokeWidth={1.75} aria-hidden="true" />
               </button>
             </div>
           )}

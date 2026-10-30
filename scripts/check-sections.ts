@@ -58,7 +58,52 @@ for (const file of sectionFiles) {
 // 3. No style id may be a prefix of another (CSS class prefixes would clash).
 for (const a of ids) {
   for (const b of ids) {
-    if (a !== b && b.startsWith(`${a}-`)) errors.push(`style id "${a}" is a prefix of "${b}" — rename one`);
+    if (a !== b && b.startsWith(`${a}-`)) errors.push(`style id "${a}" is a prefix of "${b}": rename one`);
+  }
+}
+
+// 4. Anti-slop rules (docs/01-Design-System.md §6).
+const EYEBROW_ALLOWED = new Set(["hcl-hero", "hcl-page-hero"]);
+const RADIUS_ALLOWED = /^(999px|50%|0|var\(--hcl-radius\)|var\(--hcl-radius-sm\))$/;
+const BANNED_WORDS =
+  /\b(rituals?|unhurried|timeless|elevate[sd]?|curated|crafted|whispers?|tapestry|testament)\b|tanpa terburu-buru|\bnot [a-z]+, (?:it|they) (?:is|are)\b|bukan [a-z]+, melainkan/i;
+const ORNAMENT_GLYPHS = /[✦✧◆◇❖★☆]/;
+
+// CSS rule blocks: "selector { body }" (no nesting in our section CSS besides @media).
+const cssBlocks = (src: string) =>
+  [...src.replace(/\/\*[\s\S]*?\*\//g, "").matchAll(/([^{}]+)\{([^{}]*)\}/g)].map((m) => ({
+    selector: m[1].trim(),
+    body: m[2],
+  }));
+
+for (const file of files.filter((f) => f.endsWith(".css") && basename(f) !== "hcl-base.css")) {
+  for (const { selector, body } of cssBlocks(readFileSync(file, "utf8"))) {
+    for (const [, value] of body.matchAll(/border-radius:\s*([^;]+);/g)) {
+      if (value.split(/\s+/).some((v) => !RADIUS_ALLOWED.test(v.trim())))
+        fail(file, `radius "${value.trim()}" (allowed: 999px, var(--hcl-radius), var(--hcl-radius-sm))`);
+    }
+    if (/:hover/.test(selector) && /scale\(/.test(body)) fail(file, `no scale() on hover (${selector})`);
+    if (/transition:\s*all\b/.test(body)) fail(file, "no `transition: all`");
+    if (/font-style:\s*italic/.test(body) && !/quote|accent/.test(selector))
+      fail(file, `italic only for quotes / hero accent (${selector})`);
+  }
+}
+
+for (const file of sectionFiles) {
+  const id = basename(file, ".tsx");
+  const src = readFileSync(file, "utf8");
+  if (!EYEBROW_ALLOWED.has(id) && /\beyebrow:\s*"[^"]/.test(src)) fail(file, 'eyebrow default must be "" (max 2 per page)');
+  if (ORNAMENT_GLYPHS.test(src)) fail(file, "no ornament glyphs");
+  if (/hcl-btn--ghost/.test(src)) fail(file, "use hcl-btn--secondary or hcl-btn--on-dark");
+}
+
+const CONTENT = join(ROOT, "src/content");
+for (const file of [...sectionFiles, ...readdirSync(CONTENT).map((f) => join(CONTENT, f))]) {
+  const strings = [...readFileSync(file, "utf8").matchAll(/"((?:[^"\\]|\\.)*)"|`([^`]*)`/g)].map((m) => m[1] ?? m[2]);
+  for (const s of strings) {
+    const banned = s.match(BANNED_WORDS);
+    if (banned) fail(file, `cliché copy "${banned[0]}" in: ${s.slice(0, 80)}`);
+    if (s.includes("—")) fail(file, `em dash in copy: ${s.slice(0, 80)}`);
   }
 }
 

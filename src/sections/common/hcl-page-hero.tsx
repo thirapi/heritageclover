@@ -19,7 +19,7 @@ export const hclPageHeroDefaults: Required<Omit<HclPageHeroProps, keyof HclInjec
   sectionId: "",
   eyebrow: "Heritage Clover",
   title: "Our Story",
-  subtitle: "From the Spice Islands of Maluku to your kitchen, one hand-picked bud at a time.",
+  subtitle: "Where our cloves grow, who picks them and how they reach your kitchen.",
   image: ASSETS.pageHero,
   backgroundColor: "#2E1A13",
   textColor: "#FCFAF5",
@@ -43,7 +43,6 @@ export default function HclPageHero(props: HclPageHeroProps) {
         <div className={cn("hcl-page-hero__content", !p.isCanvas && "hcl-fade-up")}>
           {p.eyebrow && <p className="hcl-eyebrow hcl-page-hero__eyebrow">{p.eyebrow}</p>}
           <h1 className="hcl-page-hero__title">{p.title}</h1>
-          <span className="hcl-page-hero__rule" aria-hidden="true" />
           {p.subtitle && <p className="hcl-page-hero__subtitle">{p.subtitle}</p>}
         </div>
       </div>

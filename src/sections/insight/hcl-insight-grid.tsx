@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ARTICLES, articleHref } from "@/content/insight";
 import { cn } from "@/lib/utils";
 import { HclLink } from "../hcl-link";
@@ -25,13 +25,13 @@ export type HclInsightGridProps = {
 
 export const hclInsightGridDefaults: Required<Omit<HclInsightGridProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "Insight",
+  eyebrow: "",
   title: "Notes from the Spice Islands",
-  intro: "Stories, recipes and practical guides on the bud that shaped the world, written from our sorting tables in Maluku.",
+  intro: "History, recipes and storage guides for cloves, written by the team that sorts and packs our harvest in North Maluku.",
   filterLabel: "Filter articles by category",
   allLabel: "All",
   readMoreLabel: "Read article",
-  emptyText: "No articles here yet. New stories from the clove gardens are on their way.",
+  emptyText: "No articles in this category yet.",
   articles: ARTICLES.en.map((a) => ({
     title: a.title,
     excerpt: a.excerpt,
@@ -66,9 +66,6 @@ export default function HclInsightGrid(props: HclInsightGridProps) {
         <HclReveal isCanvas={p.isCanvas} className="hcl-insight-grid__head">
           {p.eyebrow && <p className="hcl-eyebrow hcl-insight-grid__eyebrow">{p.eyebrow}</p>}
           {p.title && <h2 className="hcl-insight-grid__title">{p.title}</h2>}
-          <span className="hcl-insight-grid__rule" aria-hidden="true">
-            <span />
-          </span>
           {p.intro && <p className="hcl-insight-grid__intro">{p.intro}</p>}
         </HclReveal>
 
@@ -113,8 +110,8 @@ export default function HclInsightGrid(props: HclInsightGridProps) {
                   <div className="hcl-insight-grid__body">
                     <p className="hcl-insight-grid__meta">
                       {a.category && <span className="hcl-insight-grid__category">{a.category}</span>}
-                      {a.category && a.date && <span className="hcl-insight-grid__dot" aria-hidden="true" />}
-                      {a.date && <span>{a.date}</span>}
+                      {a.category && a.date && <span aria-hidden="true">·</span>}
+                      {a.date && <span className="hcl-num">{a.date}</span>}
                     </p>
                     <h3 className="hcl-insight-grid__card-title">
                       <HclLink href={a.href} className="hcl-insight-grid__link">
@@ -123,9 +120,9 @@ export default function HclInsightGrid(props: HclInsightGridProps) {
                     </h3>
                     {a.excerpt && <p className="hcl-insight-grid__excerpt">{a.excerpt}</p>}
                     {p.readMoreLabel && (
-                      <span className="hcl-insight-grid__more" aria-hidden="true">
+                      <span className="hcl-link hcl-insight-grid__more" aria-hidden="true">
                         {p.readMoreLabel}
-                        <ArrowUpRight size={16} strokeWidth={1.75} />
+                        <ArrowRight size={16} strokeWidth={1.75} />
                       </span>
                     )}
                   </div>

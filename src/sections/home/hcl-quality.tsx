@@ -22,9 +22,9 @@ export type HclQualityProps = {
 
 export const hclQualityDefaults: Required<Omit<HclQualityProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "Our promise",
+  eyebrow: "",
   title: "Quality you can smell before you open the jar",
-  body: "Good cloves are plump, whole and slightly oily to the touch. We hold every batch to that old standard, and check it with care.",
+  body: "Good cloves are plump, whole and slightly oily to the touch. Every batch is sorted by hand and moisture-tested before it is packed.",
   points: [
     {
       title: "Traceable origin",
@@ -43,7 +43,7 @@ export const hclQualityDefaults: Required<Omit<HclQualityProps, keyof HclInjecte
     },
     {
       title: "Nothing added",
-      body: "Pure clove, with no fillers, colouring or preservatives. Just the spice, as nature made it.",
+      body: "Whole clove buds only, with no fillers, colouring or preservatives.",
       icon: "Leaf",
     },
   ],
@@ -53,8 +53,8 @@ export const hclQualityDefaults: Required<Omit<HclQualityProps, keyof HclInjecte
     { label: "Certification (TBD)", image: ASSETS.cert },
     { label: "Certification (TBD)", image: ASSETS.cert },
   ],
-  backgroundColor: "#2E1A13",
-  textColor: "#FCFAF5",
+  backgroundColor: "#EFE6D3",
+  textColor: "#4A2C21",
 };
 
 export default function HclQuality(props: HclQualityProps) {
@@ -72,25 +72,7 @@ export default function HclQuality(props: HclQualityProps) {
         <HclReveal isCanvas={p.isCanvas} className="hcl-quality__intro">
           {p.eyebrow && <p className="hcl-eyebrow hcl-quality__eyebrow">{p.eyebrow}</p>}
           <h2 className="hcl-quality__title">{p.title}</h2>
-          <span className="hcl-quality__rule" aria-hidden="true" />
           {p.body && <p className="hcl-quality__lead">{p.body}</p>}
-
-          {badges.length > 0 && (
-            <div className="hcl-quality__badges">
-              {p.badgesLabel && <p className="hcl-quality__badges-label">{p.badgesLabel}</p>}
-              <ul className="hcl-quality__badge-list">
-                {badges.map((badge, i) => (
-                  <li key={`${badge.label}-${i}`} className="hcl-quality__badge">
-                    {badge.image && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img className="hcl-quality__badge-image" src={badge.image} alt="" aria-hidden="true" loading="lazy" />
-                    )}
-                    <span className="hcl-quality__badge-text">{badge.label}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </HclReveal>
 
         <ul className="hcl-quality__points">
@@ -104,15 +86,34 @@ export default function HclQuality(props: HclQualityProps) {
                 delay={0.1 + i * 0.08}
                 className="hcl-quality__point"
               >
-                <span className="hcl-quality__icon" aria-hidden="true">
-                  <Icon strokeWidth={1.4} />
-                </span>
-                <h3 className="hcl-quality__point-title">{point.title}</h3>
+                <div className="hcl-quality__point-head">
+                  <span className="hcl-icon" aria-hidden="true">
+                    <Icon />
+                  </span>
+                  <h3 className="hcl-quality__point-title">{point.title}</h3>
+                </div>
                 {point.body && <p className="hcl-quality__point-body">{point.body}</p>}
               </HclReveal>
             );
           })}
         </ul>
+
+        {badges.length > 0 && (
+          <HclReveal isCanvas={p.isCanvas} delay={0.2} className="hcl-quality__badges">
+            {p.badgesLabel && <p className="hcl-quality__badges-label">{p.badgesLabel}</p>}
+            <ul className="hcl-quality__badge-list">
+              {badges.map((badge, i) => (
+                <li key={`${badge.label}-${i}`} className="hcl-quality__badge">
+                  {badge.image && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img className="hcl-quality__badge-image" src={badge.image} alt="" aria-hidden="true" loading="lazy" />
+                  )}
+                  <span className="hcl-quality__badge-text">{badge.label}</span>
+                </li>
+              ))}
+            </ul>
+          </HclReveal>
+        )}
       </div>
     </HclRoot>
   );

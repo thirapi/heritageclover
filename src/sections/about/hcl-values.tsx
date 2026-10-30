@@ -40,11 +40,11 @@ export const hclValuesDefaults: Required<
   Omit<HclValuesProps, keyof HclInjectedProps>
 > = {
   sectionId: "",
-  eyebrow: "Our mission",
+  eyebrow: "",
   mission:
-    "To return the clove to its rightful place: honestly grown, carefully kept, and as fragrant as the day it left the Spice Islands.",
+    "To bring Indonesian cloves to your kitchen the way growers in Maluku keep them: picked by hand, dried in the sun and sealed while the oils are still in the bud.",
   missionNote:
-    "We are a small Indonesian brand with a long memory. Everything we do starts with the growers who keep this heritage alive.",
+    "We are a small Indonesian brand. We buy from smallholder clove gardens and work with the families who pick, dry and sort the harvest.",
   values: [
     {
       title: "Rooted in origin",
@@ -52,8 +52,8 @@ export const hclValuesDefaults: Required<
       icon: "Compass",
     },
     {
-      title: "Patience over shortcuts",
-      body: "Picked by hand at the bud stage and dried slowly in the sun. We let tradition set the pace, not the clock.",
+      title: "Picked by hand, dried in the sun",
+      body: "Buds are picked while still closed and dried on mats in the sun for several days, the same method Maluku growers have used for generations.",
       icon: "Sun",
     },
     {
@@ -63,7 +63,7 @@ export const hclValuesDefaults: Required<
     },
     {
       title: "Quality you can check",
-      body: "Every batch is sorted, inspected and sealed with care. If it is not good enough for our own kitchens, it does not leave.",
+      body: "Every batch is sorted by hand and checked for moisture before it is packed. Batches that are not dry enough go back to the sun.",
       icon: "ShieldCheck",
     },
   ],
@@ -82,18 +82,12 @@ export default function HclValues(props: HclValuesProps) {
     >
       <div className="hcl-container">
         <HclReveal isCanvas={p.isCanvas} className="hcl-values__mission">
-          {p.eyebrow && (
-            <p className="hcl-eyebrow hcl-values__eyebrow">{p.eyebrow}</p>
-          )}
-          <span className="hcl-values__quote-mark" aria-hidden="true">
-            &ldquo;
-          </span>
-          <h2 className="hcl-values__statement">{p.mission}</h2>
-          <span className="hcl-values__ornament" aria-hidden="true">
-            <span />
-            <i />
-            <span />
-          </span>
+          <div>
+            {p.eyebrow && (
+              <p className="hcl-eyebrow hcl-values__eyebrow">{p.eyebrow}</p>
+            )}
+            <h2 className="hcl-values__statement">{p.mission}</h2>
+          </div>
           {p.missionNote && <p className="hcl-values__note">{p.missionNote}</p>}
         </HclReveal>
 
@@ -108,13 +102,12 @@ export default function HclValues(props: HclValuesProps) {
                 delay={i * 0.08}
                 className="hcl-values__item"
               >
-                <span className="hcl-values__index" aria-hidden="true">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="hcl-values__icon" aria-hidden="true">
-                  <Icon size={22} strokeWidth={1.4} />
-                </span>
-                <h3 className="hcl-values__title">{value.title}</h3>
+                <div className="hcl-values__item-head">
+                  <span className="hcl-icon hcl-values__icon" aria-hidden="true">
+                    <Icon />
+                  </span>
+                  <h3 className="hcl-values__title">{value.title}</h3>
+                </div>
                 <p className="hcl-values__body">{value.body}</p>
               </HclReveal>
             );
