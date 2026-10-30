@@ -1,0 +1,171 @@
+.hcl-farmers {
+  position: relative;
+  padding: var(--hcl-space-section) 0 calc(var(--hcl-space-section) + 32px);
+}
+
+.hcl-farmers__head {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 48px 72px;
+  align-items: end;
+  margin-bottom: 80px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--hcl-line);
+}
+
+.hcl-farmers__eyebrow {
+  margin-bottom: 1rem;
+}
+
+.hcl-farmers__title {
+  font-size: var(--hcl-h2);
+  max-width: 14ch;
+}
+
+.hcl-farmers__body {
+  position: relative;
+  padding-left: 24px;
+  color: var(--hcl-ink-muted);
+  font-size: 1.0625rem;
+}
+
+.hcl-farmers__body::before {
+  content: "";
+  position: absolute;
+  top: 0.4em;
+  bottom: 0.4em;
+  left: 0;
+  width: 1px;
+  background-color: var(--hcl-gold);
+}
+
+.hcl-farmers__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Staggered portraits: the middle one sits lower for an editorial rhythm. */
+.hcl-farmers__person:nth-child(3n + 2) {
+  margin-top: 72px;
+}
+
+.hcl-farmers__figure {
+  margin: 0;
+}
+
+.hcl-farmers__portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--hcl-line);
+}
+
+.hcl-farmers__portrait::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(201, 164, 92, 0.55);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.hcl-farmers__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.15);
+  transition: transform 900ms var(--hcl-ease);
+}
+
+.hcl-farmers__person:hover .hcl-farmers__portrait img {
+  transform: scale(1.04);
+}
+
+.hcl-farmers__number {
+  position: absolute;
+  left: 24px;
+  bottom: 18px;
+  font-family: var(--hcl-font-display);
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--hcl-gold);
+}
+
+.hcl-farmers__quote {
+  position: relative;
+  margin: 2rem 0 1.5rem;
+  padding-top: 1.5rem;
+  font-family: var(--hcl-font-display);
+  font-style: italic;
+  font-size: 1.375rem;
+  line-height: 1.35;
+}
+
+.hcl-farmers__quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.35em;
+  left: -0.05em;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--hcl-gold);
+}
+
+.hcl-farmers__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 1rem;
+  border-top: 1px solid var(--hcl-line);
+}
+
+.hcl-farmers__name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.hcl-farmers__role {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hcl-ember);
+}
+
+@media (max-width: 1023px) {
+  .hcl-farmers__head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  .hcl-farmers__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 56px 32px;
+  }
+
+  .hcl-farmers__person:nth-child(3n + 2) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .hcl-farmers {
+    padding-bottom: var(--hcl-space-section);
+  }
+
+  .hcl-farmers__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 56px;
+  }
+
+  .hcl-farmers__quote {
+    font-size: 1.25rem;
+  }
+}

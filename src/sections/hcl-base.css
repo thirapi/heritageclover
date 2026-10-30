@@ -39,24 +39,26 @@
 }
 
 /*
- * Base + helper rules are wrapped in :where() (zero specificity) so a section's
- * own class (e.g. .hcl-page-hero__eyebrow) always overrides them.
+ * Base + helper rules scope with :where(.hcl-root) so they carry only their own
+ * specificity: element rules (0,0,1) and helper classes (0,1,0) beat Tailwind's
+ * preflight (loaded earlier), while a section's own class (e.g.
+ * .hcl-page-hero__eyebrow, same specificity, loaded later) still overrides them.
  */
-:where(.hcl-root *, .hcl-root *::before, .hcl-root *::after) {
+:where(.hcl-root) *, :where(.hcl-root) *::before, :where(.hcl-root) *::after {
   box-sizing: border-box;
 }
 
-:where(.hcl-root a) {
+:where(.hcl-root) a {
   color: inherit;
   text-decoration: none;
 }
 
-:where(.hcl-root img) {
+:where(.hcl-root) img {
   display: block;
   max-width: 100%;
 }
 
-:where(.hcl-root h1, .hcl-root h2, .hcl-root h3, .hcl-root h4) {
+:where(.hcl-root) :is(h1, h2, h3, h4) {
   font-family: var(--hcl-font-display);
   font-weight: 500;
   line-height: 1.1;
@@ -64,19 +66,19 @@
   margin: 0;
 }
 
-:where(.hcl-root p) {
+:where(.hcl-root) p {
   margin: 0;
 }
 
 /* Shared layout + type helpers used by every section. */
-:where(.hcl-root .hcl-container) {
+:where(.hcl-root) .hcl-container {
   width: 100%;
   max-width: var(--hcl-container);
   margin-inline: auto;
   padding-inline: var(--hcl-gutter);
 }
 
-:where(.hcl-root .hcl-eyebrow) {
+:where(.hcl-root) .hcl-eyebrow {
   font-family: var(--hcl-font-body);
   font-size: 0.75rem;
   font-weight: 600;
@@ -85,7 +87,7 @@
   color: var(--hcl-ember);
 }
 
-:where(.hcl-root .hcl-btn) {
+:where(.hcl-root) .hcl-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -99,20 +101,20 @@
     border-color 200ms var(--hcl-ease);
 }
 
-:where(.hcl-root .hcl-btn--primary) {
+:where(.hcl-root) .hcl-btn--primary {
   background-color: var(--hcl-ember);
   color: var(--hcl-ivory);
 }
 
-:where(.hcl-root .hcl-btn--primary:hover) {
+:where(.hcl-root) .hcl-btn--primary:hover {
   background-color: var(--hcl-clove);
 }
 
-:where(.hcl-root .hcl-btn--ghost) {
+:where(.hcl-root) .hcl-btn--ghost {
   border: 1px solid currentColor;
 }
 
-:where(.hcl-root :focus-visible) {
+:where(.hcl-root) :focus-visible {
   outline: 2px solid var(--hcl-gold);
   outline-offset: 3px;
 }

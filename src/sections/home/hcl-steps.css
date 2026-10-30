@@ -1,0 +1,229 @@
+.hcl-steps {
+  padding: var(--hcl-space-section) 0;
+}
+
+.hcl-steps__head {
+  max-width: 640px;
+  margin: 0 auto 72px;
+  text-align: center;
+}
+
+.hcl-steps__eyebrow {
+  margin-bottom: 1rem;
+}
+
+.hcl-steps__title {
+  font-size: var(--hcl-h2);
+}
+
+.hcl-steps__ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 1.5rem 0;
+}
+
+.hcl-steps__ornament span {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background-color: var(--hcl-gold);
+}
+
+.hcl-steps__ornament i {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--hcl-gold);
+  transform: rotate(45deg);
+}
+
+.hcl-steps__intro {
+  color: var(--hcl-ink-muted);
+  font-size: 1.0625rem;
+}
+
+.hcl-steps__track {
+  --hcl-steps-medallion: 76px;
+  position: relative;
+}
+
+.hcl-steps__list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--hcl-steps-count), minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Gold thread joining the medallions: first centre to last centre. */
+.hcl-steps__line {
+  position: absolute;
+  top: calc(var(--hcl-steps-medallion) / 2);
+  left: calc(50% / var(--hcl-steps-count));
+  right: calc(50% / var(--hcl-steps-count));
+  height: 1px;
+  background-image: linear-gradient(90deg, var(--hcl-gold) 50%, transparent 50%);
+  background-size: 8px 1px;
+}
+
+.hcl-steps__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hcl-steps__medallion {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--hcl-steps-medallion);
+  height: var(--hcl-steps-medallion);
+  border: 1px solid var(--hcl-gold);
+  border-radius: 999px;
+  background-color: var(--hcl-ivory);
+  color: var(--hcl-clove);
+  box-shadow: 0 0 0 6px var(--hcl-ivory), inset 0 0 0 5px var(--hcl-parchment);
+  transition: background-color 300ms var(--hcl-ease), color 300ms var(--hcl-ease);
+}
+
+.hcl-steps__medallion svg {
+  width: 28px;
+  height: 28px;
+}
+
+.hcl-steps__item:hover .hcl-steps__medallion {
+  background-color: var(--hcl-clove);
+  color: var(--hcl-gold);
+}
+
+.hcl-steps__text {
+  margin-top: 28px;
+}
+
+.hcl-steps__number {
+  display: block;
+  font-family: var(--hcl-font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--hcl-gold);
+  margin-bottom: 0.25rem;
+}
+
+.hcl-steps__item-title {
+  font-size: var(--hcl-h3);
+  margin-bottom: 0.75rem;
+}
+
+.hcl-steps__body {
+  color: var(--hcl-ink-muted);
+  font-size: 0.9375rem;
+  max-width: 28ch;
+  margin-inline: auto;
+}
+
+.hcl-steps__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;
+}
+
+.hcl-steps__cta {
+  color: var(--hcl-clove);
+  border-color: var(--hcl-gold);
+}
+
+.hcl-steps__cta:hover {
+  background-color: var(--hcl-clove);
+  border-color: var(--hcl-clove);
+  color: var(--hcl-ivory);
+}
+
+@media (max-width: 1023px) {
+  .hcl-steps__track {
+    --hcl-steps-medallion: 64px;
+  }
+
+  .hcl-steps__list {
+    gap: 20px;
+  }
+
+  .hcl-steps__medallion svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hcl-steps__body {
+    font-size: 0.875rem;
+  }
+}
+
+/* Vertical timeline below tablet width. */
+@media (max-width: 767px) {
+  .hcl-steps__head {
+    margin-bottom: 48px;
+  }
+
+  .hcl-steps__track {
+    --hcl-steps-medallion: 56px;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .hcl-steps__list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .hcl-steps__line {
+    display: none;
+  }
+
+  /* Each step draws the thread down to the next one. */
+  .hcl-steps__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--hcl-steps-medallion) / 2);
+    left: calc(var(--hcl-steps-medallion) / 2);
+    width: 1px;
+    height: calc(100% + 36px);
+    background-image: linear-gradient(180deg, var(--hcl-gold) 50%, transparent 50%);
+    background-size: 1px 8px;
+  }
+
+  .hcl-steps__item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .hcl-steps__medallion {
+    flex: none;
+  }
+
+  .hcl-steps__medallion svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .hcl-steps__text {
+    margin-top: 4px;
+  }
+
+  .hcl-steps__body {
+    max-width: none;
+    margin-inline: 0;
+    font-size: 0.9375rem;
+  }
+
+  .hcl-steps__actions {
+    margin-top: 48px;
+  }
+}

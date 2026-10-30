@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { LAYOUT } from "@/content/layout";
 import { LocaleProvider } from "@/lib/locale";
+import HclFooter from "@/sections/layout/hcl-footer";
+import HclHeader from "@/sections/layout/hcl-header";
 import { LOCALES, isLocale } from "@/lib/locales";
 import "../../globals.css";
 
@@ -21,7 +24,11 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   return (
     <html lang={locale}>
       <body>
-        <LocaleProvider locale={locale}>{children}</LocaleProvider>
+        <LocaleProvider locale={locale}>
+          <HclHeader {...LAYOUT[locale].header} />
+          {children}
+          <HclFooter {...LAYOUT[locale].footer} />
+        </LocaleProvider>
       </body>
     </html>
   );

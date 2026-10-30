@@ -1,0 +1,119 @@
+.hcl-marquee {
+  position: relative;
+  padding: 1.75rem 0;
+  border-block: 1px solid rgba(201, 164, 92, 0.35);
+}
+
+.hcl-marquee::before,
+.hcl-marquee::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  height: 1px;
+  background-color: rgba(201, 164, 92, 0.18);
+  pointer-events: none;
+}
+
+.hcl-marquee::before {
+  top: 6px;
+}
+
+.hcl-marquee::after {
+  bottom: 6px;
+}
+
+.hcl-marquee__viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+.hcl-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: hcl-marquee-scroll var(--hcl-marquee-duration, 60s) linear infinite;
+}
+
+.hcl-marquee:hover .hcl-marquee__track {
+  animation-play-state: paused;
+}
+
+.hcl-marquee--slow {
+  --hcl-marquee-duration: 90s;
+}
+
+.hcl-marquee--normal {
+  --hcl-marquee-duration: 60s;
+}
+
+.hcl-marquee--fast {
+  --hcl-marquee-duration: 35s;
+}
+
+.hcl-marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hcl-marquee__item {
+  padding-inline: 1.75rem;
+  font-family: var(--hcl-font-display);
+  font-size: clamp(1.375rem, 1.1rem + 1vw, 2rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.hcl-marquee__sep {
+  display: flex;
+  align-items: center;
+}
+
+.hcl-marquee__glyph {
+  width: 14px;
+  height: 14px;
+  fill: var(--hcl-gold);
+}
+
+/* Editor canvas / reduced motion: frozen at the start of the strip. */
+.hcl-marquee--static .hcl-marquee__track {
+  animation: none;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hcl-marquee__track {
+    animation: none;
+    transform: none;
+  }
+}
+
+@keyframes hcl-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .hcl-marquee {
+    padding: 1.25rem 0;
+  }
+
+  .hcl-marquee__item {
+    padding-inline: 1.25rem;
+  }
+
+  .hcl-marquee__glyph {
+    width: 11px;
+    height: 11px;
+  }
+}
