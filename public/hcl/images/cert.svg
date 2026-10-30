@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E4D9C6"/>
+      <stop offset="1" stop-color="#C9A45C"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" fill="url(#g)"/>
+  
+  <g transform="translate(0 0) rotate(0) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(118.4 227.2) rotate(47) scale(0.8)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(236.8 134.4) rotate(94) scale(0.9904761904761905)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(35.2 41.6) rotate(141) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(153.6 268.8) rotate(188) scale(0.8)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(272 176) rotate(235) scale(0.9904761904761905)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(70.4 83.2) rotate(282) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(188.79999999999998 310.4) rotate(329) scale(0.8)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(307.2 217.60000000000002) rotate(16) scale(0.9904761904761905)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(105.60000000000001 124.80000000000001) rotate(63) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(224 32) rotate(110) scale(0.8)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(22.400000000000002 259.20000000000005) rotate(157) scale(0.9904761904761905)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(140.8 166.4) rotate(204) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(259.20000000000005 73.60000000000001) rotate(251) scale(0.8)" fill="#4A2C21" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <rect x="12.8" y="12.8" width="294.40000000000003" height="294.40000000000003" fill="none" stroke="#4A2C21" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#4A2C21" font-family="Georgia, serif" font-size="20" font-style="italic">Certification (TBD)</text>
+  <text x="50%" y="186" text-anchor="middle" fill="#4A2C21" fill-opacity="0.6" font-family="system-ui, sans-serif" font-size="8" letter-spacing="3">PLACEHOLDER</text>
+</svg>

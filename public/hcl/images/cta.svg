@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1000" viewBox="0 0 1920 1000">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B5532E"/>
+      <stop offset="1" stop-color="#4A2C21"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1000" fill="url(#g)"/>
+  
+  <g transform="translate(0 0) rotate(0) scale(1.9047619047619049)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(710.4 710) rotate(47) scale(2.5)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(1420.8 420) rotate(94) scale(3.0952380952380953)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(211.2 130) rotate(141) scale(1.9047619047619049)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(921.5999999999999 840) rotate(188) scale(2.5)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(1632 550) rotate(235) scale(3.0952380952380953)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(422.4 260) rotate(282) scale(1.9047619047619049)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(1132.8 970) rotate(329) scale(2.5)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(1843.1999999999998 680) rotate(16) scale(3.0952380952380953)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(633.6 390) rotate(63) scale(1.9047619047619049)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(1344 100) rotate(110) scale(2.5)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(134.4 810) rotate(157) scale(3.0952380952380953)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(844.8 520) rotate(204) scale(1.9047619047619049)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <g transform="translate(1555.2 230) rotate(251) scale(2.5)" fill="#F6F0E4" opacity="0.16">
+    <circle cx="0" cy="-34" r="11"/>
+    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
+    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  </g>
+  <rect x="76.8" y="40" width="1766.4" height="920" fill="none" stroke="#F6F0E4" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#F6F0E4" font-family="Georgia, serif" font-size="63" font-style="italic">Clove harvest at dusk</text>
+  <text x="50%" y="581.9" text-anchor="middle" fill="#F6F0E4" fill-opacity="0.6" font-family="system-ui, sans-serif" font-size="24" letter-spacing="3">PLACEHOLDER</text>
+</svg>
