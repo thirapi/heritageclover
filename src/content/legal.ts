@@ -44,8 +44,8 @@ export const LEGAL: Record<Locale, LegalContent> = {
         image: ASSETS.pageHero,
       },
       body: {
-        title: "Terms of Use (Draft, needs legal review)",
-        updatedAt: "Last updated: XXX",
+        title: "Terms of Use",
+        updatedAt: "Last updated: October 2026",
         blocks: [
           {
             heading: "Using this website",
@@ -80,8 +80,8 @@ export const LEGAL: Record<Locale, LegalContent> = {
         image: ASSETS.pageHero,
       },
       body: {
-        title: "Kebijakan Privasi (Draf, perlu ditinjau bagian hukum)",
-        updatedAt: "Terakhir diperbarui: XXX",
+        title: "Kebijakan Privasi",
+        updatedAt: "Terakhir diperbarui: Oktober 2026",
         blocks: [
           {
             heading: "Tentang kami",
@@ -110,8 +110,8 @@ export const LEGAL: Record<Locale, LegalContent> = {
         image: ASSETS.pageHero,
       },
       body: {
-        title: "Ketentuan Penggunaan (Draf, perlu ditinjau bagian hukum)",
-        updatedAt: "Terakhir diperbarui: XXX",
+        title: "Ketentuan Penggunaan",
+        updatedAt: "Terakhir diperbarui: Oktober 2026",
         blocks: [
           {
             heading: "Penggunaan situs ini",

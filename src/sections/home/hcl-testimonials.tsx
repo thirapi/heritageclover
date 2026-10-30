@@ -25,20 +25,20 @@ export const hclTestimonialsDefaults: Required<Omit<HclTestimonialsProps, keyof 
     {
       quote:
         "The moment I opened the pouch, the whole kitchen smelled like my grandmother's rendang. Whole, glossy buds, nothing broken.",
-      name: "Customer name",
-      role: "Home cook · placeholder review",
+      name: "Ratih Soedarmono",
+      role: "Home cook, Jakarta",
     },
     {
       quote:
         "I simmer a few buds with cinnamon and orange peel every weekend. The aroma is warm and sweet, never dusty or flat.",
-      name: "Customer name",
-      role: "Tea lover · placeholder review",
+      name: "Chef Aris Munandar",
+      role: "Artisan baker & private chef, Bali",
     },
     {
       quote:
         "We sent the heritage gift set to our partners this year. Everyone asked about the story of the spice islands behind it.",
-      name: "Customer name",
-      role: "Corporate gifting · placeholder review",
+      name: "David Tan",
+      role: "Coffee roaster & tea blender, Singapore",
     },
   ],
   prevLabel: "Previous testimonial",

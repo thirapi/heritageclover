@@ -1,82 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#E4D9C6"/>
-      <stop offset="1" stop-color="#C9A45C"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A2C21"/>
+      <stop offset="100%" stop-color="#2E1A13"/>
     </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#C9A45C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C9A45C" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="900" height="1100" fill="url(#g)"/>
-  
-  <g transform="translate(0 0) rotate(0) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+
+  <rect width="900" height="1100" fill="url(#bg)"/>
+  <rect width="900" height="1100" fill="url(#glow)"/>
+
+  <!-- Decorative border line -->
+  <rect x="24" y="24" width="852" height="1052" rx="8" fill="none" stroke="#C9A45C" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="30" y="30" width="840" height="1040" rx="6" fill="none" stroke="#C9A45C" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Corner flourishes -->
+  <path d="M 40 50 L 50 40 M 40 40 L 60 40 M 40 40 L 40 60" stroke="#C9A45C" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+  <path d="M 860 50 L 850 40 M 860 40 L 840 40 M 860 40 L 860 60" stroke="#C9A45C" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+  <path d="M 40 1050 L 50 1060 M 40 1060 L 60 1060 M 40 1060 L 40 1040" stroke="#C9A45C" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+  <path d="M 860 1050 L 850 1060 M 860 1060 L 840 1060 M 860 1060 L 860 1040" stroke="#C9A45C" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+
+  <!-- Apothecary Jar / Pouch silhouette in center -->
+  <g transform="translate(450, 462)">
+    <!-- Pouch / Jar body -->
+    <path d="M -90 120 C -95 120, -110 90, -105 -30 C -100 -70, -70 -90, -45 -95 L 45 -95 C 70 -90, 100 -70, 105 -30 C 110 90, 95 120, 90 120 Z" fill="#EFE6D3" fill-opacity="0.12" stroke="#C9A45C" stroke-opacity="0.4" stroke-width="1.5"/>
+    <!-- Lid / Seal -->
+    <rect x="-40" y="-115" width="80" height="20" rx="3" fill="#C9A45C" fill-opacity="0.3" stroke="#C9A45C" stroke-opacity="0.6" stroke-width="1.5"/>
+    <!-- Tie twine -->
+    <line x1="-50" y1="-95" x2="50" y2="-95" stroke="#AD4F2B" stroke-width="2"/>
+
+    <!-- Botanical etching on label -->
+    
+  <g transform="translate(0 5) rotate(0) scale(0.7)" stroke="#C9A45C" stroke-opacity="0.6" fill="none">
+    <path d="M 0 120 Q 8 60 0 0 Q -8 -60 0 -120" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Leaves -->
+    <path d="M 2 50 Q -35 38 -55 12 Q -35 -12 0 40" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.21"/>
+    <path d="M 0 45 Q -28 28 -52 15" stroke-width="1"/>
+    
+    <path d="M 2 35 Q 40 22 62 5 Q 40 -18 0 25" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.21"/>
+    <path d="M 0 30 Q 32 18 58 8" stroke-width="1"/>
+
+    <path d="M -1 -25 Q -45 -42 -62 -72 Q -35 -82 -2 -35" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.21"/>
+    <path d="M -1 -30 Q -35 -48 -58 -68" stroke-width="1"/>
+
+    <path d="M 1 -38 Q 45 -55 68 -85 Q 40 -95 0 -48" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.21"/>
+    <path d="M 0 -42 Q 36 -62 64 -80" stroke-width="1"/>
+
+    <!-- Terminal cluster of 3 buds -->
+    <path d="M 0 -120 L -30 -165" stroke-width="2"/>
+    <path d="M 0 -120 L 0 -175" stroke-width="2"/>
+    <path d="M 0 -120 L 30 -165" stroke-width="2"/>
+
+    <g transform="translate(-30, -165) rotate(-24)">
+      <path d="M -3.5 0 L 3.5 0 L 3 -28 L -3 -28 Z" fill="#C9A45C" fill-opacity="0.36" stroke-width="1"/>
+      <path d="M -8 -30 L -3.5 -28 L 0 -29 L 3.5 -28 L 8 -30 L 5 -36 L -5 -36 Z" fill="#C9A45C" fill-opacity="0.48"/>
+      <circle cx="0" cy="-40" r="9" fill="#C9A45C" fill-opacity="0.51" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(0, -175)">
+      <path d="M -4 0 L 4 0 L 3.5 -32 L -3.5 -32 Z" fill="#C9A45C" fill-opacity="0.36" stroke-width="1"/>
+      <path d="M -9 -34 L -4 -32 L 0 -33 L 4 -32 L 9 -34 L 6 -40 L -6 -40 Z" fill="#C9A45C" fill-opacity="0.48"/>
+      <circle cx="0" cy="-44" r="10" fill="#C9A45C" fill-opacity="0.51" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(30, -165) rotate(24)">
+      <path d="M -3.5 0 L 3.5 0 L 3 -28 L -3 -28 Z" fill="#C9A45C" fill-opacity="0.36" stroke-width="1"/>
+      <path d="M -8 -30 L -3.5 -28 L 0 -29 L 3.5 -28 L 8 -30 L 5 -36 L -5 -36 Z" fill="#C9A45C" fill-opacity="0.48"/>
+      <circle cx="0" cy="-40" r="9" fill="#C9A45C" fill-opacity="0.51" stroke-width="1"/>
+    </g>
   </g>
-  <g transform="translate(333 781) rotate(47) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
   </g>
-  <g transform="translate(666 462) rotate(94) scale(2.7857142857142856)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(99 143) rotate(141) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(432 924) rotate(188) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(765 605) rotate(235) scale(2.7857142857142856)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(198 286) rotate(282) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(531 1067) rotate(329) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(864 748) rotate(16) scale(2.7857142857142856)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(297 429) rotate(63) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(630 110) rotate(110) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(63.00000000000001 891.0000000000001) rotate(157) scale(2.7857142857142856)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(396 572) rotate(204) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(729 253) rotate(251) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#4A2C21" font-family="Georgia, serif" font-size="56" font-style="italic">Ground Cloves</text>
-  <text x="50%" y="622.8" text-anchor="middle" fill="#4A2C21" fill-opacity="0.6" font-family="system-ui, sans-serif" font-size="21" letter-spacing="3">PLACEHOLDER</text>
+
+  <!-- Typography: Product title & specifics -->
+  <text x="450" y="792" text-anchor="middle" fill="#F6F0E4" font-family="Georgia, serif" font-size="28" font-weight="600" letter-spacing="1">Ground Cloves</text>
+  <text x="450" y="847" text-anchor="middle" fill="#C9A45C" font-family="Georgia, serif" font-size="15" font-style="italic" letter-spacing="1">Stone-Milled Aromatic Spice</text>
+  <line x1="410" y1="891.0000000000001" x2="490" y2="891.0000000000001" stroke="#C9A45C" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="450" y="946" text-anchor="middle" fill="#F6F0E4" fill-opacity="0.75" font-family="system-ui, sans-serif" font-size="13" font-weight="600" letter-spacing="3">NET WT. 80G · PURE</text>
 </svg>

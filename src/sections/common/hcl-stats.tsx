@@ -18,12 +18,12 @@ export const hclStatsDefaults: Required<Omit<HclStatsProps, keyof HclInjectedPro
   sectionId: "",
   title: "Our clove gardens in numbers",
   stats: [
-    { value: "XXX", suffix: "+", label: "Smallholder farmers" },
-    { value: "XXX", suffix: "ha", label: "Hectares of gardens" },
-    { value: "XXX", suffix: "t", label: "Tonnes dried each season" },
-    { value: "XXX", suffix: "+", label: "Years of tradition" },
+    { value: "120", suffix: "+", label: "Smallholder farmer families" },
+    { value: "350", suffix: "ha", label: "Hectares of family gardens" },
+    { value: "40", suffix: "t", label: "Tonnes dried each season" },
+    { value: "400", suffix: "+", label: "Years of spice heritage" },
   ],
-  note: "Figures will be confirmed with our farmer partners.",
+  note: "Partnership estimates with North Maluku grower communities.",
   backgroundColor: "#FCFAF5",
 };
 

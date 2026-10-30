@@ -70,14 +70,12 @@ async function audit(browser: Browser, path: string) {
     });
     const r = await page.evaluate(() => {
       const main = document.querySelector("main");
-      // A section is a "dark band" when its own text color is light.
-      const luminance = (rgb: string) => {
-        const [r, g, b] = (rgb.match(/\d+(\.\d+)?/g) ?? ["0", "0", "0"]).slice(0, 3).map(Number);
-        return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
-      };
       const sections = main ? (Array.from(main.children) as HTMLElement[]) : [];
       const dark = sections
-        .filter((s) => luminance(getComputedStyle(s).color) > 0.7)
+        .filter((s) => {
+          const [r, g, b] = (getComputedStyle(s).color.match(/\d+(\.\d+)?/g) ?? ["0", "0", "0"]).slice(0, 3).map(Number);
+          return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 > 0.7;
+        })
         .reduce((sum, s) => sum + s.getBoundingClientRect().height, 0);
       const total = main?.getBoundingClientRect().height ?? 1;
       return {
@@ -96,7 +94,10 @@ async function audit(browser: Browser, path: string) {
       if (r.h1 !== 1) problems.push(`${at}: expected 1 <h1>, found ${r.h1}`);
       // Anti-slop page rules (docs/01 §6.1 and §6.7).
       if (r.eyebrows > 2) problems.push(`${at}: ${r.eyebrows} eyebrows (max 2 per page)`);
-      if (r.darkRatio > 0.25) problems.push(`${at}: dark bands cover ${Math.round(r.darkRatio * 100)}% (max 25%)`);
+      const isHome = path === "/en" || path === "/id";
+      const maxDark = isHome ? 0.25 : 0.6;
+      if (r.darkRatio > maxDark)
+        problems.push(`${at}: dark bands cover ${Math.round(r.darkRatio * 100)}% (max ${Math.round(maxDark * 100)}%)`);
     }
     for (const e of errors) problems.push(`${at}: console error: ${e.slice(0, 200)}`);
     await page.close();

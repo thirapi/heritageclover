@@ -1,82 +1,184 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#4A2C21"/>
-      <stop offset="1" stop-color="#2E1A13"/>
+    <radialGradient id="vignette" cx="65%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#4A2C21"/>
+      <stop offset="60%" stop-color="#2E1A13"/>
+      <stop offset="100%" stop-color="#1B0F0B"/>
+    </radialGradient>
+    <linearGradient id="warmLight" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AD4F2B" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#C9A45C" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#1B0F0B" stop-opacity="0.4"/>
     </linearGradient>
   </defs>
-  <rect width="1920" height="1080" fill="url(#g)"/>
+
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+  <rect width="1920" height="1080" fill="url(#warmLight)"/>
+
+  <!-- Botanical branch clusters placed strictly on the right side and borders -->
+  <!-- This keeps the left half perfectly clean and dark for text readability -->
+  <g transform="translate(1574.3999999999999, 486)">
+    
+  <g transform="translate(0 0) rotate(-15) scale(2.2)" stroke="#C9A45C" stroke-opacity="0.22" fill="none">
+    <path d="M 0 120 Q 8 60 0 0 Q -8 -60 0 -120" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Leaves -->
+    <path d="M 2 50 Q -35 38 -55 12 Q -35 -12 0 40" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.077"/>
+    <path d="M 0 45 Q -28 28 -52 15" stroke-width="1"/>
+    
+    <path d="M 2 35 Q 40 22 62 5 Q 40 -18 0 25" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.077"/>
+    <path d="M 0 30 Q 32 18 58 8" stroke-width="1"/>
+
+    <path d="M -1 -25 Q -45 -42 -62 -72 Q -35 -82 -2 -35" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.077"/>
+    <path d="M -1 -30 Q -35 -48 -58 -68" stroke-width="1"/>
+
+    <path d="M 1 -38 Q 45 -55 68 -85 Q 40 -95 0 -48" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.077"/>
+    <path d="M 0 -42 Q 36 -62 64 -80" stroke-width="1"/>
+
+    <!-- Terminal cluster of 3 buds -->
+    <path d="M 0 -120 L -30 -165" stroke-width="2"/>
+    <path d="M 0 -120 L 0 -175" stroke-width="2"/>
+    <path d="M 0 -120 L 30 -165" stroke-width="2"/>
+
+    <g transform="translate(-30, -165) rotate(-24)">
+      <path d="M -3.5 0 L 3.5 0 L 3 -28 L -3 -28 Z" fill="#C9A45C" fill-opacity="0.132" stroke-width="1"/>
+      <path d="M -8 -30 L -3.5 -28 L 0 -29 L 3.5 -28 L 8 -30 L 5 -36 L -5 -36 Z" fill="#C9A45C" fill-opacity="0.17600000000000002"/>
+      <circle cx="0" cy="-40" r="9" fill="#C9A45C" fill-opacity="0.187" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(0, -175)">
+      <path d="M -4 0 L 4 0 L 3.5 -32 L -3.5 -32 Z" fill="#C9A45C" fill-opacity="0.132" stroke-width="1"/>
+      <path d="M -9 -34 L -4 -32 L 0 -33 L 4 -32 L 9 -34 L 6 -40 L -6 -40 Z" fill="#C9A45C" fill-opacity="0.17600000000000002"/>
+      <circle cx="0" cy="-44" r="10" fill="#C9A45C" fill-opacity="0.187" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(30, -165) rotate(24)">
+      <path d="M -3.5 0 L 3.5 0 L 3 -28 L -3 -28 Z" fill="#C9A45C" fill-opacity="0.132" stroke-width="1"/>
+      <path d="M -8 -30 L -3.5 -28 L 0 -29 L 3.5 -28 L 8 -30 L 5 -36 L -5 -36 Z" fill="#C9A45C" fill-opacity="0.17600000000000002"/>
+      <circle cx="0" cy="-40" r="9" fill="#C9A45C" fill-opacity="0.187" stroke-width="1"/>
+    </g>
+  </g>
+  </g>
+  <g transform="translate(1766.4, 885.5999999999999)">
+    
+  <g transform="translate(0 0) rotate(-40) scale(1.6)" stroke="#AD4F2B" stroke-opacity="0.28" fill="none">
+    <path d="M 0 120 Q 8 60 0 0 Q -8 -60 0 -120" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Leaves -->
+    <path d="M 2 50 Q -35 38 -55 12 Q -35 -12 0 40" stroke-width="1.75" fill="#AD4F2B" fill-opacity="0.098"/>
+    <path d="M 0 45 Q -28 28 -52 15" stroke-width="1"/>
+    
+    <path d="M 2 35 Q 40 22 62 5 Q 40 -18 0 25" stroke-width="1.75" fill="#AD4F2B" fill-opacity="0.098"/>
+    <path d="M 0 30 Q 32 18 58 8" stroke-width="1"/>
+
+    <path d="M -1 -25 Q -45 -42 -62 -72 Q -35 -82 -2 -35" stroke-width="1.75" fill="#AD4F2B" fill-opacity="0.098"/>
+    <path d="M -1 -30 Q -35 -48 -58 -68" stroke-width="1"/>
+
+    <path d="M 1 -38 Q 45 -55 68 -85 Q 40 -95 0 -48" stroke-width="1.75" fill="#AD4F2B" fill-opacity="0.098"/>
+    <path d="M 0 -42 Q 36 -62 64 -80" stroke-width="1"/>
+
+    <!-- Terminal cluster of 3 buds -->
+    <path d="M 0 -120 L -30 -165" stroke-width="2"/>
+    <path d="M 0 -120 L 0 -175" stroke-width="2"/>
+    <path d="M 0 -120 L 30 -165" stroke-width="2"/>
+
+    <g transform="translate(-30, -165) rotate(-24)">
+      <path d="M -3.5 0 L 3.5 0 L 3 -28 L -3 -28 Z" fill="#AD4F2B" fill-opacity="0.168" stroke-width="1"/>
+      <path d="M -8 -30 L -3.5 -28 L 0 -29 L 3.5 -28 L 8 -30 L 5 -36 L -5 -36 Z" fill="#AD4F2B" fill-opacity="0.22400000000000003"/>
+      <circle cx="0" cy="-40" r="9" fill="#AD4F2B" fill-opacity="0.23800000000000002" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(0, -175)">
+      <path d="M -4 0 L 4 0 L 3.5 -32 L -3.5 -32 Z" fill="#AD4F2B" fill-opacity="0.168" stroke-width="1"/>
+      <path d="M -9 -34 L -4 -32 L 0 -33 L 4 -32 L 9 -34 L 6 -40 L -6 -40 Z" fill="#AD4F2B" fill-opacity="0.22400000000000003"/>
+      <circle cx="0" cy="-44" r="10" fill="#AD4F2B" fill-opacity="0.23800000000000002" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(30, -165) rotate(24)">
+      <path d="M -3.5 0 L 3.5 0 L 3 -28 L -3 -28 Z" fill="#AD4F2B" fill-opacity="0.168" stroke-width="1"/>
+      <path d="M -8 -30 L -3.5 -28 L 0 -29 L 3.5 -28 L 8 -30 L 5 -36 L -5 -36 Z" fill="#AD4F2B" fill-opacity="0.22400000000000003"/>
+      <circle cx="0" cy="-40" r="9" fill="#AD4F2B" fill-opacity="0.23800000000000002" stroke-width="1"/>
+    </g>
+  </g>
+  </g>
+  <g transform="translate(1382.3999999999999, 162)">
+    
+  <g transform="translate(0 0) rotate(25) scale(1.4)" stroke="#C9A45C" stroke-opacity="0.18" fill="none">
+    <path d="M 0 120 Q 8 60 0 0 Q -8 -60 0 -120" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Leaves -->
+    <path d="M 2 50 Q -35 38 -55 12 Q -35 -12 0 40" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.063"/>
+    <path d="M 0 45 Q -28 28 -52 15" stroke-width="1"/>
+    
+    <path d="M 2 35 Q 40 22 62 5 Q 40 -18 0 25" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.063"/>
+    <path d="M 0 30 Q 32 18 58 8" stroke-width="1"/>
+
+    <path d="M -1 -25 Q -45 -42 -62 -72 Q -35 -82 -2 -35" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.063"/>
+    <path d="M -1 -30 Q -35 -48 -58 -68" stroke-width="1"/>
+
+    <path d="M 1 -38 Q 45 -55 68 -85 Q 40 -95 0 -48" stroke-width="1.75" fill="#C9A45C" fill-opacity="0.063"/>
+    <path d="M 0 -42 Q 36 -62 64 -80" stroke-width="1"/>
+
+    <!-- Terminal cluster of 3 buds -->
+    <path d="M 0 -120 L -30 -165" stroke-width="2"/>
+    <path d="M 0 -120 L 0 -175" stroke-width="2"/>
+    <path d="M 0 -120 L 30 -165" stroke-width="2"/>
+
+    <g transform="translate(-30, -165) rotate(-24)">
+      <path d="M -3.5 0 L 3.5 0 L 3 -28 L -3 -28 Z" fill="#C9A45C" fill-opacity="0.108" stroke-width="1"/>
+      <path d="M -8 -30 L -3.5 -28 L 0 -29 L 3.5 -28 L 8 -30 L 5 -36 L -5 -36 Z" fill="#C9A45C" fill-opacity="0.144"/>
+      <circle cx="0" cy="-40" r="9" fill="#C9A45C" fill-opacity="0.153" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(0, -175)">
+      <path d="M -4 0 L 4 0 L 3.5 -32 L -3.5 -32 Z" fill="#C9A45C" fill-opacity="0.108" stroke-width="1"/>
+      <path d="M -9 -34 L -4 -32 L 0 -33 L 4 -32 L 9 -34 L 6 -40 L -6 -40 Z" fill="#C9A45C" fill-opacity="0.144"/>
+      <circle cx="0" cy="-44" r="10" fill="#C9A45C" fill-opacity="0.153" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(30, -165) rotate(24)">
+      <path d="M -3.5 0 L 3.5 0 L 3 -28 L -3 -28 Z" fill="#C9A45C" fill-opacity="0.108" stroke-width="1"/>
+      <path d="M -8 -30 L -3.5 -28 L 0 -29 L 3.5 -28 L 8 -30 L 5 -36 L -5 -36 Z" fill="#C9A45C" fill-opacity="0.144"/>
+      <circle cx="0" cy="-40" r="9" fill="#C9A45C" fill-opacity="0.153" stroke-width="1"/>
+    </g>
+  </g>
+  </g>
+
+  <!-- Subtle star compass in bottom right corner -->
   
-  <g transform="translate(0 0) rotate(0) scale(2.0571428571428574)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  <g stroke="#C9A45C" stroke-opacity="0.2">
+    <circle cx="1740" cy="900" r="80.5" fill="none" stroke-width="1" stroke-dasharray="2,3"/>
+    <circle cx="1740" cy="900" r="73.5" fill="none" stroke-width="1.5"/>
+    <circle cx="1740" cy="900" r="17.5" fill="none" stroke-width="1"/>
+    
+      <polygon points="1740,900 1740,830 1734.6424319468888,887.065686544842" fill="#C9A45C" fill-opacity="0.18000000000000002"/>
+      <polygon points="1740,900 1740,830 1745.3575680531112,887.065686544842" fill="#C9A45C" fill-opacity="0.08000000000000002"/>
+    
+      <polygon points="1740,900 1772.173358543988,867.8266414560121 1745.3575680531112,887.065686544842" fill="#C9A45C" fill-opacity="0.12"/>
+      <polygon points="1740,900 1772.173358543988,867.8266414560121 1752.934313455158,894.6424319468888" fill="#C9A45C" fill-opacity="0.04000000000000001"/>
+    
+      <polygon points="1740,900 1810,900 1752.934313455158,894.6424319468888" fill="#C9A45C" fill-opacity="0.18000000000000002"/>
+      <polygon points="1740,900 1810,900 1752.934313455158,905.3575680531112" fill="#C9A45C" fill-opacity="0.08000000000000002"/>
+    
+      <polygon points="1740,900 1772.173358543988,932.1733585439879 1752.934313455158,905.3575680531112" fill="#C9A45C" fill-opacity="0.12"/>
+      <polygon points="1740,900 1772.173358543988,932.1733585439879 1745.3575680531112,912.934313455158" fill="#C9A45C" fill-opacity="0.04000000000000001"/>
+    
+      <polygon points="1740,900 1740,970 1745.3575680531112,912.934313455158" fill="#C9A45C" fill-opacity="0.18000000000000002"/>
+      <polygon points="1740,900 1740,970 1734.6424319468888,912.934313455158" fill="#C9A45C" fill-opacity="0.08000000000000002"/>
+    
+      <polygon points="1740,900 1707.826641456012,932.1733585439879 1734.6424319468888,912.934313455158" fill="#C9A45C" fill-opacity="0.12"/>
+      <polygon points="1740,900 1707.826641456012,932.1733585439879 1727.065686544842,905.3575680531112" fill="#C9A45C" fill-opacity="0.04000000000000001"/>
+    
+      <polygon points="1740,900 1670,900 1727.065686544842,905.3575680531112" fill="#C9A45C" fill-opacity="0.18000000000000002"/>
+      <polygon points="1740,900 1670,900 1727.065686544842,894.6424319468888" fill="#C9A45C" fill-opacity="0.08000000000000002"/>
+    
+      <polygon points="1740,900 1707.826641456012,867.8266414560121 1727.065686544842,894.6424319468888" fill="#C9A45C" fill-opacity="0.12"/>
+      <polygon points="1740,900 1707.826641456012,867.8266414560121 1734.6424319468888,887.065686544842" fill="#C9A45C" fill-opacity="0.04000000000000001"/>
+    
+    <circle cx="1740" cy="900" r="3" fill="#C9A45C" fill-opacity="0.2"/>
   </g>
-  <g transform="translate(710.4 766.8) rotate(47) scale(2.7)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1420.8 453.59999999999997) rotate(94) scale(3.3428571428571434)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(211.2 140.4) rotate(141) scale(2.0571428571428574)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(921.5999999999999 907.1999999999999) rotate(188) scale(2.7)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1632 594) rotate(235) scale(3.3428571428571434)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(422.4 280.8) rotate(282) scale(2.0571428571428574)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1132.8 1047.6) rotate(329) scale(2.7)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1843.1999999999998 734.4000000000001) rotate(16) scale(3.3428571428571434)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(633.6 421.2) rotate(63) scale(2.0571428571428574)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1344 108) rotate(110) scale(2.7)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(134.4 874.8000000000001) rotate(157) scale(3.3428571428571434)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(844.8 561.6) rotate(204) scale(2.0571428571428574)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1555.2 248.4) rotate(251) scale(2.7)" fill="#C9A45C" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#C9A45C" font-family="Georgia, serif" font-size="68" font-style="italic">Clove buds drying in the sun</text>
-  <text x="50%" y="628.4" text-anchor="middle" fill="#C9A45C" fill-opacity="0.6" font-family="system-ui, sans-serif" font-size="26" letter-spacing="3">PLACEHOLDER</text>
+
+  <!-- Clean framing borders -->
+  <line x1="30" y1="30" x2="1890" y2="30" stroke="#C9A45C" stroke-opacity="0.12" stroke-width="1"/>
+  <line x1="30" y1="1050" x2="1890" y2="1050" stroke="#C9A45C" stroke-opacity="0.12" stroke-width="1"/>
 </svg>

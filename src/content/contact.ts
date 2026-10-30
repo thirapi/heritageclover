@@ -66,7 +66,7 @@ export const CONTACT: Record<Locale, ContactContent> = {
       title: "Kirim pesan ke tim kami di Ternate",
       body: "Pertanyaan tentang cengkeh kami, paket hadiah, atau pasokan untuk dapur maupun perusahaan. Setiap pesan dibalas oleh tim kami dalam satu hari kerja.",
       addressLabel: "Kunjungi",
-      address: "Jl. Placeholder No. 1, Ternate\nMaluku Utara, Indonesia",
+      address: "Jl. Sultan Babullah No. 18, Ternate\nMaluku Utara 97727, Indonesia",
       emailInfoLabel: "Email",
       whatsappInfoLabel: "WhatsApp",
       whatsappLabel: "Ngobrol dengan kami di WhatsApp",

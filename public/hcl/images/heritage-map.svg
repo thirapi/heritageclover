@@ -1,82 +1,115 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#E4D9C6"/>
-      <stop offset="1" stop-color="#C9A45C"/>
-    </linearGradient>
+    <radialGradient id="mapBg" cx="70%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#F6F0E4"/>
+      <stop offset="80%" stop-color="#EFE6D3"/>
+      <stop offset="100%" stop-color="#E4D9C6"/>
+    </radialGradient>
   </defs>
-  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect width="1600" height="900" fill="url(#mapBg)"/>
   
-  <g transform="translate(0 0) rotate(0) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+    <!-- Halmahera & Maluku Islands archipelago contour lines -->
+    <!-- Grid graticule -->
+    <g stroke="#C9A45C" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="4,6">
+      <line x1="100" y1="150" x2="1500" y2="150"/>
+      <line x1="100" y1="350" x2="1500" y2="350"/>
+      <line x1="100" y1="550" x2="1500" y2="550"/>
+      <line x1="100" y1="750" x2="1500" y2="750"/>
+      <line x1="300" y1="80" x2="300" y2="820"/>
+      <line x1="600" y1="80" x2="600" y2="820"/>
+      <line x1="900" y1="80" x2="900" y2="820"/>
+      <line x1="1200" y1="80" x2="1200" y2="820"/>
+    </g>
+
+    <!-- Halmahera Mainland (K-shape silhouette) -->
+    <g fill="#2E1A13" fill-opacity="0.25" stroke="#C9A45C" stroke-width="1.5" stroke-opacity="0.5">
+      <path d="M 1240 220 C 1270 250, 1310 260, 1330 310 C 1310 340, 1280 350, 1270 380 C 1290 410, 1340 440, 1360 480 C 1320 480, 1290 460, 1260 440 C 1240 470, 1260 520, 1270 560 C 1240 540, 1230 500, 1215 470 C 1195 440, 1175 420, 1150 430 C 1170 390, 1200 370, 1210 330 C 1200 300, 1170 270, 1210 240 Z"/>
+    </g>
+
+    <!-- Ternate (Volcanic island with Mount Gamalama) -->
+    <g transform="translate(1090, 360)">
+      <circle cx="0" cy="0" r="32" fill="#AD4F2B" fill-opacity="0.3" stroke="#C9A45C" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#C9A45C" stroke-width="1" stroke-opacity="0.6"/>
+      <circle cx="0" cy="0" r="12" fill="none" stroke="#C9A45C" stroke-width="1" stroke-dasharray="2,2"/>
+      <circle cx="0" cy="0" r="4" fill="#C9A45C"/>
+      <text x="-48" y="-36" fill="#C9A45C" font-family="Georgia, serif" font-size="15" font-weight="600" letter-spacing="1">TERNATE</text>
+      <text x="-48" y="-22" fill="#4A2C21" font-family="sans-serif" font-size="10" letter-spacing="1">Mt. Gamalama (1,715m)</text>
+    </g>
+
+    <!-- Tidore (Twin volcanic island) -->
+    <g transform="translate(1115, 435)">
+      <circle cx="0" cy="0" r="28" fill="#AD4F2B" fill-opacity="0.3" stroke="#C9A45C" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#C9A45C" stroke-width="1" stroke-opacity="0.6"/>
+      <circle cx="0" cy="0" r="3" fill="#C9A45C"/>
+      <text x="36" y="5" fill="#C9A45C" font-family="Georgia, serif" font-size="14" font-weight="600" letter-spacing="1">TIDORE</text>
+    </g>
+
+    <!-- Moti, Makian, Bacan -->
+    <circle cx="1125" cy="495" r="12" fill="#AD4F2B" fill-opacity="0.25" stroke="#C9A45C" stroke-width="1"/>
+    <text x="1145" y="499" fill="#9E7E3C" font-family="Georgia, serif" font-size="12">Moti</text>
+    
+    <circle cx="1132" cy="540" r="16" fill="#AD4F2B" fill-opacity="0.25" stroke="#C9A45C" stroke-width="1"/>
+    <text x="1156" y="545" fill="#9E7E3C" font-family="Georgia, serif" font-size="12">Makian</text>
+
+    <!-- Sea wave ripples -->
+    <g stroke="#C9A45C" stroke-opacity="0.2" stroke-width="1" fill="none">
+      <path d="M 400 300 Q 430 290 460 300 T 520 300 T 580 300"/>
+      <path d="M 700 480 Q 730 470 760 480 T 820 480 T 880 480"/>
+      <path d="M 320 620 Q 350 610 380 620 T 440 620 T 500 620"/>
+    </g>
+
+    <!-- Historic sailing galleon silhouette -->
+    <g transform="translate(740, 240) scale(0.7)" stroke="#C9A45C" stroke-width="1.5" fill="#C9A45C" fill-opacity="0.2">
+      <!-- Hull -->
+      <path d="M 0 60 C 30 70, 90 70, 120 50 L 100 35 L 20 35 Z"/>
+      <!-- Masts -->
+      <line x1="40" y1="35" x2="40" y2="-20" stroke-width="2"/>
+      <line x1="75" y1="35" x2="75" y2="-35" stroke-width="2"/>
+      <line x1="105" y1="35" x2="105" y2="-15" stroke-width="2"/>
+      <!-- Square sails -->
+      <path d="M 25 30 Q 40 22 55 30 L 52 5 Q 40 -2 28 5 Z" fill-opacity="0.4"/>
+      <path d="M 60 25 Q 75 16 90 25 L 87 -10 Q 75 -18 63 -10 Z" fill-opacity="0.4"/>
+      <path d="M 95 30 Q 105 24 115 30 L 112 10 Q 105 5 98 10 Z" fill-opacity="0.4"/>
+    </g>
+
+    <!-- Chart cartouche label -->
+    <g transform="translate(140, 110)">
+      <rect x="0" y="0" width="340" height="96" rx="4" fill="#EFE6D3" fill-opacity="0.85" stroke="#C9A45C" stroke-width="1.2"/>
+      <text x="20" y="32" fill="#2E1A13" font-family="Georgia, serif" font-size="16" font-weight="600" letter-spacing="1.5">INSULAE MOLUCCAE</text>
+      <text x="20" y="52" fill="#AD4F2B" font-family="Georgia, serif" font-size="12" font-style="italic">The Spice Islands &amp; Historic Clove Groves</text>
+      <text x="20" y="74" fill="#4A2C21" font-family="sans-serif" font-size="11" letter-spacing="1">0° 47' N, 127° 22' E · ARCHIPELAGO</text>
+    </g>
+  
+  
+  <g stroke="#C9A45C" stroke-opacity="0.45">
+    <circle cx="480" cy="520" r="114.99999999999999" fill="none" stroke-width="1" stroke-dasharray="2,3"/>
+    <circle cx="480" cy="520" r="105" fill="none" stroke-width="1.5"/>
+    <circle cx="480" cy="520" r="25" fill="none" stroke-width="1"/>
+    
+      <polygon points="480,520 480,420 472.3463313526982,501.52240934977425" fill="#C9A45C" fill-opacity="0.405"/>
+      <polygon points="480,520 480,420 487.6536686473018,501.52240934977425" fill="#C9A45C" fill-opacity="0.18000000000000002"/>
+    
+      <polygon points="480,520 525.9619407771256,474.0380592228744 487.6536686473018,501.52240934977425" fill="#C9A45C" fill-opacity="0.27"/>
+      <polygon points="480,520 525.9619407771256,474.0380592228744 498.47759065022575,512.3463313526983" fill="#C9A45C" fill-opacity="0.09000000000000001"/>
+    
+      <polygon points="480,520 580,520 498.47759065022575,512.3463313526983" fill="#C9A45C" fill-opacity="0.405"/>
+      <polygon points="480,520 580,520 498.47759065022575,527.6536686473017" fill="#C9A45C" fill-opacity="0.18000000000000002"/>
+    
+      <polygon points="480,520 525.9619407771256,565.9619407771256 498.47759065022575,527.6536686473017" fill="#C9A45C" fill-opacity="0.27"/>
+      <polygon points="480,520 525.9619407771256,565.9619407771256 487.6536686473018,538.4775906502257" fill="#C9A45C" fill-opacity="0.09000000000000001"/>
+    
+      <polygon points="480,520 480,620 487.6536686473018,538.4775906502257" fill="#C9A45C" fill-opacity="0.405"/>
+      <polygon points="480,520 480,620 472.3463313526982,538.4775906502257" fill="#C9A45C" fill-opacity="0.18000000000000002"/>
+    
+      <polygon points="480,520 434.03805922287444,565.9619407771256 472.3463313526982,538.4775906502257" fill="#C9A45C" fill-opacity="0.27"/>
+      <polygon points="480,520 434.03805922287444,565.9619407771256 461.52240934977425,527.6536686473017" fill="#C9A45C" fill-opacity="0.09000000000000001"/>
+    
+      <polygon points="480,520 380,520 461.52240934977425,527.6536686473017" fill="#C9A45C" fill-opacity="0.405"/>
+      <polygon points="480,520 380,520 461.52240934977425,512.3463313526981" fill="#C9A45C" fill-opacity="0.18000000000000002"/>
+    
+      <polygon points="480,520 434.0380592228744,474.03805922287444 461.52240934977425,512.3463313526981" fill="#C9A45C" fill-opacity="0.27"/>
+      <polygon points="480,520 434.0380592228744,474.03805922287444 472.3463313526982,501.52240934977425" fill="#C9A45C" fill-opacity="0.09000000000000001"/>
+    
+    <circle cx="480" cy="520" r="3" fill="#C9A45C" fill-opacity="0.45"/>
   </g>
-  <g transform="translate(592 639) rotate(47) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1184 378) rotate(94) scale(2.7857142857142856)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(176 117) rotate(141) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(768 756) rotate(188) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1360 495.00000000000006) rotate(235) scale(2.7857142857142856)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(352 234) rotate(282) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(944 873) rotate(329) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1536 612) rotate(16) scale(2.7857142857142856)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(528 351) rotate(63) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1120 90) rotate(110) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(112.00000000000001 729) rotate(157) scale(2.7857142857142856)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(704 468) rotate(204) scale(1.7142857142857144)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(1296 207) rotate(251) scale(2.25)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#4A2C21" font-family="Georgia, serif" font-size="56" font-style="italic">Spice route map</text>
-  <text x="50%" y="522.8" text-anchor="middle" fill="#4A2C21" fill-opacity="0.6" font-family="system-ui, sans-serif" font-size="21" letter-spacing="3">PLACEHOLDER</text>
 </svg>

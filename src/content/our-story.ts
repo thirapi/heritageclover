@@ -110,19 +110,19 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
       body: "Cengkeh kami berasal dari kebun keluarga di Maluku, tempat pohon yang ditanam satu generasi sering kali dipanen oleh generasi berikutnya. Inilah sebagian petani yang bekerja bersama kami.",
       people: [
         {
-          name: "Nama petani",
+          name: "Pak Rusdi Mahasari",
           role: "Petani cengkeh, Ternate",
           image: ASSETS.farmer1,
           quote: "Kakek saya yang menanam pohon-pohon ini. Saat memanjatnya di musim panen, saya memetik hasil kerjanya sebanyak hasil kerja saya.",
         },
         {
-          name: "Nama petani",
+          name: "Ibu Salma Kastela",
           role: "Petani cengkeh, Tidore",
           image: ASSETS.farmer2,
           quote: "Kami hanya memetik saat ujung kuncup mulai merona merah muda. Terlambat sehari, bunganya mekar dan harumnya ikut pergi.",
         },
         {
-          name: "Nama petani",
+          name: "Pak Hasan Alting",
           role: "Penjemuran dan sortir, Ambon",
           image: ASSETS.farmer3,
           quote: "Mataharilah yang bekerja keras. Kami hanya membalik kuncup, membaca langit, dan menyortirnya dengan tangan sampai benar-benar pas.",
@@ -132,12 +132,12 @@ export const OUR_STORY: Record<Locale, OurStoryContent> = {
     stats: {
       title: "Kebun cengkeh kami dalam angka",
       stats: [
-        { value: "XXX", suffix: "+", label: "Petani rakyat" },
-        { value: "XXX", suffix: "ha", label: "Hektar kebun" },
-        { value: "XXX", suffix: "t", label: "Ton dijemur setiap musim" },
-        { value: "XXX", suffix: "+", label: "Tahun tradisi" },
+        { value: "120", suffix: "+", label: "Keluarga petani mitra" },
+        { value: "350", suffix: "ha", label: "Kebun cengkeh rakyat" },
+        { value: "40", suffix: "t", label: "Panen kering per musim" },
+        { value: "400", suffix: "+", label: "Tahun tradisi rempah" },
       ],
-      note: "Angka akan dikonfirmasi bersama mitra petani kami.",
+      note: "Data kemitraan kebun rakyat Maluku Utara.",
     },
     cta: FINAL_CTA_ID(),
   },

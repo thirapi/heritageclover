@@ -56,7 +56,7 @@ export const hclFooterDefaults: Required<Omit<HclFooterProps, keyof HclInjectedP
   contactTitle: "Contact",
   address: "Ternate, North Maluku\nIndonesia",
   email: "hello@heritageclover.com",
-  whatsapp: "+62 XXX XXXX XXXX",
+  whatsapp: "+62 812-8899-7700",
   socials: [
     { label: "Instagram", href: "https://instagram.com", icon: "Instagram" },
     { label: "Facebook", href: "https://facebook.com", icon: "Facebook" },

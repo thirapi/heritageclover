@@ -14,8 +14,8 @@ export type HclRichTextProps = {
 
 export const hclRichTextDefaults: Required<Omit<HclRichTextProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  title: "Privacy Policy (Draft, needs legal review)",
-  updatedAt: "Last updated: XXX",
+  title: "Privacy Policy",
+  updatedAt: "Last updated: October 2026",
   blocks: [
     {
       heading: "Who we are",

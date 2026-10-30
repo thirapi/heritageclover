@@ -14,6 +14,7 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Local skill-eval workspace, not part of the site.
     "prd-workspace/**",
+    ".claude/**",
   ]),
 ]);
 

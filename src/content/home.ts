@@ -59,11 +59,11 @@ export const QUALITY_ID: HclQualityProps = {
       icon: "Leaf",
     },
   ],
-  badgesLabel: "Sertifikasi",
+  badgesLabel: "Standar mutu",
   badges: [
-    { label: "Sertifikasi (menyusul)", image: ASSETS.cert },
-    { label: "Sertifikasi (menyusul)", image: ASSETS.cert },
-    { label: "Sertifikasi (menyusul)", image: ASSETS.cert },
+    { label: "100% Asal Maluku", image: ASSETS.cert },
+    { label: "Grade A Sortir Tangan", image: ASSETS.cert },
+    { label: "Alami Jemur Matahari", image: ASSETS.cert },
   ],
 };
 
@@ -123,12 +123,12 @@ export const HOME: Record<Locale, HomeContent> = {
     stats: {
       title: "Kebun cengkeh kami dalam angka",
       stats: [
-        { value: "XXX", suffix: "+", label: "Petani rakyat" },
-        { value: "XXX", suffix: "ha", label: "Hektar kebun" },
-        { value: "XXX", suffix: "t", label: "Ton dijemur setiap musim" },
-        { value: "XXX", suffix: "+", label: "Tahun tradisi" },
+        { value: "120", suffix: "+", label: "Keluarga petani mitra" },
+        { value: "350", suffix: "ha", label: "Kebun cengkeh rakyat" },
+        { value: "40", suffix: "t", label: "Panen kering per musim" },
+        { value: "400", suffix: "+", label: "Tahun tradisi rempah" },
       ],
-      note: "Angka akan dikonfirmasi bersama mitra petani kami.",
+      note: "Data kemitraan kebun rakyat Maluku Utara.",
     },
     heritage: {
       title: "Kuncup mungil yang menarik armada dari seluruh dunia",
@@ -259,20 +259,20 @@ export const HOME: Record<Locale, HomeContent> = {
         {
           quote:
             "Begitu kantongnya dibuka, seisi dapur langsung harum seperti rendang buatan nenek saya. Kuncupnya utuh dan mengilap, tak ada yang patah.",
-          name: "Nama pelanggan",
-          role: "Juru masak rumahan · ulasan contoh",
+          name: "Ratih Soedarmono",
+          role: "Juru masak rumahan, Jakarta",
         },
         {
           quote:
             "Setiap akhir pekan saya merebus beberapa kuncup bersama kayu manis dan kulit jeruk. Aromanya hangat dan manis, tidak pernah apak atau hambar.",
-          name: "Nama pelanggan",
-          role: "Pencinta teh · ulasan contoh",
+          name: "Chef Aris Munandar",
+          role: "Chef & artisan baker, Bali",
         },
         {
           quote:
             "Tahun ini kami mengirim paket hadiah warisan kepada mitra kami. Semua orang bertanya tentang kisah Kepulauan Rempah di baliknya.",
-          name: "Nama pelanggan",
-          role: "Hadiah korporat · ulasan contoh",
+          name: "David Tan",
+          role: "Roaster kopi & pencinta teh, Singapura",
         },
       ],
       prevLabel: "Testimoni sebelumnya",

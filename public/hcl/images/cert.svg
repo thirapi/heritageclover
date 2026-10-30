@@ -1,82 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#E4D9C6"/>
-      <stop offset="1" stop-color="#C9A45C"/>
-    </linearGradient>
+    <radialGradient id="sealBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCFAF5"/>
+      <stop offset="70%" stop-color="#EFE6D3"/>
+      <stop offset="100%" stop-color="#E4D9C6"/>
+    </radialGradient>
+    <path id="curveTop" d="M 58.623999999999995 160 A 101.376 101.376 0 0 1 261.376 160" fill="none"/>
+    <path id="curveBottom" d="M 261.376 160 A 101.376 101.376 0 0 1 58.623999999999995 160" fill="none"/>
   </defs>
-  <rect width="320" height="320" fill="url(#g)"/>
+
+  <!-- Outer background -->
+  <circle cx="160" cy="160" r="140.8" fill="url(#sealBg)" stroke="#C9A45C" stroke-width="2"/>
   
-  <g transform="translate(0 0) rotate(0) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
+  <!-- Guilloche / serrated border ring -->
+  <circle cx="160" cy="160" r="132.8" fill="none" stroke="#AD4F2B" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="160" cy="160" r="126.80000000000001" fill="none" stroke="#C9A45C" stroke-width="1"/>
+  <circle cx="160" cy="160" r="73.21600000000001" fill="none" stroke="#C9A45C" stroke-width="1"/>
+
+  <!-- Curved text -->
+  <text font-family="Georgia, serif" font-size="10" font-weight="600" fill="#2E1A13" letter-spacing="2">
+    <textPath href="#curveTop" startOffset="50%" text-anchor="middle">HERITAGE CLOVER</textPath>
+  </text>
+  <text font-family="Georgia, serif" font-size="9" font-weight="500" fill="#AD4F2B" letter-spacing="2">
+    <textPath href="#curveBottom" startOffset="50%" text-anchor="middle">MALUKU ORIGIN · GRADE A</textPath>
+  </text>
+
+  <!-- Center emblem: detailed clove bud with 4 stars -->
+  
+  <g transform="translate(160 168) rotate(0) scale(0.65)" stroke="#2E1A13" stroke-opacity="0.9" fill="#2E1A13" fill-opacity="0.315">
+    <!-- Tapering calyx tube / hypanthium with fine longitudinal ribs -->
+    <path d="M -7 40 L -5 -20 L 5 -20 L 7 40 C 4 44 -4 44 -7 40 Z" stroke-width="1.5"/>
+    <line x1="-2" y1="-18" x2="-3" y2="38" stroke-width="1" stroke-opacity="0.45"/>
+    <line x1="2" y1="-18" x2="3" y2="38" stroke-width="1" stroke-opacity="0.45"/>
+    <!-- 4 triangular sepals spreading outward -->
+    <path d="M -16 -28 L -6 -20 L -2 -22 L 2 -22 L 6 -20 L 16 -28 L 12 -36 L 5 -30 L -5 -30 L -12 -36 Z" stroke-width="1.5" fill-opacity="0.63"/>
+    <!-- Round unopened bud dome (four tightly folded petals) -->
+    <circle cx="0" cy="-40" r="14" stroke-width="1.5" fill-opacity="0.7200000000000001"/>
+    <path d="M -9 -42 C -4 -49 4 -49 9 -42" stroke-width="1" fill="none" stroke-opacity="0.54"/>
+    <path d="M -11 -38 C -4 -32 4 -32 11 -38" stroke-width="1" fill="none" stroke-opacity="0.54"/>
   </g>
-  <g transform="translate(118.4 227.2) rotate(47) scale(0.8)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(236.8 134.4) rotate(94) scale(0.9904761904761905)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(35.2 41.6) rotate(141) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(153.6 268.8) rotate(188) scale(0.8)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(272 176) rotate(235) scale(0.9904761904761905)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(70.4 83.2) rotate(282) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(188.79999999999998 310.4) rotate(329) scale(0.8)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(307.2 217.60000000000002) rotate(16) scale(0.9904761904761905)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(105.60000000000001 124.80000000000001) rotate(63) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(224 32) rotate(110) scale(0.8)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(22.400000000000002 259.20000000000005) rotate(157) scale(0.9904761904761905)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(140.8 166.4) rotate(204) scale(0.6095238095238096)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <g transform="translate(259.20000000000005 73.60000000000001) rotate(251) scale(0.8)" fill="#4A2C21" opacity="0.16">
-    <circle cx="0" cy="-34" r="11"/>
-    <path d="M-14 -24 L0 -14 L14 -24 L9 -12 L0 -6 L-9 -12 Z"/>
-    <path d="M-3.5 -8 L3.5 -8 L1.5 40 L-1.5 40 Z"/>
-  </g>
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#4A2C21" font-family="Georgia, serif" font-size="20" font-style="italic">Certification (TBD)</text>
-  <text x="50%" y="186" text-anchor="middle" fill="#4A2C21" fill-opacity="0.6" font-family="system-ui, sans-serif" font-size="8" letter-spacing="3">PLACEHOLDER</text>
+  
+  <!-- Flanking stars -->
+  <circle cx="114.94399999999999" cy="160" r="2" fill="#C9A45C"/>
+  <circle cx="205.056" cy="160" r="2" fill="#C9A45C"/>
 </svg>
