@@ -1,0 +1,124 @@
+/*
+ * Heritage Clover (hcl-*) design tokens + base rules (docs/01-Design-System.md).
+ * Everything is scoped under .hcl-root so it never leaks into other section
+ * libraries or the exantara dashboard after porting.
+ */
+.hcl-root {
+  --hcl-clove: #4A2C21;
+  --hcl-clove-deep: #2E1A13;
+  --hcl-ember: #B5532E;
+  --hcl-leaf: #3F5B3A;
+  --hcl-gold: #C9A45C;
+  --hcl-parchment: #F6F0E4;
+  --hcl-ivory: #FCFAF5;
+  --hcl-ink-muted: #7A6A5F;
+  --hcl-line: #E4D9C6;
+
+  --hcl-font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --hcl-font-body: "Manrope", system-ui, sans-serif;
+
+  --hcl-h1: clamp(2.5rem, 1.6rem + 4.5vw, 5.5rem);
+  --hcl-h2: clamp(2rem, 1.5rem + 2.6vw, 3.5rem);
+  --hcl-h3: clamp(1.375rem, 1.25rem + 0.6vw, 1.75rem);
+
+  --hcl-space-section: 120px;
+  --hcl-space-section-sm: 72px;
+  --hcl-container: 1240px;
+  --hcl-gutter: 24px;
+
+  --hcl-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --hcl-duration: 700ms;
+
+  font-family: var(--hcl-font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--hcl-clove);
+  background-color: var(--hcl-parchment);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hcl-root *,
+.hcl-root *::before,
+.hcl-root *::after {
+  box-sizing: border-box;
+}
+
+.hcl-root a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hcl-root img {
+  display: block;
+  max-width: 100%;
+}
+
+.hcl-root :where(h1, h2, h3, h4) {
+  font-family: var(--hcl-font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.hcl-root :where(p) {
+  margin: 0;
+}
+
+/* Shared layout + type helpers used by every section. */
+.hcl-root .hcl-container {
+  width: 100%;
+  max-width: var(--hcl-container);
+  margin-inline: auto;
+  padding-inline: var(--hcl-gutter);
+}
+
+.hcl-root .hcl-eyebrow {
+  font-family: var(--hcl-font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hcl-ember);
+}
+
+.hcl-root .hcl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: background-color 200ms var(--hcl-ease), color 200ms var(--hcl-ease),
+    border-color 200ms var(--hcl-ease);
+}
+
+.hcl-root .hcl-btn--primary {
+  background-color: var(--hcl-ember);
+  color: var(--hcl-ivory);
+}
+
+.hcl-root .hcl-btn--primary:hover {
+  background-color: var(--hcl-clove);
+}
+
+.hcl-root .hcl-btn--ghost {
+  border: 1px solid currentColor;
+}
+
+.hcl-root :focus-visible {
+  outline: 2px solid var(--hcl-gold);
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .hcl-root {
+    --hcl-space-section: 72px;
+    --hcl-space-section-sm: 48px;
+    --hcl-gutter: 16px;
+  }
+}

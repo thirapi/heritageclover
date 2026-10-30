@@ -47,15 +47,15 @@ Dev server: `npm run dev` → `http://localhost:3000`.
 **Description:** As a developer, I need a scoped brand root so tokens and fonts never leak into other tenants after porting.
 
 **Acceptance Criteria:**
-- [ ] `src/sections/hcl-base.css` mendefinisikan semua token `docs/01 §1` di bawah selektor `.hcl-root`, beserta font-family display/body
-- [ ] `src/sections/hcl-root.tsx` mengekspor:
+- [x] `src/sections/hcl-base.css` mendefinisikan semua token `docs/01 §1` di bawah selektor `.hcl-root`, beserta font-family display/body
+- [x] `src/sections/hcl-root.tsx` mengekspor:
   - `HclRoot` (prop `as`, default `"div"`; memberi kelas `hcl-root`; merender `<link rel="stylesheet" precedence="default" href="…Cormorant+Garamond…Manrope…">`)
-  - `withHclDefaults(props, defaults)` (merge yang mengabaikan nilai `null`/`undefined`/`""`)
+  - `withHclDefaults(defaults, props)` (urutan argumen sama dengan `withHcDefaults` Hancoco; mengabaikan `null`/`undefined`, string kosong tetap dipakai karena berarti field sengaja dikosongkan)
   - `hclLines(text)` (split per baris, trim, buang baris kosong)
-  - tipe `HclInjectedProps = { isCanvas?: boolean }`
-- [ ] Tidak ada `next/font` atau `@import` di CSS
-- [ ] Unit test kecil (vitest) untuk `withHclDefaults` dan `hclLines`; script `test` di package.json; `npm test` lolos
-- [ ] `npm run typecheck` dan `npm run lint` lolos
+  - tipe `HclInjectedProps` (salinan `SectionInjectedProps` exantara: `websiteId`, `fullDomain`, `isCanvas`, `previewMode`)
+- [x] Tidak ada `next/font` atau `@import` di CSS
+- [x] Unit test kecil (vitest) untuk `withHclDefaults` dan `hclLines`; script `test` di package.json; `npm test` lolos
+- [x] `npm run typecheck` dan `npm run lint` lolos
 
 ### US-003: Routing locale dan HclLink
 **Description:** As a visitor, I want `/en/...` and `/id/...` URLs so I can read the site in my language.

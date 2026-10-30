@@ -33,7 +33,7 @@ export type HclHeroProps = {
 export const hclHeroDefaults = { /* copy EN lengkap */ } satisfies Required<Omit<HclHeroProps, keyof HclInjectedProps>>;
 
 export default function HclHero(raw: HclHeroProps) {
-  const p = withHclDefaults(raw, hclHeroDefaults);
+  const p = withHclDefaults(hclHeroDefaults, raw);
   ...
 }
 ```
