@@ -448,7 +448,7 @@ function generateUseArtwork(theme: string, desc: string, iconType: string, color
 
   <!-- Editorial label -->
   <text x="${cx}" y="${h * 0.78}" text-anchor="middle" fill="${PALETTE.parchment}" font-family="Georgia, serif" font-size="22" font-weight="600" letter-spacing="1">${theme}</text>
-  <text x="${cx}" y="${h * 0.85}" text-anchor="middle" fill="${PALETTE.gold}" font-family="sans-serif" font-size="12" letter-spacing="1.5">${desc.toUpperCase()}</text>
+  <text x="${cx}" y="${h * 0.85}" text-anchor="middle" fill="${PALETTE.gold}" font-family="sans-serif" font-size="12" letter-spacing="1.5">${desc.replace(/&amp;/g, "&").toUpperCase().replace(/&/g, "&amp;")}</text>
 </svg>`;
 }
 
