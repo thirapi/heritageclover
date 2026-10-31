@@ -72,12 +72,18 @@
   transform: translateX(3px);
 }
 
+/* Image is absolutely positioned so photos of any ratio can't stretch the
+   4:5 box (a flex item's min-height:auto would otherwise grow to fit them). */
 .hcl-showcase__media {
+  position: relative;
   aspect-ratio: 4 / 5;
+  overflow: hidden;
   background-color: var(--hcl-sand);
 }
 
 .hcl-showcase__image {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
