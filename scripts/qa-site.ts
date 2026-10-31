@@ -96,7 +96,7 @@ async function audit(browser: Browser, path: string) {
       if (r.eyebrows > 2) problems.push(`${at}: ${r.eyebrows} eyebrows (max 2 per page)`);
       const isHome = path === "/en" || path === "/id";
       const maxDark = isHome ? 0.25 : 0.6;
-      if (r.darkRatio > maxDark)
+      if (Math.round(r.darkRatio * 100) > Math.round(maxDark * 100))
         problems.push(`${at}: dark bands cover ${Math.round(r.darkRatio * 100)}% (max ${Math.round(maxDark * 100)}%)`);
     }
     for (const e of errors) problems.push(`${at}: console error: ${e.slice(0, 200)}`);

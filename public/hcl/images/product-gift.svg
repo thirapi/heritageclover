@@ -77,7 +77,7 @@
 
   <!-- Typography: Product title & specifics -->
   <text x="450" y="792" text-anchor="middle" fill="#F6F0E4" font-family="Georgia, serif" font-size="28" font-weight="600" letter-spacing="1">Heritage Gift Set</text>
-  <text x="450" y="847" text-anchor="middle" fill="#C9A45C" font-family="Georgia, serif" font-size="15" font-style="italic" letter-spacing="1">Complete Spice Islands Collection</text>
+  <text x="450" y="847" text-anchor="middle" fill="#C9A45C" font-family="Georgia, serif" font-size="15" font-style="italic" letter-spacing="1">Complete East Java Collection</text>
   <line x1="410" y1="891.0000000000001" x2="490" y2="891.0000000000001" stroke="#C9A45C" stroke-opacity="0.3" stroke-width="1"/>
   <text x="450" y="946" text-anchor="middle" fill="#F6F0E4" fill-opacity="0.75" font-family="system-ui, sans-serif" font-size="13" font-weight="600" letter-spacing="3">FOUR COMPONENT SET</text>
 </svg>

@@ -27,12 +27,12 @@ export const INSIGHT_PAGE: Record<Locale, InsightPageContent> = {
   en: {
     meta: {
       title: "Insight",
-      description: "History, recipes and practical guides on cloves, from the gardens of North Maluku to your kitchen.",
+      description: "History, recipes and practical guides on cloves, from the gardens of East Java to your kitchen.",
     },
     hero: {
       eyebrow: "The journal",
       title: "Insight",
-      subtitle: "History, recipes and storage guides from the clove gardens of Maluku.",
+      subtitle: "History, recipes and storage guides from the clove gardens of East Java.",
       image: ASSETS.article1,
     },
     grid: { articles: gridArticles("en") },
@@ -41,18 +41,18 @@ export const INSIGHT_PAGE: Record<Locale, InsightPageContent> = {
   id: {
     meta: {
       title: "Wawasan",
-      description: "Sejarah, resep, dan panduan praktis seputar cengkeh, dari kebun-kebun Maluku Utara hingga dapur Anda.",
+      description: "Sejarah, resep, dan panduan praktis seputar cengkeh, dari kebun-kebun Jawa Timur hingga dapur Anda.",
     },
     hero: {
       eyebrow: "Jurnal kami",
       title: "Wawasan",
-      subtitle: "Sejarah, resep, dan panduan penyimpanan dari kebun-kebun cengkeh Maluku.",
+      subtitle: "Sejarah, resep, dan panduan penyimpanan dari kebun-kebun cengkeh Jawa Timur.",
       image: ASSETS.article1,
     },
     grid: {
-      title: "Catatan dari Kepulauan Rempah",
+      title: "Catatan dari Kebun Jawa Timur",
       intro:
-        "Sejarah, resep, dan panduan penyimpanan cengkeh, ditulis oleh tim yang menyortir dan mengemas hasil panen kami di Maluku Utara.",
+        "Sejarah, resep, dan panduan penyimpanan cengkeh, ditulis oleh tim yang menyortir dan mengemas hasil panen kami di Jawa Timur.",
       filterLabel: "Saring artikel berdasarkan kategori",
       allLabel: "Semua",
       readMoreLabel: "Baca artikel",

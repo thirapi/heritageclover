@@ -38,7 +38,7 @@ export const hclUsesDefaults: Required<Omit<HclUsesProps, keyof HclInjectedProps
     },
     {
       title: "Gifting",
-      body: "Gift sets of whole Maluku cloves, packed to send to family, friends and business partners.",
+      body: "Gift sets of whole East Java cloves, packed to send to family, friends and business partners.",
       image: ASSETS.useGifting,
     },
   ],

@@ -19,10 +19,10 @@ export const LAYOUT: Record<Locale, { header: HclHeaderProps; footer: HclFooterP
       menuLabel: "Menu",
       closeLabel: "Tutup",
       languageLabel: "Bahasa",
-      panelNote: "Cengkeh petik tangan dari Kepulauan Rempah Maluku.",
+      panelNote: "Cengkeh petik tangan dari perbukitan vulkanik Jawa Timur.",
     },
     footer: {
-      tagline: "Cengkeh dari kebun rakyat di Maluku Utara, dipetik dengan tangan dan dijemur di bawah matahari.",
+      tagline: "Cengkeh dari kebun rakyat di Jawa Timur, dipetik dengan tangan dan dijemur di bawah matahari.",
       exploreTitle: "Jelajahi",
       exploreLinks: [
         { label: "Beranda", href: "/" },
@@ -39,7 +39,7 @@ export const LAYOUT: Record<Locale, { header: HclHeaderProps; footer: HclFooterP
         { label: "Paket Hadiah Warisan", href: "/store" },
       ],
       contactTitle: "Kontak",
-      address: "Ternate, Maluku Utara\nIndonesia",
+      address: "Jl. Ijen No. 18, Malang\nJawa Timur 65115, Indonesia",
       newsletterTitle: "Kabar panen dan resep lewat email",
       newsletterBody: "Email sesekali saat panen baru selesai dikemas. Berhenti berlangganan kapan saja.",
       newsletterPlaceholder: "Alamat email Anda",

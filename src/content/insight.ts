@@ -15,20 +15,20 @@ export interface Article {
 const en: Article[] = [
   {
     slug: "cloves-and-the-spice-islands",
-    title: "Cloves and the Spice Islands: a short history",
-    excerpt: "How a tiny dried flower bud from Maluku drew fleets across the world.",
+    title: "Cloves and the Spice Route: a short history",
+    excerpt: "How a tiny dried flower bud from the archipelago drew fleets across the world.",
     date: "October 12, 2026",
     category: "Heritage",
     image: ASSETS.article1,
-    body: `For centuries, cloves grew in only a handful of islands in North Maluku: Ternate, Tidore, Moti, Makian and Bacan. Traders carried them along the maritime silk road to China, India, the Middle East and Europe.
+    body: `For centuries, cloves grew on only a handful of volcanic islands in the eastern archipelago. Traders carried them along maritime spice routes to China, India, the Middle East and Europe.
 
 ## Worth more than gold
 
-By the sixteenth century a sack of cloves could make a merchant's fortune. Portuguese, Spanish and Dutch fleets fought for control of the islands, and the clove trade reshaped maps, empires and kitchens around the world.
+By the sixteenth century a sack of cloves could make a merchant's fortune. Portuguese, Spanish and Dutch fleets fought for control of the routes, and the clove trade reshaped maps, empires and kitchens around the world.
 
-## From monopoly to smallholders
+## From monopoly to East Java smallholders
 
-Today cloves grow across Indonesia, largely on family-owned gardens. The trees still take years to mature, and the buds are still picked by hand before they bloom. That history lives on in every bud we dry and sort.`,
+Today cloves flourish across Indonesia, particularly in the fertile volcanic highlands of East Java. Smallholder family groves in Trenggalek, Pacitan, and the Semeru foothills nurture oil-rich Zanzibar and Sikotok varieties. The trees take years to mature, and every bud is still picked by hand before it blooms. That living heritage continues in every bud we dry and sort.`,
   },
   {
     slug: "five-ways-to-cook-with-cloves",
@@ -85,20 +85,20 @@ Press a bud with your fingernail. A fresh clove releases a little oil. If nothin
 const id: Article[] = [
   {
     slug: "cloves-and-the-spice-islands",
-    title: "Cengkeh dan Kepulauan Rempah: sejarah singkat",
-    excerpt: "Bagaimana kuncup bunga kering kecil dari Maluku menarik armada dari seluruh dunia.",
+    title: "Cengkeh dan Jalur Rempah: sejarah singkat",
+    excerpt: "Bagaimana kuncup bunga kering kecil dari nusantara menarik armada dari seluruh dunia.",
     date: "12 Oktober 2026",
     category: "Warisan",
     image: ASSETS.article1,
-    body: `Selama berabad-abad, cengkeh hanya tumbuh di segelintir pulau di Maluku Utara: Ternate, Tidore, Moti, Makian, dan Bacan. Para pedagang membawanya melalui jalur sutra maritim ke Tiongkok, India, Timur Tengah, dan Eropa.
+    body: `Selama berabad-abad, cengkeh hanya tumbuh di segelintir pulau di bagian timur nusantara. Para pedagang membawanya melalui jalur rempah maritim ke Tiongkok, India, Timur Tengah, dan Eropa.
 
 ## Lebih berharga dari emas
 
-Pada abad ke-16, sekarung cengkeh bisa membuat seorang pedagang kaya raya. Armada Portugis, Spanyol, dan Belanda berebut menguasai pulau-pulau ini, dan perdagangan cengkeh mengubah peta, kerajaan, serta dapur di seluruh dunia.
+Pada abad ke-16, sekarung cengkeh bisa membuat seorang pedagang kaya raya. Armada Portugis, Spanyol, dan Belanda berebut menguasai jalur perdagangan ini, dan rempah nusantara mengubah peta, perniagaan, serta dapur di seluruh dunia.
 
-## Dari monopoli ke kebun rakyat
+## Dari monopoli ke kebun rakyat Jawa Timur
 
-Kini cengkeh tumbuh di berbagai wilayah Indonesia, sebagian besar di kebun milik keluarga. Pohonnya tetap butuh bertahun-tahun untuk berbuah, dan kuncupnya tetap dipetik dengan tangan sebelum mekar. Sejarah itu hidup di setiap kuncup yang kami jemur dan sortir.`,
+Kini cengkeh tumbuh subur di lereng perbukitan vulkanik Jawa Timur. Kebun-kebun rakyat di Trenggalek, Pacitan, dan lereng Gunung Semeru merawat varietas unggul seperti Zanzibar dan Sikotok. Pohonnya butuh bertahun-tahun untuk dewasa, dan kuncupnya tetap dipetik dengan tangan sebelum mekar. Sejarah itu hidup di setiap kuncup yang kami jemur dan sortir.`,
   },
   {
     slug: "five-ways-to-cook-with-cloves",

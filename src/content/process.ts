@@ -24,7 +24,7 @@ export const PROCESS: Record<Locale, ProcessContent> = {
     hero: {
       eyebrow: "The process",
       title: "From tree to table",
-      subtitle: "Picked, dried, sorted, tested and sealed, the way growers in Maluku have done it for generations.",
+      subtitle: "Picked, dried, sorted, tested and sealed, the way growers in East Java have done it for generations.",
       image: ASSETS.drying,
     },
     detail: {},
@@ -39,7 +39,7 @@ export const PROCESS: Record<Locale, ProcessContent> = {
     hero: {
       eyebrow: "Prosesnya",
       title: "Dari pohon ke meja",
-      subtitle: "Dipetik, dijemur, disortir, diuji, dan dikemas, seperti yang dilakukan petani Maluku turun-temurun.",
+      subtitle: "Dipetik, dijemur, disortir, diuji, dan dikemas, seperti yang dilakukan petani Jawa Timur turun-temurun.",
       image: ASSETS.drying,
     },
     detail: {

@@ -26,8 +26,8 @@ export type HclInsightGridProps = {
 export const hclInsightGridDefaults: Required<Omit<HclInsightGridProps, keyof HclInjectedProps>> = {
   sectionId: "",
   eyebrow: "",
-  title: "Notes from the Spice Islands",
-  intro: "History, recipes and storage guides for cloves, written by the team that sorts and packs our harvest in North Maluku.",
+  title: "Notes from the East Java groves",
+  intro: "History, recipes and storage guides for cloves, written by the team that sorts and packs our harvest in East Java.",
   filterLabel: "Filter articles by category",
   allLabel: "All",
   readMoreLabel: "Read article",

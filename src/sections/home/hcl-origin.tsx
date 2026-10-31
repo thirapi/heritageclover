@@ -21,18 +21,18 @@ export type HclOriginProps = {
 export const hclOriginDefaults: Required<Omit<HclOriginProps, keyof HclInjectedProps>> = {
   sectionId: "",
   eyebrow: "",
-  title: "Grown on the volcanic slopes of North Maluku",
-  body: "Our cloves come from smallholder gardens around Ternate, where the trees grow in volcanic soil within sight of the sea. We buy directly from the families who tend the trees, at harvest time.",
+  title: "Grown on the volcanic slopes of East Java",
+  body: "Our cloves come from smallholder gardens across Trenggalek and the Semeru foothills, where the trees grow in rich volcanic soil cooled by highland breezes. We buy directly from the families who tend the trees, at harvest time.",
   facts: [
-    { label: "Origin", value: "North Maluku" },
+    { label: "Origin", value: "East Java" },
     { label: "Harvest", value: "By hand" },
-    { label: "Drying", value: "4–5 days in the sun" },
+    { label: "Drying", value: "4 to 5 days in the sun" },
     { label: "Sorting", value: "Bud by bud" },
   ],
   factsTitle: "At a glance",
   image: ASSETS.origin,
-  imageAlt: "Clove trees on a hillside garden in North Maluku",
-  locationLabel: "Ternate · North Maluku",
+  imageAlt: "Clove trees on a hillside garden in East Java",
+  locationLabel: "Trenggalek & Semeru · East Java",
 };
 
 export default function HclOrigin(props: HclOriginProps) {

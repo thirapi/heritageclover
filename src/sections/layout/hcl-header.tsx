@@ -41,7 +41,7 @@ export const hclHeaderDefaults: Required<Omit<HclHeaderProps, keyof HclInjectedP
   menuLabel: "Menu",
   closeLabel: "Close",
   languageLabel: "Language",
-  panelNote: "Hand-picked cloves from the Spice Islands of Maluku.",
+  panelNote: "Hand-picked cloves from the volcanic hills of East Java.",
   backgroundColor: "#F6F0E4",
 };
 

@@ -3,7 +3,7 @@
   isolation: isolate;
   display: flex;
   align-items: center;
-  min-height: 64vh;
+  min-height: 56vh;
   padding: var(--hcl-space-section) 0;
   color: var(--hcl-ivory);
 }

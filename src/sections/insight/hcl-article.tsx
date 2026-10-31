@@ -30,7 +30,7 @@ export const hclArticleDefaults: Required<Omit<HclArticleProps, keyof HclInjecte
   title: first.title,
   date: first.date,
   image: first.image,
-  imageAlt: "Dried clove buds from the gardens of North Maluku",
+  imageAlt: "Dried clove buds from the gardens of East Java",
   body: first.body,
   backLabel: "All articles",
   backHref: "/insight",

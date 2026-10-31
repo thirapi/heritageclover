@@ -22,8 +22,8 @@ export type HclShowcaseProps = {
 export const hclShowcaseDefaults: Required<Omit<HclShowcaseProps, keyof HclInjectedProps>> = {
   sectionId: "",
   eyebrow: "",
-  title: "From the Spice Islands, for your table",
-  body: "Whole buds, ground clove, bud oil and a gift set. Everything starts with the same hand-picked, sun-dried cloves from North Maluku.",
+  title: "From East Java groves, for your table",
+  body: "Whole buds, ground clove, bud oil and a gift set. Everything starts with the same hand-picked, sun-dried cloves from East Java.",
   products: [
     {
       name: "Whole Cloves",

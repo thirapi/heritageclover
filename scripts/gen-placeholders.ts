@@ -119,10 +119,10 @@ function compassRose(cx: number, cy: number, r: number, color: string, op = 0.4)
   </g>`;
 }
 
-// Archipelago contours for Spice Islands map
-function spiceIslandsMap(): string {
+// East Java regional contours for Heritage Clover map
+function eastJavaMap(): string {
   return `
-    <!-- Halmahera & Maluku Islands archipelago contour lines -->
+    <!-- East Java Volcanic Highlands & Clove Groves Map -->
     <!-- Grid graticule -->
     <g stroke="${PALETTE.gold}" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="4,6">
       <line x1="100" y1="150" x2="1500" y2="150"/>
@@ -135,45 +135,73 @@ function spiceIslandsMap(): string {
       <line x1="1200" y1="80" x2="1200" y2="820"/>
     </g>
 
-    <!-- Halmahera Mainland (K-shape silhouette) -->
-    <g fill="${PALETTE.cloveDeep}" fill-opacity="0.25" stroke="${PALETTE.gold}" stroke-width="1.5" stroke-opacity="0.5">
-      <path d="M 1240 220 C 1270 250, 1310 260, 1330 310 C 1310 340, 1280 350, 1270 380 C 1290 410, 1340 440, 1360 480 C 1320 480, 1290 460, 1260 440 C 1240 470, 1260 520, 1270 560 C 1240 540, 1230 500, 1215 470 C 1195 440, 1175 420, 1150 430 C 1170 390, 1200 370, 1210 330 C 1200 300, 1170 270, 1210 240 Z"/>
+    <!-- East Java Mainland Silhouette -->
+    <!-- West border (Pacitan/Tuban) -> North coast (Surabaya) -> East horn (Banyuwangi) -> South rugged coast -->
+    <g fill="${PALETTE.cloveDeep}" fill-opacity="0.22" stroke="${PALETTE.gold}" stroke-width="1.8" stroke-opacity="0.55">
+      <path d="M 520 280 
+               C 620 270, 750 290, 860 300 
+               C 920 320, 970 300, 1020 330 
+               C 1070 340, 1140 330, 1220 360 
+               C 1270 380, 1340 430, 1370 480 
+               C 1390 530, 1350 580, 1310 610 
+               C 1240 610, 1160 590, 1100 620 
+               C 1020 630, 950 640, 880 620 
+               C 800 640, 720 630, 650 610 
+               C 580 620, 520 630, 480 600 
+               C 450 550, 460 480, 480 420 
+               C 490 360, 480 320, 520 280 Z"/>
     </g>
 
-    <!-- Ternate (Volcanic island with Mount Gamalama) -->
-    <g transform="translate(1090, 360)">
-      <circle cx="0" cy="0" r="32" fill="${PALETTE.ember}" fill-opacity="0.3" stroke="${PALETTE.gold}" stroke-width="1.5"/>
-      <circle cx="0" cy="0" r="22" fill="none" stroke="${PALETTE.gold}" stroke-width="1" stroke-opacity="0.6"/>
-      <circle cx="0" cy="0" r="12" fill="none" stroke="${PALETTE.gold}" stroke-width="1" stroke-dasharray="2,2"/>
+    <!-- Madura Island (North of Surabaya) -->
+    <g fill="${PALETTE.cloveDeep}" fill-opacity="0.18" stroke="${PALETTE.gold}" stroke-width="1.2" stroke-opacity="0.45">
+      <path d="M 870 250 C 960 230, 1080 235, 1170 260 C 1190 280, 1140 300, 1070 300 C 970 300, 900 290, 870 250 Z"/>
+      <text x="1000" y="275" fill="${PALETTE.goldMuted}" font-family="Georgia, serif" font-size="12" letter-spacing="2">MADURA</text>
+    </g>
+
+    <!-- Mount Semeru (Volcanic peak 3,676m - East Java) -->
+    <g transform="translate(940, 530)">
+      <circle cx="0" cy="0" r="34" fill="${PALETTE.ember}" fill-opacity="0.32" stroke="${PALETTE.gold}" stroke-width="1.6"/>
+      <circle cx="0" cy="0" r="24" fill="none" stroke="${PALETTE.gold}" stroke-width="1" stroke-opacity="0.6"/>
+      <circle cx="0" cy="0" r="14" fill="none" stroke="${PALETTE.gold}" stroke-width="1" stroke-dasharray="2,2"/>
       <circle cx="0" cy="0" r="4" fill="${PALETTE.gold}"/>
-      <text x="-48" y="-36" fill="${PALETTE.gold}" font-family="Georgia, serif" font-size="15" font-weight="600" letter-spacing="1">TERNATE</text>
-      <text x="-48" y="-22" fill="${PALETTE.clove}" font-family="sans-serif" font-size="10" letter-spacing="1">Mt. Gamalama (1,715m)</text>
+      <text x="44" y="-8" fill="${PALETTE.gold}" font-family="Georgia, serif" font-size="15" font-weight="600" letter-spacing="1">MT. SEMERU</text>
+      <text x="44" y="8" fill="${PALETTE.clove}" font-family="sans-serif" font-size="10" letter-spacing="1">Volcanic Terroir (3,676m)</text>
     </g>
 
-    <!-- Tidore (Twin volcanic island) -->
-    <g transform="translate(1115, 435)">
-      <circle cx="0" cy="0" r="28" fill="${PALETTE.ember}" fill-opacity="0.3" stroke="${PALETTE.gold}" stroke-width="1.5"/>
+    <!-- Trenggalek / Watulimo Clove Hills -->
+    <g transform="translate(680, 550)">
+      <circle cx="0" cy="0" r="28" fill="${PALETTE.leaf}" fill-opacity="0.3" stroke="${PALETTE.gold}" stroke-width="1.5"/>
       <circle cx="0" cy="0" r="18" fill="none" stroke="${PALETTE.gold}" stroke-width="1" stroke-opacity="0.6"/>
+      <circle cx="0" cy="0" r="4" fill="${PALETTE.gold}"/>
+      <text x="-40" y="-36" fill="${PALETTE.gold}" font-family="Georgia, serif" font-size="14" font-weight="600" letter-spacing="1">TRENGGALEK</text>
+      <text x="-40" y="-22" fill="${PALETTE.clove}" font-family="sans-serif" font-size="10" letter-spacing="1">Watulimo Heirloom Groves</text>
+    </g>
+
+    <!-- Pacitan Clove Valley -->
+    <g transform="translate(540, 560)">
+      <circle cx="0" cy="0" r="22" fill="${PALETTE.ember}" fill-opacity="0.25" stroke="${PALETTE.gold}" stroke-width="1.2"/>
       <circle cx="0" cy="0" r="3" fill="${PALETTE.gold}"/>
-      <text x="36" y="5" fill="${PALETTE.gold}" font-family="Georgia, serif" font-size="14" font-weight="600" letter-spacing="1">TIDORE</text>
+      <text x="-80" y="24" fill="${PALETTE.gold}" font-family="Georgia, serif" font-size="13" font-weight="600" letter-spacing="1">PACITAN</text>
+      <text x="-80" y="36" fill="${PALETTE.clove}" font-family="sans-serif" font-size="9" letter-spacing="1">South Coast Valleys</text>
     </g>
 
-    <!-- Moti, Makian, Bacan -->
-    <circle cx="1125" cy="495" r="12" fill="${PALETTE.ember}" fill-opacity="0.25" stroke="${PALETTE.gold}" stroke-width="1"/>
-    <text x="1145" y="499" fill="${PALETTE.goldMuted}" font-family="Georgia, serif" font-size="12">Moti</text>
-    
-    <circle cx="1132" cy="540" r="16" fill="${PALETTE.ember}" fill-opacity="0.25" stroke="${PALETTE.gold}" stroke-width="1"/>
-    <text x="1156" y="545" fill="${PALETTE.goldMuted}" font-family="Georgia, serif" font-size="12">Makian</text>
+    <!-- Malang Plateau & Dampit -->
+    <g transform="translate(860, 480)">
+      <circle cx="0" cy="0" r="20" fill="${PALETTE.leaf}" fill-opacity="0.25" stroke="${PALETTE.gold}" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="3" fill="${PALETTE.gold}"/>
+      <text x="-30" y="-26" fill="${PALETTE.gold}" font-family="Georgia, serif" font-size="13" font-weight="600" letter-spacing="1">MALANG · DAMPIT</text>
+    </g>
 
-    <!-- Sea wave ripples -->
+    <!-- Sea wave ripples (Southern Ocean / Samudra Hindia) -->
     <g stroke="${PALETTE.gold}" stroke-opacity="0.2" stroke-width="1" fill="none">
-      <path d="M 400 300 Q 430 290 460 300 T 520 300 T 580 300"/>
-      <path d="M 700 480 Q 730 470 760 480 T 820 480 T 880 480"/>
-      <path d="M 320 620 Q 350 610 380 620 T 440 620 T 500 620"/>
+      <path d="M 420 690 Q 450 680 480 690 T 540 690 T 600 690"/>
+      <path d="M 720 710 Q 750 700 780 710 T 840 710 T 900 710"/>
+      <path d="M 1020 680 Q 1050 670 1080 680 T 1140 680 T 1200 680"/>
+      <text x="760" y="750" fill="${PALETTE.goldMuted}" font-family="Georgia, serif" font-size="13" font-style="italic" letter-spacing="3">OCEANUS INDICUS</text>
     </g>
 
-    <!-- Historic sailing galleon silhouette -->
-    <g transform="translate(740, 240) scale(0.7)" stroke="${PALETTE.gold}" stroke-width="1.5" fill="${PALETTE.gold}" fill-opacity="0.2">
+    <!-- Historic merchant galleon silhouette -->
+    <g transform="translate(360, 380) scale(0.7)" stroke="${PALETTE.gold}" stroke-width="1.5" fill="${PALETTE.gold}" fill-opacity="0.2">
       <!-- Hull -->
       <path d="M 0 60 C 30 70, 90 70, 120 50 L 100 35 L 20 35 Z"/>
       <!-- Masts -->
@@ -188,10 +216,10 @@ function spiceIslandsMap(): string {
 
     <!-- Chart cartouche label -->
     <g transform="translate(140, 110)">
-      <rect x="0" y="0" width="340" height="96" rx="4" fill="${PALETTE.sand}" fill-opacity="0.85" stroke="${PALETTE.gold}" stroke-width="1.2"/>
-      <text x="20" y="32" fill="${PALETTE.cloveDeep}" font-family="Georgia, serif" font-size="16" font-weight="600" letter-spacing="1.5">INSULAE MOLUCCAE</text>
-      <text x="20" y="52" fill="${PALETTE.ember}" font-family="Georgia, serif" font-size="12" font-style="italic">The Spice Islands &amp; Historic Clove Groves</text>
-      <text x="20" y="74" fill="${PALETTE.clove}" font-family="sans-serif" font-size="11" letter-spacing="1">0° 47' N, 127° 22' E · ARCHIPELAGO</text>
+      <rect x="0" y="0" width="370" height="98" rx="4" fill="${PALETTE.sand}" fill-opacity="0.88" stroke="${PALETTE.gold}" stroke-width="1.2"/>
+      <text x="20" y="32" fill="${PALETTE.cloveDeep}" font-family="Georgia, serif" font-size="16" font-weight="600" letter-spacing="1.5">TABULA JAVAE ORIENTALIS</text>
+      <text x="20" y="52" fill="${PALETTE.ember}" font-family="Georgia, serif" font-size="12" font-style="italic">The Volcanic Highlands &amp; Heirloom Clove Groves</text>
+      <text x="20" y="74" fill="${PALETTE.clove}" font-family="sans-serif" font-size="11" letter-spacing="1">8° 03' S, 111° 42' E · JAVA ORIENTALIS</text>
     </g>
   `;
 }
@@ -226,7 +254,7 @@ function qualitySealSVG(w: number, h: number): string {
     <textPath href="#curveTop" startOffset="50%" text-anchor="middle">HERITAGE CLOVER</textPath>
   </text>
   <text font-family="Georgia, serif" font-size="9" font-weight="500" fill="${PALETTE.ember}" letter-spacing="2">
-    <textPath href="#curveBottom" startOffset="50%" text-anchor="middle">MALUKU ORIGIN · GRADE A</textPath>
+    <textPath href="#curveBottom" startOffset="50%" text-anchor="middle">EAST JAVA ORIGIN · GRADE A</textPath>
   </text>
 
   <!-- Center emblem: detailed clove bud with 4 stars -->
@@ -303,7 +331,7 @@ function farmerArtwork(region: string, crop: string, color: string, w: number, h
   <!-- Fine framing border -->
   <rect x="20" y="20" width="${w - 40}" height="${h - 40}" rx="8" fill="none" stroke="${PALETTE.gold}" stroke-opacity="0.3" stroke-width="1"/>
 
-  <!-- Silhouette of Mount Gamalama / Volcanic Peak in background -->
+  <!-- Silhouette of Mount Semeru / Volcanic Peak in background -->
   <path d="M 60 ${h * 0.58} L ${cx} ${h * 0.32} L ${w - 60} ${h * 0.58} Z" fill="${PALETTE.gold}" fill-opacity="0.08"/>
   <path d="M 60 ${h * 0.58} L ${cx} ${h * 0.32} L ${w - 60} ${h * 0.58} Z" fill="none" stroke="${PALETTE.gold}" stroke-opacity="0.25" stroke-width="1.2"/>
   
@@ -494,7 +522,7 @@ writeFileSync(join(OUT, "page-hero.svg"), atmosphericBackdrop(PALETTE.cloveDeep,
 writeFileSync(join(OUT, "origin.svg"), atmosphericBackdrop(PALETTE.leafDeep, PALETTE.cloveDeep, 1600, 1000, false));
 writeFileSync(join(OUT, "intro.svg"), atmosphericBackdrop(PALETTE.emberMuted, PALETTE.cloveDeep, 900, 1100, false));
 
-// 2. Map (authentic archipelago chart)
+// 2. Map (authentic East Java regional chart)
 writeFileSync(join(OUT, "heritage-map.svg"), `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
   <defs>
     <radialGradient id="mapBg" cx="70%" cy="50%" r="70%">
@@ -504,7 +532,7 @@ writeFileSync(join(OUT, "heritage-map.svg"), `<svg xmlns="http://www.w3.org/2000
     </radialGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#mapBg)"/>
-  ${spiceIslandsMap()}
+  ${eastJavaMap()}
   ${compassRose(480, 520, 100, PALETTE.gold, 0.45)}
 </svg>`);
 
@@ -512,15 +540,15 @@ writeFileSync(join(OUT, "heritage-map.svg"), `<svg xmlns="http://www.w3.org/2000
 writeFileSync(join(OUT, "cert.svg"), qualitySealSVG(320, 320));
 
 // 4. Products
-writeFileSync(join(OUT, "product-whole.svg"), productArtwork("Whole Cloves", "Hand-Sorted Maluku Clove Buds", "NET WT. 100G · GRADE A", PALETTE.emberMuted, 900, 1100));
+writeFileSync(join(OUT, "product-whole.svg"), productArtwork("Whole Cloves", "Hand-Sorted East Java Clove Buds", "NET WT. 100G · GRADE A", PALETTE.emberMuted, 900, 1100));
 writeFileSync(join(OUT, "product-ground.svg"), productArtwork("Ground Cloves", "Stone-Milled Aromatic Spice", "NET WT. 80G · PURE", PALETTE.clove, 900, 1100));
 writeFileSync(join(OUT, "product-oil.svg"), productArtwork("Clove Bud Oil", "Steam-Distilled Pure Essential Oil", "30 ML · 100% PURE", PALETTE.leafDeep, 900, 1100));
-writeFileSync(join(OUT, "product-gift.svg"), productArtwork("Heritage Gift Set", "Complete Spice Islands Collection", "FOUR COMPONENT SET", PALETTE.cloveNight, 900, 1100));
+writeFileSync(join(OUT, "product-gift.svg"), productArtwork("Heritage Gift Set", "Complete East Java Collection", "FOUR COMPONENT SET", PALETTE.cloveNight, 900, 1100));
 
 // 5. Farmers
-writeFileSync(join(OUT, "farmer-1.svg"), farmerArtwork("Ternate", "Mount Gamalama Slopes", PALETTE.leafDeep, 800, 1000));
-writeFileSync(join(OUT, "farmer-2.svg"), farmerArtwork("Tidore", "Family Clove Gardens", PALETTE.emberMuted, 800, 1000));
-writeFileSync(join(OUT, "farmer-3.svg"), farmerArtwork("Ambon", "Traditional Sun Drying", PALETTE.clove, 800, 1000));
+writeFileSync(join(OUT, "farmer-1.svg"), farmerArtwork("Trenggalek", "Watulimo Heirloom Groves", PALETTE.leafDeep, 800, 1000));
+writeFileSync(join(OUT, "farmer-2.svg"), farmerArtwork("Malang", "Semeru Volcanic Slopes", PALETTE.emberMuted, 800, 1000));
+writeFileSync(join(OUT, "farmer-3.svg"), farmerArtwork("Pacitan", "Southern Valley Groves", PALETTE.clove, 800, 1000));
 
 // 6. Process
 writeFileSync(join(OUT, "harvest.svg"), processArtwork("01", "Hand Picking", PALETTE.leafDeep, 1200, 900));
@@ -559,7 +587,7 @@ writeFileSync(join(OUT, "og.svg"), `<svg xmlns="http://www.w3.org/2000/svg" widt
     <text x="0" y="0" fill="${PALETTE.gold}" font-family="sans-serif" font-size="14" font-weight="600" letter-spacing="3">HERITAGE CLOVER · INDONESIA</text>
     <text x="0" y="65" fill="${PALETTE.parchment}" font-family="Georgia, serif" font-size="52" font-weight="600">The Spice That</text>
     <text x="0" y="125" fill="${PALETTE.gold}" font-family="Georgia, serif" font-size="52" font-style="italic">Shaped the World.</text>
-    <text x="0" y="180" fill="${PALETTE.parchment}" fill-opacity="0.8" font-family="sans-serif" font-size="18">Single-origin cloves hand-picked from the historic Spice Islands of Maluku.</text>
+    <text x="0" y="180" fill="${PALETTE.parchment}" fill-opacity="0.8" font-family="sans-serif" font-size="18">Single-origin cloves hand-picked from the volcanic hills of East Java.</text>
   </g>
 </svg>`);
 

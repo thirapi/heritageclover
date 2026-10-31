@@ -37,7 +37,7 @@ export type HclFooterProps = {
 export const hclFooterDefaults: Required<Omit<HclFooterProps, keyof HclInjectedProps>> = {
   sectionId: "",
   brandName: "Heritage Clover",
-  tagline: "Cloves from smallholder gardens in North Maluku, hand-picked and sun-dried.",
+  tagline: "Cloves from smallholder gardens in East Java, hand-picked and sun-dried.",
   exploreTitle: "Explore",
   exploreLinks: [
     { label: "Home", href: "/" },
@@ -54,7 +54,7 @@ export const hclFooterDefaults: Required<Omit<HclFooterProps, keyof HclInjectedP
     { label: "Heritage Gift Sets", href: "/store" },
   ],
   contactTitle: "Contact",
-  address: "Ternate, North Maluku\nIndonesia",
+  address: "Jl. Ijen No. 18, Malang\nJawa Timur 65115, Indonesia",
   email: "hello@heritageclover.com",
   whatsapp: "+62 812-8899-7700",
   socials: [

@@ -42,7 +42,7 @@ export const hclStepsDefaults: Required<
   eyebrow: "",
   title: "From the tree to the jar",
   intro:
-    "Picking, drying and sorting are done by hand, the way Maluku growers have always done them. Moisture is checked and every lot is sealed before it leaves the island.",
+    "Picking, drying and sorting are done by hand, the way East Java growers have done for generations. Moisture is checked and every lot is sealed before it leaves the warehouse.",
   steps: [
     {
       number: "01",

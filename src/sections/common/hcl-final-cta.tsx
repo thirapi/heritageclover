@@ -20,8 +20,8 @@ export type HclFinalCtaProps = {
 
 export const hclFinalCtaDefaults: Required<Omit<HclFinalCtaProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  title: "Bring the Spice Islands to your table.",
-  body: "Whole cloves, ground cloves and clove bud oil from smallholder gardens in Maluku. Hand-picked, sun-dried and sealed fresh.",
+  title: "Bring single-origin cloves to your table.",
+  body: "Whole cloves, ground cloves and clove bud oil from smallholder gardens in East Java. Hand-picked, sun-dried and sealed fresh.",
   primaryLabel: "Shop the collection",
   primaryHref: "/store",
   secondaryLabel: "Talk to us",

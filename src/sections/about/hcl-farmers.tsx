@@ -21,25 +21,25 @@ export const hclFarmersDefaults: Required<
   sectionId: "",
   eyebrow: "",
   title: "Meet the people who keep the gardens",
-  body: "Our cloves come from family gardens in Maluku, where trees planted by one generation are often harvested by the next. These are some of the growers we work with.",
+  body: "Our cloves come from family gardens across East Java, where trees planted by one generation are tended and harvested by the next. These are some of the growers we work with.",
   people: [
     {
       name: "Pak Rusdi Mahasari",
-      role: "Clove grower, Ternate",
+      role: "Clove grower, Watulimo, Trenggalek",
       image: ASSETS.farmer1,
       quote:
-        "My grandfather planted these trees. When I climb them at harvest, I am picking his work as much as mine.",
+        "My grandfather planted these trees on the hills of Watulimo. When I climb them at harvest, I am picking his work as much as mine.",
     },
     {
       name: "Ibu Salma Kastela",
-      role: "Clove harvester & sorter, Tidore",
+      role: "Clove harvester & sorter, Dampit, Semeru slopes",
       image: ASSETS.farmer2,
       quote:
         "We pick only when the buds blush pink at the tip. A day too late and the flower opens, and the fragrance goes with it.",
     },
     {
       name: "Pak Hasan Alting",
-      role: "Drying and sorting, Ambon",
+      role: "Traditional sun drying, Pacitan",
       image: ASSETS.farmer3,
       quote:
         "The sun does the real work. We just turn the buds, watch the sky, and sort them by hand until they are right.",

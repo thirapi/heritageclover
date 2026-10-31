@@ -23,19 +23,19 @@ export const hclHeritageTeaserDefaults: Required<Omit<HclHeritageTeaserProps, ke
   sectionId: "",
   eyebrow: "",
   title: "A tiny bud that drew fleets across the world",
-  body: "For centuries the clove grew on only a handful of islands in North Maluku. Traders carried it by sea to China, India, the Middle East and Europe, and the fight to control its supply drew European fleets to the islands.",
+  body: "The clove trade shaped world history, traveling along ancient maritime spice routes. In the rich volcanic soils of East Java, generations of smallholder families have cultivated some of the finest clove gardens in the archipelago.",
   milestones: [
-    { year: "Antiquity", label: "Cloves leave Maluku on early sea routes towards China and India." },
-    { year: "1500s", label: "Ternate and Tidore become the centre of the clove trade." },
-    { year: "1600s", label: "European fleets race each other for the Spice Islands." },
-    { year: "Today", label: "Smallholder families on the same islands still pick the buds by hand." },
+    { year: "Antiquity", label: "Cloves leave early island sea routes towards China and India." },
+    { year: "1500s", label: "The spice trade connects the archipelago to global merchant fleets." },
+    { year: "1800s", label: "Clove saplings take root in the fertile volcanic highlands of East Java." },
+    { year: "Today", label: "Smallholder families in Trenggalek and Semeru still pick every bud by hand." },
   ],
   ctaLabel: "Read our story",
   ctaHref: "/our-story",
   mapImage: ASSETS.heritageMap,
 };
 
-// Simplified spice-route line from the west (Europe) to Maluku in the east.
+// Simplified spice-route line from the west towards the spice ports of Java and the archipelago.
 const ROUTE =
   "M6 254 C 110 150, 230 240, 360 160 S 560 50, 700 120 S 900 220, 1010 120 S 1110 60, 1150 88";
 

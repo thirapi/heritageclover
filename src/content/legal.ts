@@ -85,7 +85,7 @@ export const LEGAL: Record<Locale, LegalContent> = {
         blocks: [
           {
             heading: "Tentang kami",
-            body: "Heritage Clover menghadirkan cengkeh petik tangan dari kebun-kebun rakyat di Maluku ke dapur dan rumah di seluruh dunia. Kebijakan ini menjelaskan informasi pribadi apa saja yang kami kumpulkan saat Anda mengunjungi situs kami atau menghubungi kami, serta bagaimana kami menjaganya.\n\nJika Anda memiliki pertanyaan tentang kebijakan ini, Anda dapat menghubungi kami kapan saja melalui halaman kontak.",
+            body: "Heritage Clover menghadirkan cengkeh petik tangan dari kebun-kebun rakyat di Jawa Timur ke dapur dan rumah di seluruh dunia. Kebijakan ini menjelaskan informasi pribadi apa saja yang kami kumpulkan saat Anda mengunjungi situs kami atau menghubungi kami, serta bagaimana kami menjaganya.\n\nJika Anda memiliki pertanyaan tentang kebijakan ini, Anda dapat menghubungi kami kapan saja melalui halaman kontak.",
           },
           {
             heading: "Apa yang kami kumpulkan dan untuk apa",

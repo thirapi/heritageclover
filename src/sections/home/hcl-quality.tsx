@@ -28,7 +28,7 @@ export const hclQualityDefaults: Required<Omit<HclQualityProps, keyof HclInjecte
   points: [
     {
       title: "Traceable origin",
-      body: "Sourced from smallholder gardens in Maluku, the islands where the clove trade began.",
+      body: "Sourced from smallholder gardens in East Java, where volcanic soil yields plump, oil-rich buds.",
       icon: "MapPin",
     },
     {
@@ -49,7 +49,7 @@ export const hclQualityDefaults: Required<Omit<HclQualityProps, keyof HclInjecte
   ],
   badgesLabel: "Quality standards",
   badges: [
-    { label: "100% Single Origin Maluku", image: ASSETS.cert },
+    { label: "100% Single Origin East Java", image: ASSETS.cert },
     { label: "Grade A Hand-Sorted", image: ASSETS.cert },
     { label: "Sun-Dried Natural", image: ASSETS.cert },
   ],

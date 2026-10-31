@@ -18,7 +18,7 @@ export type HclMarqueeProps = {
 export const hclMarqueeDefaults: Required<Omit<HclMarqueeProps, keyof HclInjectedProps>> = {
   sectionId: "",
   items: [
-    "Hand-picked in Maluku",
+    "Hand-picked in East Java",
     "Sun-dried for days",
     "Sorted by hand",
     "Picked at the bud",

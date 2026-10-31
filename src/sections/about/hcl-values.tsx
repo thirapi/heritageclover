@@ -42,7 +42,7 @@ export const hclValuesDefaults: Required<
   sectionId: "",
   eyebrow: "",
   mission:
-    "To bring Indonesian cloves to your kitchen the way growers in Maluku keep them: picked by hand, dried in the sun and sealed while the oils are still in the bud.",
+    "To bring Indonesian cloves to your kitchen the way growers in East Java keep them: picked by hand, dried in the sun and sealed while the oils are still in the bud.",
   missionNote:
     "We are a small Indonesian brand. We buy from smallholder clove gardens and work with the families who pick, dry and sort the harvest.",
   values: [
@@ -53,7 +53,7 @@ export const hclValuesDefaults: Required<
     },
     {
       title: "Picked by hand, dried in the sun",
-      body: "Buds are picked while still closed and dried on mats in the sun for several days, the same method Maluku growers have used for generations.",
+      body: "Buds are picked while still closed and dried on mats in the sun for several days, the same method East Java growers have used for generations.",
       icon: "Sun",
     },
     {

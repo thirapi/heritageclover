@@ -40,7 +40,7 @@ export const QUALITY_ID: HclQualityProps = {
   points: [
     {
       title: "Asal yang dapat ditelusuri",
-      body: "Diambil dari kebun rakyat di Maluku, kepulauan tempat perdagangan cengkeh bermula.",
+      body: "Diambil dari kebun rakyat di Jawa Timur, tempat tanah vulkanik menghasilkan kuncup yang gemuk dan kaya minyak atsiri.",
       icon: "MapPin",
     },
     {
@@ -61,7 +61,7 @@ export const QUALITY_ID: HclQualityProps = {
   ],
   badgesLabel: "Standar mutu",
   badges: [
-    { label: "100% Asal Maluku", image: ASSETS.cert },
+    { label: "100% Asal Jawa Timur", image: ASSETS.cert },
     { label: "Grade A Sortir Tangan", image: ASSETS.cert },
     { label: "Alami Jemur Matahari", image: ASSETS.cert },
   ],
@@ -71,9 +71,9 @@ export const QUALITY_ID: HclQualityProps = {
 export const HOME: Record<Locale, HomeContent> = {
   en: {
     meta: {
-      title: "Heritage Clover: Cloves from the Spice Islands",
+      title: "Heritage Clover: Cloves from East Java",
       description:
-        "Hand-picked, sun-dried cloves from smallholder gardens in Maluku, the original Spice Islands, sealed fresh for your kitchen.",
+        "Hand-picked, sun-dried cloves from smallholder gardens in East Java, sealed fresh for your kitchen.",
     },
     hero: {},
     marquee: {},
@@ -91,21 +91,21 @@ export const HOME: Record<Locale, HomeContent> = {
   },
   id: {
     meta: {
-      title: "Heritage Clover: Cengkeh dari Kepulauan Rempah",
+      title: "Heritage Clover: Cengkeh dari Jawa Timur",
       description:
-        "Cengkeh petik tangan dan jemur matahari dari kebun rakyat di Maluku, Kepulauan Rempah yang asli, dikemas segar untuk dapur Anda.",
+        "Cengkeh petik tangan dan jemur matahari dari kebun rakyat di Jawa Timur, dikemas segar untuk dapur Anda.",
     },
     hero: {
-      eyebrow: "Heritage Clover · Maluku, Indonesia",
+      eyebrow: "Heritage Clover · Jawa Timur, Indonesia",
       title: "Rempah yang",
       titleAccent: "Mengubah Dunia.",
-      body: "Kuncup cengkeh yang dipetik dengan tangan di Maluku Utara, dijemur di bawah matahari selama empat sampai lima hari, dan dikemas segar untuk dapur Anda.",
+      body: "Kuncup cengkeh yang dipetik dengan tangan di Jawa Timur, dijemur di bawah matahari selama empat sampai lima hari, dan dikemas segar untuk dapur Anda.",
       primaryLabel: "Belanja cengkeh",
       secondaryLabel: "Kisah kami",
     },
     marquee: {
       items: [
-        "Dipetik tangan di Maluku",
+        "Dipetik tangan di Jawa Timur",
         "Dijemur berhari-hari",
         "Disortir dengan tangan",
         "Dipetik saat masih kuncup",
@@ -115,8 +115,8 @@ export const HOME: Record<Locale, HomeContent> = {
     },
     intro: {
       statement:
-        "Selama berabad-abad, cengkeh hanya tumbuh di beberapa pulau kecil di Maluku Utara.\nKami membelinya di sana, dari keluarga-keluarga yang menanamnya.",
-      body: "Heritage Clover bekerja bersama petani rakyat di Ternate dan pulau-pulau di sekitarnya. Setiap kuncup dipetik dengan tangan saat warnanya berubah dari hijau ke merah muda, dijemur di bawah matahari selama empat sampai lima hari, dan disortir dengan tangan sebelum dikemas.",
+        "Tanah vulkanik Jawa Timur menghasilkan cengkeh beraroma istimewa.\nKami membelinya langsung dari keluarga-keluarga yang merawat pohonnya.",
+      body: "Heritage Clover bekerja bersama petani rakyat di Trenggalek, Pacitan, dan lereng Gunung Semeru di Jawa Timur. Setiap kuncup dipetik dengan tangan saat warnanya berubah dari hijau ke merah muda, dijemur di bawah matahari selama empat sampai lima hari, dan disortir dengan tangan sebelum dikemas.",
       signature: "Keluarga Heritage Clover",
       imageAlt: "Tangan menyortir kuncup cengkeh kering",
     },
@@ -128,22 +128,22 @@ export const HOME: Record<Locale, HomeContent> = {
         { value: "40", suffix: "t", label: "Panen kering per musim" },
         { value: "400", suffix: "+", label: "Tahun tradisi rempah" },
       ],
-      note: "Data kemitraan kebun rakyat Maluku Utara.",
+      note: "Data kemitraan kebun rakyat Jawa Timur.",
     },
     heritage: {
-      title: "Kuncup mungil yang menarik armada dari seluruh dunia",
-      body: "Selama berabad-abad, cengkeh hanya tumbuh di segelintir pulau di Maluku Utara. Para pedagang membawanya lewat laut ke Tiongkok, India, Timur Tengah, dan Eropa, dan perebutan pasokannya mendatangkan armada-armada Eropa ke pulau-pulau itu.",
+      title: "Kuncup mungil yang menggerakkan perdagangan dunia",
+      body: "Perdagangan cengkeh membentuk sejarah maritim nusantara. Di tanah vulkanik Jawa Timur yang subur, generasi petani rakyat merawat kebun-kebun cengkeh terbaik.",
       milestones: [
-        { year: "Zaman kuno", label: "Cengkeh meninggalkan Maluku lewat jalur laut awal menuju Tiongkok dan India." },
-        { year: "1500-an", label: "Ternate dan Tidore menjadi pusat perdagangan cengkeh." },
-        { year: "1600-an", label: "Armada-armada Eropa berlomba menuju Kepulauan Rempah." },
-        { year: "Hari ini", label: "Keluarga petani rakyat di pulau-pulau yang sama masih memetik kuncupnya dengan tangan." },
+        { year: "Zaman kuno", label: "Cengkeh berlayar lewat jalur laut awal menuju Tiongkok dan India." },
+        { year: "1500-an", label: "Jalur rempah nusantara menghubungkan kepulauan dengan armada niaga dunia." },
+        { year: "1800-an", label: "Bibit cengkeh berakar di dataran tinggi vulkanik Jawa Timur yang subur." },
+        { year: "Hari ini", label: "Keluarga petani di Trenggalek dan Semeru masih memetik setiap kuncup dengan tangan." },
       ],
       ctaLabel: "Baca kisah kami",
     },
     showcase: {
-      title: "Dari Kepulauan Rempah, untuk meja Anda",
-      body: "Kuncup utuh, cengkeh bubuk, minyak bunga cengkeh, dan paket hadiah. Semuanya berasal dari cengkeh yang sama, dipetik dengan tangan dan dijemur di bawah matahari di Maluku Utara.",
+      title: "Dari kebun Jawa Timur, untuk meja Anda",
+      body: "Kuncup utuh, cengkeh bubuk, minyak bunga cengkeh, dan paket hadiah. Semuanya berasal dari cengkeh yang sama, dipetik dengan tangan dan dijemur di bawah matahari di Jawa Timur.",
       products: [
         {
           name: "Cengkeh Utuh",
@@ -175,22 +175,22 @@ export const HOME: Record<Locale, HomeContent> = {
       swipeHint: "Geser untuk melihat",
     },
     origin: {
-      title: "Tumbuh di lereng vulkanik Maluku Utara",
-      body: "Cengkeh kami berasal dari kebun rakyat di sekitar Ternate, tempat pohon-pohonnya tumbuh di tanah vulkanik yang menghadap ke laut. Kami membeli langsung dari keluarga-keluarga yang merawat pohonnya, saat musim panen.",
+      title: "Tumbuh di lereng vulkanik Jawa Timur",
+      body: "Cengkeh kami berasal dari kebun rakyat di Trenggalek dan lereng Semeru, tempat pohon-pohonnya tumbuh di tanah vulkanik yang sejuk berhawa perbukitan. Kami membeli langsung dari keluarga-keluarga yang merawat pohonnya, saat musim panen.",
       facts: [
-        { label: "Asal", value: "Maluku Utara" },
+        { label: "Asal", value: "Jawa Timur" },
         { label: "Panen", value: "Petik tangan" },
-        { label: "Penjemuran", value: "4–5 hari di bawah matahari" },
+        { label: "Penjemuran", value: "4 sampai 5 hari di bawah matahari" },
         { label: "Sortir", value: "Kuncup demi kuncup" },
       ],
       factsTitle: "Sekilas",
-      imageAlt: "Pohon cengkeh di kebun lereng bukit di Maluku Utara",
-      locationLabel: "Ternate · Maluku Utara",
+      imageAlt: "Pohon cengkeh di kebun lereng bukit di Jawa Timur",
+      locationLabel: "Trenggalek & Semeru · Jawa Timur",
     },
     steps: {
       title: "Dari pohon ke toples",
       intro:
-        "Pemetikan, penjemuran, dan penyortiran dikerjakan dengan tangan, seperti yang selalu dilakukan petani Maluku. Kadar air diperiksa dan setiap lot dikemas rapat sebelum meninggalkan pulau.",
+        "Pemetikan, penjemuran, dan penyortiran dikerjakan dengan tangan, seperti yang selalu dilakukan petani Jawa Timur turun-temurun. Kadar air diperiksa dan setiap lot dikemas rapat sebelum meninggalkan gudang.",
       steps: [
         {
           number: "01",
@@ -247,7 +247,7 @@ export const HOME: Record<Locale, HomeContent> = {
         },
         {
           title: "Hadiah",
-          body: "Paket hadiah berisi cengkeh utuh Maluku, dikemas untuk dikirim kepada keluarga, teman, dan mitra bisnis.",
+          body: "Paket hadiah berisi cengkeh utuh Jawa Timur, dikemas untuk dikirim kepada keluarga, teman, dan mitra bisnis.",
           image: ASSETS.useGifting,
         },
       ],
@@ -270,7 +270,7 @@ export const HOME: Record<Locale, HomeContent> = {
         },
         {
           quote:
-            "Tahun ini kami mengirim paket hadiah warisan kepada mitra kami. Semua orang bertanya tentang kisah Kepulauan Rempah di baliknya.",
+            "Tahun ini kami mengirim paket hadiah warisan kepada mitra kami. Semua orang terkesan dengan aroma cengkeh Jawa Timur yang manis dan hangat.",
           name: "David Tan",
           role: "Roaster kopi & pencinta teh, Singapura",
         },

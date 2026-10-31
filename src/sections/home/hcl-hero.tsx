@@ -28,10 +28,10 @@ export type HclHeroProps = {
 
 export const hclHeroDefaults: Required<Omit<HclHeroProps, keyof HclInjectedProps>> = {
   sectionId: "",
-  eyebrow: "Heritage Clover · Maluku, Indonesia",
+  eyebrow: "Heritage Clover · East Java, Indonesia",
   title: "The Spice That",
   titleAccent: "Shaped the World.",
-  body: "Clove buds picked by hand in North Maluku, dried in the sun for four to five days and sealed fresh for your kitchen.",
+  body: "Clove buds picked by hand in East Java, dried in the sun for four to five days and sealed fresh for your kitchen.",
   primaryLabel: "Shop cloves",
   primaryHref: "/store",
   secondaryLabel: "Our story",

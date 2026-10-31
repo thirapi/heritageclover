@@ -19,7 +19,7 @@ export const hclRichTextDefaults: Required<Omit<HclRichTextProps, keyof HclInjec
   blocks: [
     {
       heading: "Who we are",
-      body: "Heritage Clover brings hand-picked cloves from smallholder gardens in Maluku to kitchens and homes around the world. This policy explains what personal information we collect when you visit our website or contact us, and how we look after it.\n\nIf you have any question about this policy, you can reach us through the contact page at any time.",
+      body: "Heritage Clover brings hand-picked cloves from smallholder gardens in East Java to kitchens and homes around the world. This policy explains what personal information we collect when you visit our website or contact us, and how we look after it.\n\nIf you have any question about this policy, you can reach us through the contact page at any time.",
     },
     {
       heading: "What we collect and why",

@@ -23,7 +23,7 @@ export const hclStatsDefaults: Required<Omit<HclStatsProps, keyof HclInjectedPro
     { value: "40", suffix: "t", label: "Tonnes dried each season" },
     { value: "400", suffix: "+", label: "Years of spice heritage" },
   ],
-  note: "Partnership estimates with North Maluku grower communities.",
+  note: "Partnership estimates with East Java grower communities.",
   backgroundColor: "#FCFAF5",
 };
 

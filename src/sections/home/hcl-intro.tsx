@@ -19,8 +19,8 @@ export const hclIntroDefaults: Required<Omit<HclIntroProps, keyof HclInjectedPro
   sectionId: "",
   eyebrow: "",
   statement:
-    "For centuries, cloves grew only on a few small islands in North Maluku.\nWe buy ours there, from the families who grow them.",
-  body: "Heritage Clover works with smallholder growers on Ternate and the neighbouring islands. Each bud is picked by hand as it turns from green to pink, dried in the sun for four to five days and sorted by hand before it is packed.",
+    "East Java's volcanic soils produce some of the world's most fragrant cloves.\nWe buy ours directly from the families who tend the trees.",
+  body: "Heritage Clover works with smallholder growers across Trenggalek, Pacitan, and the slopes of Mount Semeru in East Java. Each bud is picked by hand as it turns from green to pink, dried in the sun for four to five days and sorted by hand before it is packed.",
   signature: "The Heritage Clover family",
   image: ASSETS.intro,
   imageAlt: "Hands sorting dried clove buds",
